@@ -1,0 +1,72 @@
+/* Variables */
+
+$blue:  #2199C3;
+$black: #2D2D2D;
+$white: #FFFFFF;
+
+
+/* Backgrounds */
+.background-blue {
+	background: $blue;
+}
+
+.background-black {
+	background: $black;
+}
+
+.background-gradient {
+	background-image: linear-gradient(-180deg, #FFFFFF 7%, #D5E4F0 50%, #58AAC7 98%);
+}
+
+.header-top {
+	padding: rem-calc(14) 0;
+	color: $white;
+	font-weight: 600;
+	font-size: rem-calc(22);
+}
+
+.social-icon {
+	padding-right: rem-calc(24);
+}
+
+.menu-wrapper {
+	padding-top: rem-calc(67);
+}
+
+.menu {
+	float: right;
+	list-style: none;
+	font-weight: 300;
+	text-decoration: underline;
+	color: $blue;
+}
+
+.menu li:last-child() a {
+	padding-right: 0;
+}
+
+.header {
+	position: relative;
+	z-index: 0;
+}
+
+.newsletter-cta {
+	position: relative;
+	z-index: 20;
+}
+
+.newsletter-text {
+	padding: rem-calc(25) 0;
+	color: $white;
+}
+
+.newsletter-text span {
+	float: left;
+	max-width: calc(100% - 65px);
+}
+
+.newsletter-arrow {
+	float: left;
+	margin-top: rem-calc(-7);
+	margin-left: rem-calc(5);
+}

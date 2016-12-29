@@ -1,0 +1,58 @@
+.hero {
+	position: relative;
+	height: 776px;
+	z-index: 10;
+}
+
+.animation-monitors {
+	position: absolute;
+	top: rem-calc(67);
+	left: 15%;
+}
+
+.animation-keyboard {
+	position: absolute;
+	top: rem-calc(500);
+	left: -5%;
+}
+
+.animation-mug {
+	position: absolute;
+	top: rem-calc(500);
+	left: 50%;
+}
+
+.animation-mouse {
+	position: absolute;
+	top: rem-calc(400);
+	left: 60%;
+}
+
+.animation-text {
+	position: absolute;
+	top: rem-calc(100);
+	left: 30%;
+
+	width: 40%;
+	text-align: center;
+}
+
+.animation-bubbles1 {
+	position: absolute;
+	left: rem-calc(-150);
+	bottom: rem-calc(-50);
+
+	z-index: 100;
+}
+
+.animation-bubbles2 {
+	position: absolute;
+	bottom: rem-calc(150);
+	right: rem-calc(50);
+}
+
+.animation-desk {
+	position: absolute;
+	bottom: rem-calc(30);
+	right: rem-calc(-100);
+}

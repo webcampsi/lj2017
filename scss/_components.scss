@@ -62,6 +62,15 @@ h1 {
     z-index: 0;
 }
 
+/* Footer */
+.footer {
+    height: rem-calc(400);
+    padding-top: rem-calc(250);
+    margin-top: rem-calc(-100);
+    background-image: linear-gradient(-180deg, #FFFFFF 31%, #DFF0FF 63%, #8DCBE5 99%);
+    
+}
+
 /* Newsletter */
 
 .newsletter-cta {
@@ -278,6 +287,10 @@ h1 {
 .schedule .talk-speaker-image {
     flex-grow: 1;
     min-width: rem-calc(103);
+
+    @include breakpoint(medium down) {
+        display: none;
+    }
 }
 
 .schedule .talk-info {
@@ -348,3 +361,45 @@ h1 {
     display: inline-block;
 }
 
+.section-team {
+    margin-top: rem-calc(120);
+    margin-bottom: rem-calc(170);
+}
+
+.section-team h1 {
+    margin-bottom: rem-calc(45);
+}
+
+.team-member,
+.sponsor {
+    margin-bottom: rem-calc(50);
+}
+
+.team-name {
+    display: block;
+    margin-top: rem-calc(17);
+    font-size: rem-calc(25);
+}
+
+.team-description {
+    margin-bottom: rem-calc(78);
+}
+
+.section-sponsors {
+    // margin-bottom: rem-calc(122);
+}
+
+.section-sponsors h1 {
+    margin-bottom: rem-calc(45);
+}
+
+.haiku {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.haiku-byline {
+    font-size: rem-calc(12);
+    font-weight: bold;
+    color: $body-font-color;
+}

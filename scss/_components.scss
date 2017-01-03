@@ -240,3 +240,97 @@ h1 {
     font-size: rem-calc(22);
     font-weight: 600;
 }
+
+.section-schedule h1 {
+    margin: rem-calc(93) 0 rem-calc(112);
+    color: $white;
+}
+
+.schedule {
+    border-spacing: 0 rem-calc(47px);
+    margin-bottom: rem-calc(180);
+}
+
+.schedule thead,
+.schedule tbody,
+.schedule tr {
+    color: $white;
+    background-color: transparent !important;
+}
+
+.schedule th {
+    color: $white;
+    font-weight: bold;
+    font-size: rem-calc(24);
+    text-align: center;
+}
+
+.schedule tr td:first-child() {
+    font-size: rem-calc(24);
+    font-weight: bold;
+    text-align: right;
+}
+
+.schedule .talk {
+    display: flex;
+}
+
+.schedule .talk-speaker-image {
+    flex-grow: 1;
+    margin-right: rem-calc(25);
+}
+
+.schedule .talk-info {
+    flex-grow: 3;
+    display: inline-block;
+    text-align: left;
+}
+
+.schedule .talk-speaker {
+    display: block;
+    font-size: rem-calc(24);
+}
+
+.schedule .talk-jobtitle {
+    display: block;
+    font-size: rem-calc(16);
+    font-style: italic;
+}
+
+.schedule .talk-title {
+    display: block;
+    font-size: rem-calc(16);
+}
+
+.talk-announcement {
+    border-spacing: 0px 10px;
+}
+
+.talk-announcement td {
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    border-left: none;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: rem-calc(20);
+}
+
+.talk-announcement-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.talk-announcement-image {
+    display: inline-block;
+}
+
+.talk-announcement-title {
+    display: inline-block;
+    font-size: rem-calc(24);
+}
+
+.talk-announcement-description {
+    display: inline-block;
+}
+

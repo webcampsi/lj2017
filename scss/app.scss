@@ -49,5 +49,6 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import '_defaults';
 @import '_components';
 @import '_animation';

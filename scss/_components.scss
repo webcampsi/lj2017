@@ -277,19 +277,30 @@ h1 {
 
 .schedule .talk-speaker-image {
     flex-grow: 1;
-    margin-right: rem-calc(25);
+    min-width: rem-calc(103);
 }
 
 .schedule .talk-info {
-    flex-grow: 3;
+    display: block;
+    flex-grow: 2;
     display: inline-block;
     text-align: left;
+    color: $white;
+
+    padding-left: rem-calc(25);
+
+    &:active,
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
 }
 
 .schedule .talk-speaker {
     display: block;
     font-size: rem-calc(24);
 }
+
 
 .schedule .talk-jobtitle {
     display: block;
@@ -319,10 +330,13 @@ h1 {
 .talk-announcement-info {
     display: inline-block;
     vertical-align: middle;
+    text-align: left;
 }
 
 .talk-announcement-image {
     display: inline-block;
+    padding-right: rem-calc(25);
+    // width: rem-calc(65);
 }
 
 .talk-announcement-title {

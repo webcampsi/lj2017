@@ -29,23 +29,22 @@
         <div class="medium-3 column">
           <a href="/"><img src="/images/logo.svg" alt="WebCamp Logo" class="logo"></a>
         </div>
-        <div class="medium-offset-2 medium-7 column">
+        <div class="medium-offset-2 medium-7 small-12 column">
           <ul class="menu">
-            <li><a href="#submit">Submit</a></li>
-            <li><a href="#team">Team</a></li>
+            <li><a href="#submit">Submit Talk</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#tickets">Tickets</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#team" class="hide-for-small-only">Team</a></li>
+            <li><a href="#sponsors" class="hide-for-small-only">Sponsors</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="hero row">
-
+      <div class="hero row show-for-medium">
         <img src="/images/animation/monitors.svg" class="animation-monitors" id="animation-monitors" />
         <img src="/images/animation/keyboard.svg" class="animation-keyboard" id="animation-keyboard" />
         <div class="trigger"></div>
-        <img src="/images/animation/mug.svg" class="animation-mug" />
+        <img src="/images/mug.svg" class="animation-mug" />
         <img src="/images/animation/mouse.svg" class="animation-mouse" />
 
         <div class="animation-text">
@@ -54,10 +53,20 @@
         </div>
         <img src="/images/animation/bubbles1.svg" class="animation-bubbles1" />
         <img src="/images/animation/bubbles2.svg" class="animation-bubbles2" />
+        <img src="/images/animation/bubbles1.svg" class="animation-bubbles3" />
         <img src="/images/animation/desk.svg" class="animation-desk" />
-        <img src="/images/animation/mug.svg" class="animation-mug" />
-
+        <img src="/images/mug.svg" class="animation-mug" />
       </div>
+
+      <!--
+      <div class="hero row show-for-small-only">
+        <div class="trigger-small"></div>
+        <div class="animation-text-small">
+          <h1>Happy developers write better code.</h1>
+          <p>You can watch tech webinars at home. Come join us at this year’s WebCamp to learn how to be a happier web developer by taking better care of yourself and the people you care about.</p>
+        </div>
+      </div>
+      -->
 
       <div class="background-black newsletter-cta">
         <div class="newsletter-cta-row">
@@ -79,20 +88,20 @@
     </div>
 
     <div class="row section-about">
-      <div class="medium-12 column text-center">
+      <div class="small-12 column text-center">
         <h1>About</h1>
       </div>
-      <div class="medium-6 column text-paragraph">
+      <div class="medium-6 small-12 column text-paragraph">
         <p>This year, WebCamp will take place on April 22, 2017 at the Faculty of Computer and Information Science in Ljubljana. You can expect a day full of diverse talks, chocolate, coffee, and fun - it’s a Saturday and you can bring your kids too!</p>
         <p>Learn new things, meet new friends or get a massage! In the meantime, your kids can play together with Minecraft under responsible adult supervision. There will also be some cool VR and IoT experiences for all of us to play with.</p>
       </div>
-      <div class="medium-6 column text-paragraph">
+      <div class="medium-6 small-12 column text-paragraph">
         <p>WebCamp is an event organized [by the community](#team) for the community. All talks are in English and we expect 300 attendees from all over the region. It’s free to attend, but you’ll need a ticket*.</p>
         <p>Check out some highlights from the previous year below — but keep in mind that this year’s WebCamp is going to be even more special!</p>
       </div>
 
 
-      <div class="medium-5 medium-offset-1 column text-center section-about-video">
+      <div class="medium-5 medium-offset-1 small-12 column text-center section-about-video">
         <a data-open="modal-video1"><img src="/images/video1.jpg" /></a>
 
         <div class="reveal large" id="modal-video1" data-reveal>
@@ -102,7 +111,7 @@
           </button>
         </div>
       </div>
-      <div class="medium-5 column text-center section-about-video text-right">
+      <div class="medium-5 small-12 column text-center section-about-video text-right">
         <a data-open="modal-video2"><img src="/images/video2.jpg" /></a>
 
         <div class="reveal large" id="modal-video2" data-reveal>
@@ -113,17 +122,17 @@
         </div>
       </div>
 
-      <div class="medium-12 column text-center section-about-archive">
+      <div class="small-12 column text-center section-about-archive">
         See how much fun we had in <a href="http://2015.webcamp.si">2015</a> &amp; <a href="http://2016.webcamp.si">2016</a>
       </div>
 
-      <div class="medium-12 column text-center section-about-cfp">
+      <div class="small-12 column text-center section-about-cfp">
         *Speakers get tickets automatically, so we encourage you to <a href="/#cfp">submit your talk</a>.
       </div>
     </div>
 
     <div class="row section-important">
-      <div class="medium-6 medium-offset-1 column">
+      <div class="medium-10 medium-offset-1 column">
         <h1>Important info</h1>
       </div>
       <div class="medium-10 medium-offset-1 column">
@@ -219,24 +228,24 @@
                 <td>9:00</td>
                 <td>
                   <div class="talk">
-                    <img class="talk-speaker-image" src="/images/placeholder-speaker.png">
-                    <div class="talk-info">
+                    <a href="#" class="talk-speaker-image"><img class="" src="/images/placeholder-speaker.png"></a>
+                    <a href="#" class="talk-info">
                       <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i>Room 1</span>
                       <span class="talk-speaker">Luka Muzinic</span>
                       <span class="talk-jobtitle">Front-end at Zemanta</span>
                       <span class="talk-title">Dashboards for devops and other web folks</span>
-                    </div>
+                    </a>
                   </div>
                 </td>
                 <td>
                   <div class="talk">
-                    <img class="talk-speaker-image" src="/images/placeholder-speaker.png">
-                    <div class="talk-info">
+                    <a href="#" class="talk-speaker-image"><img class="" src="/images/placeholder-speaker.png"></a>
+                    <a href="#" class="talk-info">
                       <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i>Room 2</span>
                       <span class="talk-speaker">Luka Muzinic</span>
                       <span class="talk-jobtitle">Front-end at Zemanta</span>
                       <span class="talk-title">Dashboards for devops and other web folks</span>
-                    </div>
+                    </a>
                   </div>
                 </td>
                 <td>
@@ -255,12 +264,12 @@
                 <td>&nbsp;10:00</td>
                 <td>
                   <div class="talk">
-                    <img class="talk-speaker-image" src="/images/placeholder-speaker.png">
-                    <div class="talk-info">
+                    <a href="#" class="talk-speaker-image"><img class="" src="/images/placeholder-speaker.png"></a>
+                    <a href="#" class="talk-info">
                       <span class="talk-speaker">Luka Muzinic</span>
                       <span class="talk-jobtitle">Front-end at Zemanta</span>
                       <span class="talk-title">Dashboards for devops and other web folks</span>
-                    </div>
+                    </a>
                   </div>
                 </td>
                 <td>
@@ -361,12 +370,12 @@
                 </td>
               </tr>
               <tr class="talk-announcement">
-                <td>&nbsp;12:00</td>
+                <td>&nbsp;18:00</td>
                 <td colspan="3" class="text-left">
-                  <img class="talk-announcement-image" src="/images/mug-small.svg">
+                  <img class="talk-announcement-image mug-small" src="/images/mug.svg">
                   <div class="talk-announcement-info">
-                    <span class="talk-announcement-title">Lunch</span><br />
-                    <span class="talk-announcement-description">Eats</span>
+                    <span class="talk-announcement-title">Beer</span><br />
+                    <span class="talk-announcement-description">It's beer time in a mug!</span>
                   </div>
                 </td>
               </tr>
@@ -487,7 +496,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
 
     <script src="js/app.js"></script>
   </body>

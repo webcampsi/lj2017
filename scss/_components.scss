@@ -66,21 +66,30 @@ h1 {
 }
 
 .menu {
+    margin-top: rem-calc(25);
     float: right;
     list-style: none;
     font-weight: 500;
     // text-decoration: underline;
     color: $blue;
+    
+
+    @include breakpoint(small only) {
+        padding-top: rem-calc(15);
+        margin-top: 0;
+    }
 }
 
 .menu > li {
     padding: 0.7rem 1rem;
+    vertical-align: bottom;
 }
 
 .menu > li > a {
     padding: 0;
     padding-bottom: 1px;
     border-bottom: 1px solid $primary-color;
+    white-space: nowrap;
 }
 
 .menu li:last-child() {
@@ -234,12 +243,23 @@ h1 {
     margin-top: rem-calc(100);
 }
 
+.section-about h1 {
+    @include breakpoint(small only) {
+        padding-bottom: rem-calc(20);
+    }
+}
+
 .text-paragraph {
-    margin-top: rem-calc(74);
+    @include breakpoint(medium) {
+        margin-top: rem-calc(74);
+    }
 }
 
 .section-about-video {
-    margin-top: rem-calc(112);
+    margin-top: rem-calc(30);
+    @include breakpoint(medium) {
+        margin-top: rem-calc(112);
+    }
 }
 
 .section-about-archive {
@@ -254,7 +274,7 @@ h1 {
 .section-important {
     position: relative;
     padding-top: rem-calc(61); 
-    padding-bottom: rem-calc(79);
+    padding-bottom: rem-calc(49);
     margin-bottom: rem-calc(93);
 
     border: solid rem-calc(15) #F4F4F4;
@@ -268,8 +288,8 @@ h1 {
 
 .section-important-mug {
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: rem-calc(-60);
+    top: rem-calc(-80);
 }
 
 .section-cfp {

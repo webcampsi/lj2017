@@ -7,33 +7,44 @@
 .animation-monitors {
 	position: absolute;
 	top: rem-calc(67);
-	left: 15%;
+	left: 0;
 }
 
 .animation-keyboard {
 	position: absolute;
-	top: rem-calc(500);
-	left: -5%;
+	top: rem-calc(420);
+	left: -40%;
 }
 
 .animation-mug {
 	position: absolute;
 	bottom: rem-calc(100);
-	left: 50%;
+	left: 35%;
+	width: rem-calc(180);
 }
 
 .animation-mouse {
 	position: absolute;
-	top: rem-calc(400);
+	top: rem-calc(320);
 	left: 60%;
 }
 
 .animation-text {
 	position: absolute;
 	top: rem-calc(70);
-	left: 30%;
+	left: 15%;
 
-	width: 40%;
+	width: 70%;
+	text-align: center;
+	opacity: 0;
+}
+
+.animation-text-small {
+	position: absolute;
+	top: rem-calc(70);
+	left: 15%;
+
+	width: 70%;
 	text-align: center;
 	opacity: 0;
 }
@@ -51,7 +62,7 @@
 
 .animation-bubbles1 {
 	position: absolute;
-	left: rem-calc(-150);
+	left: -50%;
 	bottom: rem-calc(-50);
 
 	z-index: 100;
@@ -59,12 +70,21 @@
 
 .animation-bubbles2 {
 	position: absolute;
-	bottom: rem-calc(150);
+	bottom: rem-calc(130);
 	right: rem-calc(50);
+}
+
+.animation-bubbles3 {
+	position: absolute;
+	right: -70%;
+	bottom: rem-calc(-50);
+
+	z-index: 100;
 }
 
 .animation-desk {
 	position: absolute;
 	bottom: rem-calc(30);
-	right: rem-calc(-100);
+	// right: rem-calc(-500);
+	left: 5%;
 }

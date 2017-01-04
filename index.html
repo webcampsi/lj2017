@@ -12,12 +12,14 @@
   <body>
     <div class="background-blue header-top">
       <div class="row">
-        <div class="medium-8 column">
-          8. April 2017  •  Ljubljana, Slovenia  •  Get tickets
+        <div class="medium-8 small-12 column">
+          <span class="header-top-text">
+            22. April 2017  <span class="divider">•</span>  Ljubljana, Slovenia  <span class="divider hide-for-small-only">•</span>  <a href="#tickets" class="header-top-tickets hide-for-small-only">Get tickets</a>
+          </span>
         </div>
-        <div class="medium-offset-2 medium-2 column text-right">
-          <a href="#" class="social-icon"><img src="/images/twitter.svg" /></a>
-          <a href="#"><img src="/images/facebook.svg" /></a>
+        <div class="medium-offset-2 medium-2 column text-right hide-for-small-only">
+          <a href="https://twitter.com/webcampsi" target="_blank" class="social-icon"><img src="/images/twitter.svg" /></a>
+          <a href="https://www.facebook.com/webcamp.si" target="_blank"><img src="/images/facebook.svg" /></a>
         </div>
       </div>
     </div>
@@ -58,22 +60,20 @@
       </div>
 
       <div class="background-black newsletter-cta">
-        <div class="row">
-          <div class="medium-2 medium-offset-1 column newsletter-text">            
+        <div class="newsletter-cta-row">
+          <div class="newsletter-text">
             <span>
-              We'll send free<br />
-              tickets to email<br />
+              We'll send free<br class="show-for-large" />
+              tickets to email<br class="show-for-large" />
               subscribers!
             </span>
-            <img src="/images/arrow.svg" class="newsletter-arrow" />
+            <img src="/images/arrow.svg" class="newsletter-arrow show-for-large" />
           </div>
-          <div class="medium-8 column">
-            <form class="newsletter-form">
-              <input type="input" name="name" placeholder="Name">
-              <input type="input" name="email" placeholder="Email"> 
-              <input type="submit" value="Get Notified" class="button orange newsletter-button">
-            </form>
-          </div>
+          <form class="newsletter-form">
+            <input type="input" name="name" placeholder="Name" class="show-for-large">
+            <input type="input" name="email" placeholder="Email"> 
+            <input type="submit" value="Get Notified" class="button orange newsletter-button">
+          </form>
         </div>
       </div>
     </div>
@@ -200,7 +200,7 @@
     </div>
 
     <div class="background-black text-white section-schedule">
-      <div class="row">
+      <div class="section-schedule-row">
         <div class="medium-12 column text-center">
           <h1>Schedule</h1>
         </div>
@@ -221,6 +221,7 @@
                   <div class="talk">
                     <img class="talk-speaker-image" src="/images/placeholder-speaker.png">
                     <div class="talk-info">
+                      <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i>Room 1</span>
                       <span class="talk-speaker">Luka Muzinic</span>
                       <span class="talk-jobtitle">Front-end at Zemanta</span>
                       <span class="talk-title">Dashboards for devops and other web folks</span>
@@ -231,6 +232,7 @@
                   <div class="talk">
                     <img class="talk-speaker-image" src="/images/placeholder-speaker.png">
                     <div class="talk-info">
+                      <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i>Room 2</span>
                       <span class="talk-speaker">Luka Muzinic</span>
                       <span class="talk-jobtitle">Front-end at Zemanta</span>
                       <span class="talk-title">Dashboards for devops and other web folks</span>
@@ -241,6 +243,7 @@
                   <div class="talk">
                     <img class="talk-speaker-image" src="/images/placeholder-speaker.png">
                     <div class="talk-info">
+                      <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i>Room 3</span>
                       <span class="talk-speaker">Luka Muzinic</span>
                       <span class="talk-jobtitle">Front-end at Zemanta</span>
                       <span class="talk-title">Dashboards for devops and other web folks</span>
@@ -284,7 +287,7 @@
               <tr class="talk-announcement">
                 <td>&nbsp;12:00</td>
                 <td colspan="3" class="text-left">
-                  <img class="talk-announcement-image" src="/images/mug-small.svg">
+                  <img class="talk-announcement-image mug-small" src="/images/mug.svg">
                   <div class="talk-announcement-info">
                     <span class="talk-announcement-title">Break</span><br />
                     <span class="talk-announcement-description">Chillin with them developers</span>

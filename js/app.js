@@ -110,15 +110,43 @@ new ScrollMagic.Scene({triggerElement: ".trigger", triggerHook: 0, offset: -100}
     .addIndicators()
     .addTo(controller);
 
-// new ScrollMagic.Scene({triggerElement: ".trigger-small", triggerHook: 0, offset: -100})
-//     .setTween(TweenMax.to(
-//         '.animation-text', 1.5,
-//         {
-//             css: {
-//                 opacity: 1
-//             },
-//             ease: Linear.easeInOut
-//         }
-//     ))
-//     .addIndicators()
-//     .addTo(controller);
+
+// Small
+new ScrollMagic.Scene({triggerElement: ".trigger-small", triggerHook: 0, offset: -100})
+    .setTween(TweenMax.to(
+        '.animation-monitors-small', 0.75,
+        {
+            css: {
+                opacity: 0
+            },
+            ease: Linear.easeInOut
+        }
+    ))
+    .addIndicators()
+    .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: ".trigger-small", triggerHook: 0, offset: -100})
+    .setTween(TweenMax.to(
+        '.animation-text-small', 1.5,
+        {
+            css: {
+                opacity: 1
+            },
+            ease: Linear.easeInOut
+        }
+    ))
+    .addIndicators()
+    .addTo(controller);
+
+new ScrollMagic.Scene({triggerElement: ".trigger-small", triggerHook: 0, offset: -100})
+    .setTween(TweenMax.to(
+        '.animation-duck-small', 1.5,
+        {
+            css: {
+                opacity: 1
+            },
+            ease: Linear.easeInOut
+        }
+    ))
+    .addIndicators()
+    .addTo(controller);

@@ -36,6 +36,12 @@ h1 {
     line-height: rem-calc(60);
 }
 
+.header {
+    @include breakpoint(medium) {
+        margin-top: rem-calc(30);
+    }
+}
+
 .header-top {
     padding: rem-calc(16) 0;
     color: $white;
@@ -113,7 +119,7 @@ h1 {
 
 .logo-link {
     @include breakpoint(small only) {
-        margin: 0 rem-calc(15);
+        margin: auto rem-calc(30);
         max-width: 100%;
         width: 100%;
     }    
@@ -131,6 +137,10 @@ h1 {
         padding-top: 0;
         margin-top: 0;
     }
+}
+
+.footer-logo {
+    margin-bottom: rem-calc(15);
 }
 
 /* Newsletter */
@@ -286,12 +296,24 @@ h1 {
 }
 
 .section-about-archive {
-    margin-top: rem-calc(86);
+    margin-top: rem-calc(30);
+
+    @include breakpoint(medium) {
+        margin-top: rem-calc(86);
+    }
 }
 
 .section-about-cfp {
     margin-top: rem-calc(38);
-    margin-bottom: rem-calc(111);
+    margin-bottom: rem-calc(60);
+
+    @include breakpoint(medium) {
+        margin-bottom: rem-calc(111);
+    }
+}
+
+.section-important-wrapper {
+    overflow: hidden;
 }
 
 .section-important {
@@ -300,12 +322,12 @@ h1 {
     padding-bottom: rem-calc(49);
     margin-bottom: rem-calc(93);
 
-    overflow: hidden;
-
     border: solid rem-calc(15) #F4F4F4;
     background-color: #FCFCFC;
 
     @include breakpoint(small only) {
+        margin-bottom: rem-calc(30);
+
         padding-top: rem-calc(20);
         padding-left: rem-calc(10);
         padding-right: rem-calc(10);
@@ -321,10 +343,11 @@ h1 {
     position: absolute;
     right: rem-calc(-60);
     top: rem-calc(-80);
+    overflow: visible;
 
     @include breakpoint(small only) {
         width: 40%;
-        right: rem-calc(-20);
+        right: rem-calc(-10);
         top: rem-calc(50);
     }
 }
@@ -335,9 +358,19 @@ h1 {
 
 .section-cfp-perks {
     max-width: rem-calc(1200);
+    margin-top: rem-calc(60);
+    margin-bottom: rem-calc(60);        
 
-    margin-top: rem-calc(150);
-    margin-bottom: rem-calc(120);
+    @include breakpoint(medium) {
+        margin-top: rem-calc(150);
+        margin-bottom: rem-calc(120);
+    }
+}
+
+.section-cfp-perks p {
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(30);
+    }
 }
 
 .section-cfp-countdown {
@@ -361,6 +394,8 @@ h1 {
         padding-top: rem-calc(20);
         padding-left: rem-calc(10);
         padding-right: rem-calc(10);
+
+        margin-bottom: rem-calc(0);
     }
 }
 
@@ -559,6 +594,10 @@ h1 {
 .haiku {
     font-style: italic;
     margin-bottom: 0;
+
+    @include breakpoint(small only) {
+        margin-top: rem-calc(15);
+    }
 }
 
 .haiku-byline {

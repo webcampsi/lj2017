@@ -25,17 +25,17 @@
     </div>
 
     <div class="background-gradient clearfix header">
-      <div class="row menu-wrapper">
+      <div class="row">
         <div class="medium-3 column text-center medium-text-left">
-          <a href="/"><img src="/images/logo.svg" alt="WebCamp Logo" class="logo"></a>
+          <a href="/" class="logo-link clearfix"><img src="/images/logo.svg" alt="WebCamp Logo" class="logo"></a>
         </div>
-        <div class="medium-offset-2 medium-7 small-12 column">
+        <div class="medium-offset-2 medium-7 small-12 column clearfix">
           <ul class="menu">
             <li><a href="#submit">Submit Talk</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#tickets">Tickets</a></li>
-            <li><a href="#team" class="hide-for-small-only">Team</a></li>
-            <li><a href="#sponsors" class="hide-for-small-only">Sponsors</a></li>
+            <li class="hide-for-small-only"><a href="#team">Team</a></li>
+            <li class="hide-for-small-only"><a href="#sponsors">Sponsors</a></li>
           </ul>
         </div>
       </div>
@@ -71,11 +71,15 @@
       <div class="background-black newsletter-cta">
         <div class="newsletter-cta-row">
           <div class="newsletter-text">
-            <span>
+            <span class="hide-for-small-only">
               We'll send free<br class="show-for-large" />
-              tickets to email<br class="show-for-large" />
+              tickets to list<br class="show-for-large" />
               subscribers!
             </span>
+            <span class="show-for-small-only">
+              Free tickets for list subscribers!
+            </span>
+
             <img src="/images/arrow.svg" class="newsletter-arrow show-for-large" />
           </div>
           <form class="newsletter-form">
@@ -132,10 +136,10 @@
     </div>
 
     <div class="row section-important">
-      <div class="medium-10 medium-offset-1 column">
+      <div class="medium-10 medium-offset-1 small-12 column">
         <h1>Important info</h1>
       </div>
-      <div class="medium-10 medium-offset-1 column">
+      <div class="medium-10 medium-offset-1 small-12 column">
         <p><strong>Location:</strong> Faculty of Computer and Information Science, Ljubljana</p>
         <p><strong>Event date:</strong> Saturday, April 22, 2017</p>
         <p><strong>Tickets:</strong> free, distributed only through mailing list</p>

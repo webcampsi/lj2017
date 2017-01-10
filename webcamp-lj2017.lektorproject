@@ -3,3 +3,6 @@ name = webcamp-lj2017
 
 [packages]
 lektor-webpack-support = 0.3
+
+[servers.ghpages]
+target = ghpages+https://webcampsi/lj2017

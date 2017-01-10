@@ -15,6 +15,7 @@ install:
   - npm install -g gulp bower
   - npm install
   - bower install
+  - pip install lektor
 before_script:
   - gulp build
 script: "lektor build"

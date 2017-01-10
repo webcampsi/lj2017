@@ -22,6 +22,12 @@ $buttonBlueShadow: #2199C3;
     background-image: linear-gradient(-180deg, #FFFFFF 7%, #D5E4F0 50%, #58AAC7 98%);
 }
 
+/* Images */
+
+.mug-small {
+    width: rem-calc(85);
+}
+
 /* Type */
 
 h1 {
@@ -30,11 +36,35 @@ h1 {
     line-height: rem-calc(60);
 }
 
+.header {
+    @include breakpoint(medium) {
+        margin-top: rem-calc(30);
+    }
+}
+
 .header-top {
-    padding: rem-calc(14) 0;
+    padding: rem-calc(16) 0;
     color: $white;
     font-weight: 600;
-    font-size: rem-calc(22);
+    font-size: rem-calc(18);
+}
+
+.header-top-tickets {
+    color: $white;
+}
+
+.header-top .divider {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+}
+
+.header-top-text {
+    display: inline-block;
+    margin-top: rem-calc(2);
+
+    @include breakpoint(small only) {
+        font-size: rem-calc(17);
+    }
 }
 
 .social-icon {
@@ -42,18 +72,40 @@ h1 {
 }
 
 .menu-wrapper {
-    padding-top: rem-calc(67);
+    @include breakpoint(medium) {
+        padding-top: rem-calc(67);
+    }
 }
 
 .menu {
+    margin-top: rem-calc(25);
     float: right;
     list-style: none;
-    font-weight: 300;
-    text-decoration: underline;
+    font-weight: 500;
+    // text-decoration: underline;
     color: $blue;
+    
+
+    @include breakpoint(small only) {
+        float: none;
+        padding-top: rem-calc(0);
+        margin-top: 0;
+    }
 }
 
-.menu li:last-child() a {
+.menu > li {
+    padding: 0.7rem 1rem;
+    vertical-align: bottom;
+}
+
+.menu > li > a {
+    padding: 0;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $primary-color;
+    white-space: nowrap;
+}
+
+.menu li:last-child() {
     padding-right: 0;
 }
 
@@ -62,52 +114,103 @@ h1 {
     z-index: 0;
 }
 
+.logo {
+}
+
+.logo-link {
+    @include breakpoint(small only) {
+        margin: auto rem-calc(30);
+        max-width: 100%;
+        width: 100%;
+    }    
+}
+
 /* Footer */
 .footer {
     height: rem-calc(400);
     padding-top: rem-calc(250);
     margin-top: rem-calc(-100);
     background-image: linear-gradient(-180deg, #FFFFFF 31%, #DFF0FF 63%, #8DCBE5 99%);
-    
+
+    @include breakpoint(small only) {
+        height: rem-calc(400);
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+.footer-logo {
+    margin-bottom: rem-calc(15);
 }
 
 /* Newsletter */
 
 .newsletter-cta {
+    display: flex;
+    justify-content: center;
+
     position: relative;
     z-index: 20;
 }
 
+.newsletter-cta-row {
+    max-width: rem-calc(1200);
+}
+
 .newsletter-cta form {
-    margin-top: rem-calc(30);
+    vertical-align: text-top;
+}
+
+.newsletter-form {
+    display: inline-block;
+
+    @include breakpoint(medium down) {
+        text-align: center;
+        padding-bottom: rem-calc(20);
+    }
 }
 
 .newsletter-form input[type="input"] {
     padding: rem-calc(0) rem-calc(24);
     margin-right: rem-calc(13);
-    // box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.50);
     border-radius: rem-calc(5);
     line-height: rem-calc(40);
+
+    @include breakpoint(small only) {
+        margin-right: 0;
+        padding-right: 0;
+        width: 240px;
+    }
 }
 
 .newsletter-text {
+    display: inline-block;
     padding: rem-calc(25) 0;
     color: $white;
+
+    @include breakpoint(medium down) {
+        display: block;
+        text-align: center;
+    }
 }
 
 .newsletter-text span {
-    float: left;
-    max-width: calc(100% - 65px);
+    display: inline-block;
+    vertical-align: top;
 }
 
 .newsletter-arrow {
-    float: left;
+    // float: left;
+    display: inline-block;
     margin-top: rem-calc(-7);
     margin-left: rem-calc(5);
 }
 
 .newsletter-button {
     margin-left: rem-calc(30);
+    @include breakpoint(small only) {
+        margin-right: rem-calc(30);
+    }
 }
 
 /* Buttons */
@@ -173,31 +276,64 @@ h1 {
     margin-top: rem-calc(100);
 }
 
+.section-about h1 {
+    @include breakpoint(small only) {
+        padding-bottom: rem-calc(20);
+    }
+}
+
 .text-paragraph {
-    margin-top: rem-calc(74);
+    @include breakpoint(medium) {
+        margin-top: rem-calc(74);
+    }
 }
 
 .section-about-video {
-    margin-top: rem-calc(112);
+    margin-top: rem-calc(30);
+    @include breakpoint(medium) {
+        margin-top: rem-calc(112);
+    }
 }
 
 .section-about-archive {
-    margin-top: rem-calc(86);
+    margin-top: rem-calc(30);
+
+    @include breakpoint(medium) {
+        margin-top: rem-calc(86);
+    }
 }
 
 .section-about-cfp {
     margin-top: rem-calc(38);
-    margin-bottom: rem-calc(111);
+    margin-bottom: rem-calc(60);
+
+    @include breakpoint(medium) {
+        margin-bottom: rem-calc(111);
+    }
+}
+
+.section-important-wrapper {
+    @include breakpoint(small only) {
+        overflow: hidden;
+    }
 }
 
 .section-important {
     position: relative;
     padding-top: rem-calc(61); 
-    padding-bottom: rem-calc(79);
+    padding-bottom: rem-calc(49);
     margin-bottom: rem-calc(93);
 
     border: solid rem-calc(15) #F4F4F4;
     background-color: #FCFCFC;
+
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(30);
+
+        padding-top: rem-calc(20);
+        padding-left: rem-calc(10);
+        padding-right: rem-calc(10);
+    }
 }
 
 .section-important h1 {
@@ -207,8 +343,15 @@ h1 {
 
 .section-important-mug {
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: rem-calc(-60);
+    top: rem-calc(-80);
+    overflow: visible;
+
+    @include breakpoint(small only) {
+        width: 40%;
+        right: rem-calc(-10);
+        top: rem-calc(50);
+    }
 }
 
 .section-cfp {
@@ -216,8 +359,20 @@ h1 {
 }
 
 .section-cfp-perks {
-    margin-top: rem-calc(150);
-    margin-bottom: rem-calc(120);
+    max-width: rem-calc(1200);
+    margin-top: rem-calc(60);
+    margin-bottom: rem-calc(60);        
+
+    @include breakpoint(medium) {
+        margin-top: rem-calc(150);
+        margin-bottom: rem-calc(120);
+    }
+}
+
+.section-cfp-perks p {
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(30);
+    }
 }
 
 .section-cfp-countdown {
@@ -236,6 +391,14 @@ h1 {
     padding-top: rem-calc(40);
     padding-bottom: rem-calc(40);
     margin-bottom: rem-calc(110);
+
+    @include breakpoint(small only) {
+        padding-top: rem-calc(20);
+        padding-left: rem-calc(10);
+        padding-right: rem-calc(10);
+
+        margin-bottom: rem-calc(0);
+    }
 }
 
 .section-cfp-perks p {
@@ -255,9 +418,22 @@ h1 {
     color: $white;
 }
 
+.section-schedule {
+    display: flex;
+    justify-content: center;
+}
+
+.section-schedule-row {
+    max-width: rem-calc(1200);
+}
+
 .schedule {
     border-spacing: 0 rem-calc(47px);
     margin-bottom: rem-calc(180);
+
+    @include breakpoint(small only) {
+        width: 100%;
+    }
 }
 
 .schedule thead,
@@ -265,6 +441,12 @@ h1 {
 .schedule tr {
     color: $white;
     background-color: transparent !important;
+}
+
+.schedule thead {
+    @include breakpoint(small only) {
+        display: none;
+    }
 }
 
 .schedule th {
@@ -278,10 +460,25 @@ h1 {
     font-size: rem-calc(24);
     font-weight: bold;
     text-align: right;
+    padding-left: 0;
+    padding-right: rem-calc(20);
+}
+
+.schedule td {
+    @include breakpoint(small only) {
+        display:block;
+        // box-sizing: border-box;
+        width:99.9%;
+        // clear:both
+    }
 }
 
 .schedule .talk {
     display: flex;
+}
+
+.talk-room i {
+    margin-right: rem-calc(6);
 }
 
 .schedule .talk-speaker-image {
@@ -331,13 +528,15 @@ h1 {
 }
 
 .talk-announcement td {
-    border-top: 1px solid #D9D9D9;
-    border-bottom: 1px solid #D9D9D9;
-    border-left: none;
-    
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: rem-calc(20);
+    @include breakpoint(medium) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: rem-calc(20);
+
+        border-top: 1px solid #D9D9D9;
+        border-bottom: 1px solid #D9D9D9;
+        border-left: none;
+    }
 }
 
 .talk-announcement-info {
@@ -348,7 +547,8 @@ h1 {
 
 .talk-announcement-image {
     display: inline-block;
-    padding-right: rem-calc(25);
+    
+    margin-right: rem-calc(10);
     // width: rem-calc(65);
 }
 
@@ -396,6 +596,10 @@ h1 {
 .haiku {
     font-style: italic;
     margin-bottom: 0;
+
+    @include breakpoint(small only) {
+        margin-top: rem-calc(15);
+    }
 }
 
 .haiku-byline {

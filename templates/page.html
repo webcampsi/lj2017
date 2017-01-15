@@ -1,6 +1,13 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <h2>{{ this.title }}</h2>
-  {{ this.body }}
+	<div class="row section-about" id="coc">
+		<div class="small-12 column">
+			<h1>{{ this.title }}</h1>
+			<p>
+				{{ this.body }}
+			</p>
+		</div>
+	</div>
+</div>
 {% endblock %}

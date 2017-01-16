@@ -7,7 +7,7 @@
 	<title>WebCamp Ljubljana 2017 - 22. april 2017</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700"
 	      rel="stylesheet">
-	<link rel="stylesheet" href="./css/app.css?h=5e960f33">
+	<link rel="stylesheet" href="./css/app.css?h=bb45e3a6">
 	<link rel="icon" type="image/png" href="./images/mug.png?h=d4190478">
 </head>
 
@@ -16,10 +16,12 @@
 	<div class="row">
 		<div class="medium-8 small-12 column">
         <span class="header-top-text">
-          22. April 2017  <span
-		        class="divider">•</span>  Ljubljana, Slovenia  <span
-		        class="divider hide-for-small-only">•</span>  <a href="#tickets"
-                                                                 class="header-top-tickets hide-for-small-only">Get tickets</a>
+          22. April 2017
+	        <span class="divider">•</span>  Ljubljana, Slovenia
+
+
+
+
         </span>
 		</div>
 		<div class="medium-offset-2 medium-2 column text-right hide-for-small-only">
@@ -35,18 +37,20 @@
 <div class="background-gradient clearfix header">
 	<div class="row">
 		<div class="medium-3 column text-center medium-text-left">
-			<a href="/" class="logo-link clearfix"><img
-					src="./images/logo.svg?h=4f76dab6" alt="WebCamp Logo"
-					class="logo"></a>
+			<a href="/" class="logo-link clearfix">
+				<img src="./images/logo.svg?h=4f76dab6"
+				     alt="WebCamp Logo" class="logo"></a>
 		</div>
 		<div class="medium-offset-2 medium-7 small-12 column clearfix">
 			<ul class="menu">
 				<li><a href="/#cfp">Submit Talk</a></li>
 				<li><a href="/#about">About</a></li>
-				
+
 				<li class="hide-for-small-only"><a href="/#team">Team</a></li>
-				<li class="hide-for-small-only"><a
-						href="/#sponsors">Sponsors</a>
+				<li class="hide-for-small-only"><a href="/#partners">Partners</a>
+				<li class="hide-for-small-only"><a href="./coc/">Code of Conduct</a>
+				</li>
+				<li class="show-for-small-only"><a href="./coc/">CoC</a>
 				</li>
 			</ul>
 		</div>
@@ -111,10 +115,10 @@
 				<img src="./images/arrow.svg?h=2e69d1dc"
 				     class="newsletter-arrow show-for-large"/>
 			</div>
-			<form class="newsletter-form">
-				<input type="input" name="name" placeholder="Name"
+			<form class="newsletter-form" action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2" method="post">
+				<input type="text" name="name" placeholder="Name"
 				       class="show-for-large">
-				<input type="input" name="email" placeholder="Email">
+				<input type="email" name="email" placeholder="Email">
 				<input type="submit" value="Get Notified"
 				       class="button orange newsletter-button">
 			</form>
@@ -150,10 +154,13 @@
 		<a data-open="modal-video1"><img
 				src="./images/video1.jpg?h=a34fa662"/></a>
 
-		<div class="reveal large" id="modal-video1" data-reveal>
-			<iframe width="100%" height="630"
-			        src="https://www.youtube.com/embed/P41CUVeW5pY"
+		<div class="reveal large" id="modal-video1" data-reveal
+		     data-reset-on-close="true">
+			<div class="flex-video widescreen">
+				<iframe width="100%" height="630"#}
+			        src="https://www.youtube.com/embed/oiviGRr7BHM"
 			        frameborder="0" allowfullscreen></iframe>
+			</div>
 			<button class="close-button" data-close aria-label="Close modal"
 			        type="button">
 				<span aria-hidden="true">&times;</span>
@@ -164,10 +171,12 @@
 		<a data-open="modal-video2"><img
 				src="./images/video2.jpg?h=5cc467c5"/></a>
 
-		<div class="reveal large" id="modal-video2" data-reveal>
+		<div class="reveal large" id="modal-video2" data-reveal data-reset-on-close="true">
+			<div class="flex-video widescreen">
 			<iframe width="100%" height="630"
-			        src="https://www.youtube.com/embed/P41CUVeW5pY"
+			        src="https://www.youtube.com/embed/rc006kX-u-I"
 			        frameborder="0" allowfullscreen></iframe>
+			</div>
 			<button class="close-button" data-close aria-label="Close modal"
 			        type="button">
 				<span aria-hidden="true">&times;</span>
@@ -244,8 +253,8 @@
 			programmer, a designer, a social media expert; whoever you are, we
 			believe you have something valuable to share.</p>
 		<p>
-			Share your stories, tips & tricks with us, submit your talk proposal
-			today!*
+			Share your stories, tips & tricks with us, <strong>submit your talk proposal
+			today!</strong>
 		</p>
 		<p>
 			If you feel you’re not experienced or interesting enough to be
@@ -306,7 +315,7 @@
 	</div>
 <div class="row">
 	<div class="small-12 column text-center">
-		<a href="#" class="button blue text-uppercase">Submit your talk idea</a>
+		<a href="https://webcamp.typeform.com/to/Le1wX4" class="button blue text-uppercase" target="_blank">Submit your talk idea</a>
 	</div>
 	<div class="small-12 column section-cfp-countdown text-center">
 		<span class="talk-countdown js-talk-countdown">Hurry! CFP Closes on January 31st at midnight!</span>
@@ -333,26 +342,33 @@
 
 <div class="row align-spaced section-sponsors" id="sponsors">
 	<div class="small-12 column text-center">
-		<h1>Sponsors</h1>
+		<h1>Partners</h1>
 	</div>
-
-	<div class="medium-3 small-6 column sponsor">
-		<a href="#"><img
-				src="./images/placeholder-team.svg?h=c1a17730"/></a><br/>
-	</div>
-
-	<div class="medium-3 small-6 column sponsor">
-		<a href="#"><img
-				src="./images/placeholder-team.svg?h=c1a17730"/></a><br/>
-	</div>
-
-	<div class="medium-3 small-6 column sponsor">
-		<a href="#"><img
-				src="./images/placeholder-team.svg?h=c1a17730"/></a><br/>
+	
+		<div class="medium-6 small-6 column sponsor">
+			<a href="http://www.fri.uni-lj.si/en/" target="_blank">
+				<img src="./images/partners/fri-logo.png?h=850b93d0" alt="Fakulteta za računalništvo in inormatiko"/>
+			</a>
+			<br/>
+		</div>
+	
+		<div class="medium-6 small-6 column sponsor">
+			<a href="http://www.fri.uni-lj.si/en/lgm/description/" target="_blank">
+				<img src="./images/partners/lgm-logo.png?h=26b7fb03" alt="Laboratorij za računalniško grafiko in multimedije"/>
+			</a>
+			<br/>
+		</div>
+	
+	<div>
+		This event would not be possible without the generous help of
+		<a href="http://www.fri.uni-lj.si/en/about/" target="_blank">
+			Faculty of Computer and Information Science</a>.
+		They also host a lot of other interesting <a href="http://www.fri.uni-lj.si/si/novice_in_dogodki/aktivne/" target="_blank">events</a>.
+		Check out their event list and <a href="http://www.fri.uni-lj.si/si/izobrazevanje/" target="_blank">different post-graduate study programs</a>.
 	</div>
 </div>
 
-<div class="row align-spaced section-team" id="team">
+<div class="row align-spaced section-team" id="partners">
 	<div class="small-12 column text-center">
 		<h1>Team</h1>
 	</div>
@@ -364,22 +380,67 @@
 
 	<div class="medium-12 column hide-for-small-only"></div>
 	
-		
-	
-		
-	
-
-	
 		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/gandalfar" target="_blank">
 			<img src="./images/team/jure.jpg?h=9d8062a2"/><br/>
 			<span class="team-name">Jure Čuhalev</span>
-			<span class="team-description">New tagline</span>
+			</a>
+			<span class="team-description">Knows about everything</span>
+
 		</div>
 	
 		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/KlemenRobnik" target="_blank">
+			<img src="./images/team/klemen.jpg?h=c5d6bb05"/><br/>
+			<span class="team-name">Klemen Robnik</span>
+			</a>
+			<span class="team-description">Knows about management</span>
+
+		</div>
+	
+		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/Mojcica83" target="_blank">
+			<img src="./images/team/mojca.jpg?h=de7bb3ea"/><br/>
+			<span class="team-name">Mojca Berce</span>
+			</a>
+			<span class="team-description">Knows about logistic</span>
+
+		</div>
+	
+		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/iAlja" target="_blank">
+			<img src="./images/team/alja.jpg?h=36abdd94"/><br/>
+			<span class="team-name">Alja Isakovć</span>
+			</a>
+			<span class="team-description">Knows about virtual Internet of Things</span>
+
+		</div>
+	
+		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/design4founders" target="_blank">
+			<img src="./images/team/heidi.jpg?h=65cc254a"/><br/>
+			<span class="team-name">Heidi Pungartnik</span>
+			</a>
+			<span class="team-description">Knows about design</span>
+
+		</div>
+	
+		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/ercchy" target="_blank">
 			<img src="./images/team/erika.jpg?h=afed1475"/><br/>
 			<span class="team-name">Erika Pogorelc</span>
-			<span class="team-description">New tagline</span>
+			</a>
+			<span class="team-description">Knows about talks</span>
+
+		</div>
+	
+		<div class="medium-3 small-6 column team-member">
+			<a href="https://twitter.com/z_anderle" target="_blank">
+			<img src="./images/team/zan.jpg?h=8f5841e3"/><br/>
+			<span class="team-name">Žan Anderle</span>
+			</a>
+			<span class="team-description">Knows about talks</span>
+
 		</div>
 	
 </div>

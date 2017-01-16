@@ -170,11 +170,13 @@ h1 {
     }
 }
 
-.newsletter-form input[type="input"] {
+.newsletter-form input[type="text"], .newsletter-form input[type="email"] {
     padding: rem-calc(0) rem-calc(24);
     margin-right: rem-calc(13);
     border-radius: rem-calc(5);
     line-height: rem-calc(40);
+    width: initial;
+    display: inline;
 
     @include breakpoint(small only) {
         margin-right: 0;
@@ -573,6 +575,14 @@ h1 {
 .team-member,
 .sponsor {
     margin-bottom: rem-calc(50);
+}
+
+.team-member img {
+    border-radius: 5%;
+}
+
+.sponsor {
+    display: block;
 }
 
 .team-name {

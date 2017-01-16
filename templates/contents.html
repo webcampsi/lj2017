@@ -59,10 +59,10 @@
 				<img src="{{ 'images/arrow.svg'|asseturl }}"
 				     class="newsletter-arrow show-for-large"/>
 			</div>
-			<form class="newsletter-form">
-				<input type="input" name="name" placeholder="Name"
+			<form class="newsletter-form" action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2" method="post">
+				<input type="text" name="name" placeholder="Name"
 				       class="show-for-large">
-				<input type="input" name="email" placeholder="Email">
+				<input type="email" name="email" placeholder="Email">
 				<input type="submit" value="Get Notified"
 				       class="button orange newsletter-button">
 			</form>
@@ -98,10 +98,13 @@
 		<a data-open="modal-video1"><img
 				src="{{ '/images/video1.jpg'|asseturl }}"/></a>
 
-		<div class="reveal large" id="modal-video1" data-reveal>
-			<iframe width="100%" height="630"
-			        src="https://www.youtube.com/embed/P41CUVeW5pY"
+		<div class="reveal large" id="modal-video1" data-reveal
+		     data-reset-on-close="true">
+			<div class="flex-video widescreen">
+				<iframe width="100%" height="630"#}
+			        src="https://www.youtube.com/embed/oiviGRr7BHM"
 			        frameborder="0" allowfullscreen></iframe>
+			</div>
 			<button class="close-button" data-close aria-label="Close modal"
 			        type="button">
 				<span aria-hidden="true">&times;</span>
@@ -112,10 +115,12 @@
 		<a data-open="modal-video2"><img
 				src="{{ '/images/video2.jpg'|asseturl }}"/></a>
 
-		<div class="reveal large" id="modal-video2" data-reveal>
+		<div class="reveal large" id="modal-video2" data-reveal data-reset-on-close="true">
+			<div class="flex-video widescreen">
 			<iframe width="100%" height="630"
-			        src="https://www.youtube.com/embed/P41CUVeW5pY"
+			        src="https://www.youtube.com/embed/rc006kX-u-I"
 			        frameborder="0" allowfullscreen></iframe>
+			</div>
 			<button class="close-button" data-close aria-label="Close modal"
 			        type="button">
 				<span aria-hidden="true">&times;</span>
@@ -192,8 +197,8 @@
 			programmer, a designer, a social media expert; whoever you are, we
 			believe you have something valuable to share.</p>
 		<p>
-			Share your stories, tips & tricks with us, submit your talk proposal
-			today!*
+			Share your stories, tips & tricks with us, <strong>submit your talk proposal
+			today!</strong>
 		</p>
 		<p>
 			If you feel you’re not experienced or interesting enough to be
@@ -254,7 +259,7 @@
 	</div>
 <div class="row">
 	<div class="small-12 column text-center">
-		<a href="#" class="button blue text-uppercase">Submit your talk idea</a>
+		<a href="https://webcamp.typeform.com/to/Le1wX4" class="button blue text-uppercase" target="_blank">Submit your talk idea</a>
 	</div>
 	<div class="small-12 column section-cfp-countdown text-center">
 		<span class="talk-countdown js-talk-countdown">Hurry! CFP Closes on January 31st at midnight!</span>
@@ -281,26 +286,26 @@
 
 <div class="row align-spaced section-sponsors" id="sponsors">
 	<div class="small-12 column text-center">
-		<h1>Sponsors</h1>
+		<h1>Partners</h1>
 	</div>
-
-	<div class="medium-3 small-6 column sponsor">
-		<a href="#"><img
-				src="{{ 'images/placeholder-team.svg'|asseturl }}"/></a><br/>
-	</div>
-
-	<div class="medium-3 small-6 column sponsor">
-		<a href="#"><img
-				src="{{ 'images/placeholder-team.svg'|asseturl }}"/></a><br/>
-	</div>
-
-	<div class="medium-3 small-6 column sponsor">
-		<a href="#"><img
-				src="{{ 'images/placeholder-team.svg'|asseturl }}"/></a><br/>
+	{% for id, item in bag('partners').items() %}
+		<div class="medium-6 small-6 column sponsor">
+			<a href="{{ item.link }}" target="_blank">
+				<img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
+			</a>
+			<br/>
+		</div>
+	{% endfor %}
+	<div>
+		This event would not be possible without the generous help of
+		<a href="http://www.fri.uni-lj.si/en/about/" target="_blank">
+			Faculty of Computer and Information Science</a>.
+		They also host a lot of other interesting <a href="http://www.fri.uni-lj.si/si/novice_in_dogodki/aktivne/" target="_blank">events</a>.
+		Check out their event list and <a href="http://www.fri.uni-lj.si/si/izobrazevanje/" target="_blank">different post-graduate study programs</a>.
 	</div>
 </div>
 
-<div class="row align-spaced section-team" id="team">
+<div class="row align-spaced section-team" id="partners">
 	<div class="small-12 column text-center">
 		<h1>Team</h1>
 	</div>
@@ -311,15 +316,14 @@
 	</div>
 
 	<div class="medium-12 column hide-for-small-only"></div>
-	{% for member in bag('team').iteritems() %}
-		{{ image }}
-	{% endfor %}
-
 	{% for id, item in bag('team').items() %}
 		<div class="medium-3 small-6 column team-member">
+			<a href="{{ item.link }}" target="_blank">
 			<img src="{{ item.image|asseturl }}"/><br/>
 			<span class="team-name">{{ item.name }}</span>
+			</a>
 			<span class="team-description">{{ item.tagline }}</span>
+
 		</div>
 	{% endfor %}
 </div>

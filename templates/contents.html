@@ -311,6 +311,26 @@
 	</div>
 </div>
 
+<div class="row align-spaced section-team" id="sponsors">
+    <div class="small-12 column text-center">
+        <h1>Sponsors</h1>
+    </div>
+
+    <div class="medium-8 small-12 column text-center team-description">
+        <p>WebCamp would not be possible without generous support from our sponsors.</p>
+    </div>
+
+    {% for id, item in bag('sponsors').items() %}
+        <div class="medium-6 small-6 column sponsor">
+            <a href="{{ item.link }}" target="_blank">
+                <img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
+            </a>
+            <p><br />{{ item.description }}</p>
+            <br/>
+        </div>
+    {% endfor %}
+</div>
+
 <div class="row align-spaced section-team" id="team">
 	<div class="small-12 column text-center">
 		<h1>Team</h1>

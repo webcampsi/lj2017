@@ -55,7 +55,9 @@
 				<img src="{{ 'images/arrow.svg'|asseturl }}"
 				     class="newsletter-arrow show-for-large"/>
 			</div>
-			<form class="newsletter-form" action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2" method="post">
+			<form class="newsletter-form"
+			      action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2"
+			      method="post">
 				<input type="text" name="MERGE1" placeholder="Name"
 				       class="show-for-large">
 				<input type="email" name="MERGE0" placeholder="Email">
@@ -64,293 +66,246 @@
 			</form>
 		</div>
 	</div>
-</div>
-
-<div class="row section-about" id="about">
-	<div class="small-12 column text-center">
-		<h1>About</h1>
 	</div>
-	<div class="medium-6 small-12 column text-paragraph">
-		<p>This year, WebCamp will take place on April 22, 2017 at the Faculty
-			of Computer and Information Science in Ljubljana. You can expect a
-			day full of diverse talks, chocolate, coffee, and fun - it’s a
-			Saturday and you can bring your kids too!</p>
-		<p>Learn new things, meet new friends or get a massage! In the meantime,
-			your kids can play together with Minecraft under responsible adult
-			supervision. There will also be some cool VR and IoT experiences for
-			all of us to play with.</p>
-	</div>
-	<div class="medium-6 small-12 column text-paragraph">
-		<p>WebCamp is an event organized <a href="#team">by the community</a>
-			for the community. All talks are in English and we expect 300
-			attendees from all over the region. It’s free to attend, but you’ll
-			need a ticket*.</p>
-		<p>Check out some highlights from the previous year below — but keep in
-			mind that this year’s WebCamp is going to be even more special!</p>
-	</div>
+	<br>
 
+	<div class="row align-spaced section-team" id="speakers">
+		<div class="small-12 column text-center">
+			<h1>Speakers</h1>
+		</div>
 
-	<div class="medium-5 medium-offset-1 small-12 column text-center section-about-video">
-		<a data-open="modal-video1"><img
-				src="{{ '/images/video1.jpg'|asseturl }}"/></a>
+		<div class="medium-12 column hide-for-small-only"></div>
+		{% for id, item in bag('speakers').items() %}
+			<div class="medium-3 small-6 column team-member">
+				<a data-open="modal-speaker-{{ id }}">
+					<img src="{{ item.image|asseturl }}"/><br/>
+				</a>
+				<div class="reveal large modal-speaker-representation" id="modal-speaker-{{ id }}" data-reveal
+				     data-reset-on-close="true">
+					<div class="medium-12 column">
+						<div class="medium-10 column modal-speaker-representation">
+							<img src="{{ item.image|asseturl }}" class="modal-img-circle"/>
+							<span class="speaker-name">{{ item.name }}</span>
+						</div>
+						<h2>Session: {{ item.talk_title }}</h2>
+						<h5>Description:</h5>
+						<p>{{ item.talk_description }}</p>
+						<br>
+						<h5>What will the audience get from this talk:</h5>
+						<p>{{ item.takeaways }}</p>
 
-		<div class="reveal large" id="modal-video1" data-reveal
-		     data-reset-on-close="true">
-			<div class="flex-video widescreen">
-				<iframe width="100%" height="630"#}
-			        src="https://www.youtube.com/embed/oiviGRr7BHM"
-			        frameborder="0" allowfullscreen></iframe>
+					</div>
+					<button class="close-button" data-close
+					        aria-label="Close modal"
+					        type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<a href="{{ item.link }}" target="_blank">
+					<span class="team-name">{{ item.name }}</span>
+				</a>
+				<span class="team-description">{{ item.tagline }}</span>
 			</div>
-			<button class="close-button" data-close aria-label="Close modal"
-			        type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
+		{% endfor %}
 	</div>
-	<div class="medium-5 small-12 column text-center section-about-video text-right">
-		<a data-open="modal-video2"><img
-				src="{{ '/images/video2.jpg'|asseturl }}"/></a>
-
-		<div class="reveal large" id="modal-video2" data-reveal data-reset-on-close="true">
-			<div class="flex-video widescreen">
-			<iframe width="100%" height="630"
-			        src="https://www.youtube.com/embed/rc006kX-u-I"
-			        frameborder="0" allowfullscreen></iframe>
+	<div class="row section-important-wrapper">
+		<div class="section-important">
+			<div class="medium-10 medium-offset-1 small-12 column">
+				<h1>tl;dr:</h1>
 			</div>
-			<button class="close-button" data-close aria-label="Close modal"
-			        type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<div class="medium-10 medium-offset-1 small-12 column">
+				<p><strong>Location:</strong> Faculty of Computer and
+					Information
+					Science, Ljubljana</p>
+				<p><strong>Event date:</strong> Saturday, April 22, 2017</p>
+				<p><strong>Tickets:</strong> free, distributed only through
+					mailing
+					list</p>
+				<p>Don’t miss any of the important dates, subscribe to our
+					mailing
+					list and you’ll be the first to hear when the ticket
+					registration opens!</p>
+			</div>
+
+			<img src="{{ 'images/mug-large.svg'|asseturl }}" alt="It's a mug!!"
+			     class="section-important-mug"/>
 		</div>
 	</div>
 
-	<div class="small-12 column text-center section-about-archive">
-		See how much fun we had in <a href="http://2015.webcamp.si">2015</a>
-		&amp; <a href="http://2016.webcamp.si">2016</a>
-	</div>
-
-	<div class="small-12 column text-center section-about-cfp">
-		*Speakers get tickets automatically, so we encourage you to <a
-			href="/#cfp">submit your talk</a>.
-	</div>
-</div>
-
-<div class="row section-important-wrapper">
-	<div class="section-important">
-		<div class="medium-10 medium-offset-1 small-12 column">
-			<h1>Important info</h1>
+	{# About, Location, Venue #}
+	<div class="row section-about" id="info">
+		<div class="small-12 column text-center">
+			<h1>Venue and other info</h1>
 		</div>
-		<div class="medium-10 medium-offset-1 small-12 column">
-			<p><strong>Location:</strong> Faculty of Computer and Information
-				Science, Ljubljana</p>
-			<p><strong>Event date:</strong> Saturday, April 22, 2017</p>
-			<p><strong>Tickets:</strong> free, distributed only through mailing
-				list</p>
-			<p><strong>Deadline for talk ideas:</strong> Tuesday, January 31, 2017</p>
-			<p><strong>You will be notified if your talk is accepted by:</strong> Tuesday, February 14, 2017</p>
-			<p>Don’t miss any of the important dates, subscribe to our mailing
-				list and you’ll be the first to hear when the ticket
-				registration opens!</p>
-		</div>
-
-		<img src="{{ 'images/mug-large.svg'|asseturl }}" alt="It's a mug!!"
-		     class="section-important-mug"/>
-	</div>
-</div>
-<div class="row" id="cfp">
-	<div class="small-12 column text-center">
-
-		<h1>Call for proposals</h1>
-		<div class="small-12 column section-cfp-countdown text-center">
-			<span class="talk-countdown js-talk-countdown">
-				Submissions are now closed. Thank you for the amazing response.
-			</span>
-		</div>
-
-	</div>
-	<div class="medium-6 small-12 column text-paragraph">
-		<p>We believe that happy and satisfied people come up with nicer
-			solutions and write better code, so this year we will turn our
-			attention to the wellbeing of our community.
-		</p>
-		<p>
-			What we do as developers is hard; fixing browser specific bugs,
-			making our web app run faster, figuring out why visitors don’t
-			click where we want them to, learning the latest JS framework. Web
-			development is funny like that, isn’t it? Sometimes it feels like
-			we are losing ourselves in trying to learn all the new technology
-			and also be good at it. <strong>So this year we also want to talk
-			about
-			life outside of code</strong>.
-		</p>
-		<p>What makes you get out of bed in the morning? How do you cope with
-			the stress of ever shorter deadlines? What is your favorite
-			productivity hack? And how do you keep up with all the
-			frameworks?<br>
-			What do you want to share with the community? What is the story
-			you
-			want to be heard?
-		</p>
-	</div>
-	<div class="medium-6 small-12 column text-paragraph">
-		<p>Whether it’s a technical talk or not, we want to hear from <strong>every kind
-			of person</strong>. And that is you! You might be an expert or someone just
-			getting started, a conference veteran or a first-time attendee, a
-			programmer, a designer, a social media expert; whoever you are, we
-			believe you have something valuable to share.</p>
-		<p>
-			Share your stories, tips & tricks with us, <strong>submit your talk proposal
-			today!</strong>
-		</p>
-		<p>
-			If you feel you’re not experienced or interesting enough to be
-			selected, we encourage you to try anyway. You might surprise
-			yourself! You're the person we want to hear from! And if you
-			need some help, we are always happy to give you some feedback
-			on your proposal or your talk idea. Simply ask us over
-			email before submitting.
-		</p>
-		<p>
-			<strong>This small and friendly community driven conference has got your
-			back!</strong>
-		</p>
-	</div>
-	<div class="small-12 column text-center">
-		<br>
-		<h2>Speaker perks </h2>
-
-		<p>As a speaker you’ll get:</p>
-	</div>
-</div>
-	<div class="row align-justify section-cfp-perks">
-		<div class="medium-2 small-6 column text-center">
-			<img src="{{ 'images/icon-dinner.svg'|asseturl }}"/><br/>
-			<span class="speaker-perks">Exclusive Speaker Dinner</span>
+		<div class="medium-6 small-12 column text-paragraph">
+			<p>This year, WebCamp will take place on <strong> April 22, 2017 at
+				the <a target="_blank" href="https://fri.uni-lj.si/en/about"> Faculty
+				of Computer and Information Science</a> in Ljubljana</strong>. You
+				can expect a
+				day full of diverse talks, chocolate, coffee, and fun - it’s a
+				Saturday and you can <strong>bring your kids too!</strong></p>
 			<p>
-				experience great local food and chat
-				with other speakers and the WebCamp team before the event
+				<a href="https://fri.uni-lj.si/en/about-faculty/how-to-reach-us" target="_blank">
+					Detailed instructions on getting to the Faculty building</a>
+				<br/>
+				<strong> If you are arriving by car, you can park on the either side of
+				the Faculty building.</strong>
+			</p>
+
+
+		</div>
+
+		<div class="medium-6 small-12 column text-paragraph">
+			<p>WebCamp is an event organized <a href="#team">by the
+				community</a>
+				for the community. All talks are in English and we expect 300
+				attendees from all over the region. It’s free to attend, but
+				you’ll need a ticket*.
+			</p>
+			<p>If you are a current student of Faculty of Computer and
+				Information Science, you can get a ticket by emailing us at
+				info@webcamp.si.
 			</p>
 		</div>
-		<div class="medium-2 small-6 column text-center">
-			<img src="{{ 'images/icon-video-player.svg'|asseturl }}"/><br/>
-			<span class="speaker-perks">Video of Your Talk Posted Online</span>
+
+		<div class="medium-12 column section-map">
+			<div id="disapear-on-click" class="location-zoom">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2769.021058795885!2d14.472292399999999!3d46.0506782!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d52dfb93cd7%3A0xbfcd354b74411729!2sVe%C4%8Dna+pot+113%2C+1000+Ljubljana!5e0!3m2!1sen!2ssi!4v1408359697852"
+				        frameborder="0" style="border:0; width: 100%;
+			height: 400px;"></iframe>
+			</div>
+		</div>
+
+		<div class="medium-6 small-12 column text-paragraph">
+			<p>Learn new things, meet new friends or get a massage! In the
+				meantime, your kids can play together with Minecraft under responsible
+				adult supervision. There will also be some cool VR and IoT experiences
+				for all of us to play with.
+			</p>
+		</div>
+
+		<div class="medium-6 small-12 column text-paragraph">
+			<p>Check out some highlights from the previous year below — but keep
+				in
+				mind that this year’s WebCamp is going to be even more
+				special!
+			</p>
+			<p>Also see how much fun we had in
+				<a href="http://2015.webcamp.si">2015</a>&amp;
+				<a href="http://2016.webcamp.si">2016</a>
+			</p>
+		</div>
+
+		<div class="medium-5 medium-offset-1 small-12 column text-center section-about-video">
+			<a data-open="modal-video1"><img
+					src="{{ '/images/video1.jpg'|asseturl }}"/></a>
+
+			<div class="reveal large" id="modal-video1" data-reveal
+			     data-reset-on-close="true">
+				<div class="flex-video widescreen">
+					<iframe width="100%" height="630"
+					        src="https://www.youtube.com/embed/oiviGRr7BHM"
+					        frameborder="0" allowfullscreen></iframe>
+				</div>
+				<button class="close-button" data-close aria-label="Close modal"
+				        type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+		<div class="medium-5 small-12 column text-center section-about-video text-right">
+			<a data-open="modal-video2"><img
+					src="{{ '/images/video2.jpg'|asseturl }}"/></a>
+
+			<div class="reveal large" id="modal-video2" data-reveal
+			     data-reset-on-close="true">
+				<div class="flex-video widescreen">
+					<iframe width="100%" height="630"
+					        src="https://www.youtube.com/embed/rc006kX-u-I"
+					        frameborder="0" allowfullscreen></iframe>
+				</div>
+				<button class="close-button" data-close aria-label="Close modal"
+				        type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+
+	</div>
+	{# End About, Location, Venue #}
+
+	<div class="row align-spaced section-team" id="sponsors">
+		<div class="small-12 column text-center">
+			<h1>Sponsors</h1>
+		</div>
+
+		<div class="medium-8 small-12 column text-center team-description">
 			<p>
-				looks great on job interviews,
-				can help you get invited to more conferences
+				It is thanks to companies like these that we can keep the ticket free and make the event memorable.
+				If you see them around the venue, make sure you give them a high-five.
 			</p>
 		</div>
-		<div class="medium-2 small-6 column text-center">
-			<img src="{{ 'images/icon-online-learning.svg'|asseturl }}"/><br/>
-			<span class="speaker-perks">Training Session</span>
-			<p>
-				a chance to polish your talk before the event with experts, so
-				we encourage you to apply even if you’re new to speaking!
-			</p>
+
+		{% for id, item in bag('sponsors').items() %}
+			<div class="medium-6 small-6 column sponsor">
+				<a href="{{ item.link }}" target="_blank">
+					<img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
+				</a>
+				<p><br/>{{ item.description }}</p>
+				<br/>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="row align-spaced section-sponsors" id="partners">
+		<div class="small-12 column text-center">
+			<h1>Partners</h1>
 		</div>
-		<div class="medium-2 small-6 column text-center">
-			<img src="{{ 'images/icon-tickets.svg'|asseturl }}"/><br/>
-			<span class="speaker-perks">Guaranteed Ticket</span>
-			<p>
-				WebCamp tickets usually sell out like hot cakes, but speakers
-				gets priority access
-			</p>
+		{% for id, item in bag('partners').items() %}
+			<div class="medium-6 small-6 column sponsor">
+				<a href="{{ item.link }}" target="_blank">
+					<img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
+				</a>
+				<br/>
+			</div>
+		{% endfor %}
+		<div>
+			This event would not be possible without the generous help of
+			<a href="http://www.fri.uni-lj.si/en/about/" target="_blank">
+				Faculty of Computer and Information Science</a>.
+			They also host a lot of other interesting <a
+				href="http://fri.uni-lj.si/sl/dogodki"
+				target="_blank">events</a>.
+			Check out their event list and <a
+				href="http://fri.uni-lj.si/en/study-programmes" target="_blank">different
+			post-graduate study programs</a>.
 		</div>
-		<div class="medium-2 small-6 column text-center">
-			<img src="{{ 'images/icon-couch.svg'|asseturl }}"/><br/>
-			<span class="speaker-perks">A Friendly Couch</span>
-			<p>a friendly couch: we like to keep our family of speakers close,
-				so you’ll be invited to stay with one of us and we’ll take real
-				good care of you :)
-			</p>
+	</div>
+
+
+
+	<div class="row align-spaced section-team" id="team">
+		<div class="small-12 column text-center">
+			<h1>The Team</h1>
 		</div>
-	</div>
-
-	<div class="small-12 column section-cfp-countdown text-center">
-			<h2 class="talk-countdown js-talk-countdown">
-				Submissions are now closed.
-			</h2>
-	</div>
-
-
-{#<div class="row section-cfp-nominate">#}
-{#	<div class="medium-offset-1 medium-5 small-12 column">#}
-{#		<p>#}
-{#			If you know about someone who everyone in the community should hear#}
-{#			from but we haven't yet, please give invite them. We would love to#}
-{#			help them become one of our speakers and make sure that our audience#}
-{#			hears from them.#}
-{#		</p>#}
-{#	</div>#}
-{#	<div class="medium-offset-1 medium-4 small-12 column">#}
-{#		<p><a href="mailto:info@webcamp.si?subject=I know this awesome person">Nominate#}
-{#			a friend</a></p>#}
-{#		<p>Hint: You can both submit your talk idea and nominate a friend. Just#}
-{#			remember to do it before January 31st.<br/><br/> +10 community#}
-{#			karma!</p>#}
-{#	</div>#}
-{#</div>#}
-
-<div class="row align-spaced section-sponsors" id="partners">
-	<div class="small-12 column text-center">
-		<h1>Partners</h1>
-	</div>
-	{% for id, item in bag('partners').items() %}
-		<div class="medium-6 small-6 column sponsor">
-			<a href="{{ item.link }}" target="_blank">
-				<img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
-			</a>
-			<br/>
+		<div class="medium-8 small-12 column text-center team-description">
+			<p>WebCamp is brought to you by a team of volunteers. <br/>We
+				estimate
+				that about 256 cups of coffee will be emptied in preparation for
+				this event.</p>
 		</div>
-	{% endfor %}
-	<div>
-		This event would not be possible without the generous help of
-		<a href="http://www.fri.uni-lj.si/en/about/" target="_blank">
-			Faculty of Computer and Information Science</a>.
-		They also host a lot of other interesting <a href="http://fri.uni-lj.si/sl/dogodki" target="_blank">events</a>.
-		Check out their event list and <a href="http://fri.uni-lj.si/en/study-programmes" target="_blank">different post-graduate study programs</a>.
+
+		<div class="medium-12 column hide-for-small-only"></div>
+		{% for id, item in bag('team').items() %}
+			<div class="medium-3 small-6 column team-member">
+				<a href="{{ item.link }}" target="_blank">
+					<img src="{{ item.image|asseturl }}"/><br/>
+					<span class="team-name">{{ item.name }}</span>
+				</a>
+				<span class="team-description">{{ item.tagline }}</span>
+
+			</div>
+		{% endfor %}
 	</div>
-</div>
-
-<div class="row align-spaced section-team" id="sponsors">
-    <div class="small-12 column text-center">
-        <h1>Sponsors</h1>
-    </div>
-
-    <div class="medium-8 small-12 column text-center team-description">
-        <p>WebCamp would not be possible without generous support from our sponsors.</p>
-    </div>
-
-    {% for id, item in bag('sponsors').items() %}
-        <div class="medium-6 small-6 column sponsor">
-            <a href="{{ item.link }}" target="_blank">
-                <img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
-            </a>
-            <p><br />{{ item.description }}</p>
-            <br/>
-        </div>
-    {% endfor %}
-</div>
-
-<div class="row align-spaced section-team" id="team">
-	<div class="small-12 column text-center">
-		<h1>Team</h1>
-	</div>
-	<div class="medium-8 small-12 column text-center team-description">
-		<p>WebCamp is brought to you by a team of volunteers. <br/>We estimate
-			that about 256 cups of coffee will be emptied in preparation for
-			this event.</p>
-	</div>
-
-	<div class="medium-12 column hide-for-small-only"></div>
-	{% for id, item in bag('team').items() %}
-		<div class="medium-3 small-6 column team-member">
-			<a href="{{ item.link }}" target="_blank">
-			<img src="{{ item.image|asseturl }}"/><br/>
-			<span class="team-name">{{ item.name }}</span>
-			</a>
-			<span class="team-description">{{ item.tagline }}</span>
-
-		</div>
-	{% endfor %}
-</div>
 {% endblock %}

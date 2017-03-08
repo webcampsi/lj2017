@@ -293,7 +293,7 @@ h1 {
 .section-about-video {
     margin-top: rem-calc(30);
     @include breakpoint(medium) {
-        margin-top: rem-calc(112);
+        //margin-top: rem-calc(112);
     }
 }
 
@@ -616,4 +616,25 @@ h1 {
     font-size: rem-calc(12);
     font-weight: bold;
     color: $body-font-color;
+}
+
+.modal-img-circle {
+    width: 50px;
+    border-radius: 50%;
+    border: 4px $primary-color solid;
+    display: inline;
+}
+
+div[class^="modal-speaker-"] {
+    border: solid rem-calc(15) #F4F4F4;
+    background-color: #FCFCFC;
+}
+
+.modal-speaker-representation{
+
+    .speaker-name {
+        display: inline;
+        margin-left: rem-calc(5);
+        font-size: rem-calc(25);
+    }
 }

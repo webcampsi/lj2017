@@ -76,7 +76,7 @@
 
 		<div class="medium-12 column hide-for-small-only"></div>
 		{% for id, item in bag('speakers').items() %}
-			<div class="medium-3 small-6 column team-member">
+			<div class="medium-3 small-6 column team-member speaker-container">
 				<a data-open="modal-speaker-{{ id }}">
 					<img src="{{ item.image|asseturl }}"/><br/>
 				</a>
@@ -106,7 +106,10 @@
 					<span class="team-name">{{ item.name }}</span>
 				</a>
 				<span class="team-description">{{ item.tagline }}</span>
-                <br /><br /><a data-open="modal-speaker-{{ id }}" target="_blank">Learn more</span></a>
+
+                <div class="learn-more">
+                    <a data-open="modal-speaker-{{ id }}" target="_blank" class="button blue small">Learn more</span></a>
+                </div>
 			</div>
 		{% endfor %}
 	</div>

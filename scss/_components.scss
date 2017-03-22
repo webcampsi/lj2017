@@ -272,6 +272,18 @@ h1 {
     }
 }
 
+/* Section: VR */
+.section-vr {
+    padding-top: rem-calc(70);
+    padding-bottom: rem-calc(70);
+    margin-bottom: rem-calc(100);
+    color: $white;
+}
+
+.vr-duck {
+    margin-top: rem-calc(20);
+    width: rem-calc(150);
+}
 
 /* Section: About */
 .section-about {

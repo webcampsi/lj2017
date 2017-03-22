@@ -279,7 +279,7 @@
 				<a href="{{ item.link }}" target="_blank">
 					<img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
 				</a>
-				<p><br/>{{ item.description }}</p>
+				<p><br/>{{ item.description|safe }}</p>
 				<br/>
 			</div>
 		{% endfor %}

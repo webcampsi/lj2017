@@ -244,6 +244,11 @@ h1 {
     }
 }
 
+.button.blue.small {
+    padding: rem-calc(12) rem-calc(20);
+    font-size: rem-calc(18);
+}
+
 
 .button.orange {
     @include button-style($orange, $orange, $white);
@@ -653,4 +658,14 @@ div[class^="modal-speaker-"] {
         margin-left: rem-calc(5);
         font-size: rem-calc(25);
     }
+}
+
+.speaker-container {
+    position: relative;
+    padding-bottom: rem-calc(70);
+}
+
+.learn-more {
+    position: absolute;
+    bottom: rem-calc(-20);
 }

@@ -1,0 +1,13 @@
+name: Krešimir Antolić
+---
+tagline : JavaScript Dictator
+---
+image : /images/speakers/kresimir_antolic.png
+---
+link : https://twitter.com/kantolic
+---
+talk_title : Typing JavaScript
+---
+talk_description : Are you sick of writing unit tests just to make sure your input values are okay? Do you think JavaScript is too much script and too little Java? Are you starting to suspect undefined might be a function? If you've checked any of these boxes, then this is the talk for you! This talk will cover the basic of TypeScript and solve all your problems.
+---
+takeaways : Basic knowledge of TypeScript and reasons to use it and probably where.

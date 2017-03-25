@@ -1,0 +1,13 @@
+name: Simon Belak
+---
+tagline : Philosopher-hacker at GoOpti
+---
+image : /images/speakers/simon_belak.png
+---
+link : https://twitter.com/sbelak
+---
+talk_title : Escape from JS
+---
+talk_description : Javascript is a bad language to program in and a great language to compile into. In this talk you will learn about some of the exciting languages and paradigms cropping up on the outskirts of the Javascript ecosystem.
+---
+takeaways : "They will learn thisngs like: How does transpiling to Javascript work,  A quick look at ClojureScript, Elm, and PureScript, new tools and paradigms that these language bring to the development experience, a word on interoperability"

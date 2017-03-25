@@ -1,0 +1,13 @@
+name: Janez Čadež
+---
+tagline : Web enthusiast
+---
+image : /images/speakers/janez_cadez.png
+---
+link :
+---
+talk_title : Rapid mobile app prototyping with Ionic
+---
+talk_description : You are a web developer and your boss said "We need a mobile app for our product". Damn, I need to learn Swift and Java now. Well not really,you can make use of hybrid apps (mobile apps built with web technologies). One of these hybrid app frameworks is Ionic. Ionic 2 is the second version of this framework, it's fully cross-platform and includes many great plugins with Ionic Native. This talk will show you how to get started and quickly build a mobile app prototype.
+---
+takeaways : Basic info on how to get started with building hybrid mobile applications in Ionic 2. Some of them will realize that hybrid apps would satisfy their mobile app needs. And most important of all, they will get a bigger picture in how the web is growing (especially Javascript), moving towards more progressive web apps and away from purely native apps.

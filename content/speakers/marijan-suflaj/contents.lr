@@ -1,0 +1,24 @@
+name: Marijan Šuflaj
+---
+tagline : A passionate programmer who works primarily in PHP
+---
+image : /images/speakers/marijan_suflaj.png
+---
+link :
+---
+talk_title : Xdebug - It's easy, Mkay
+---
+talk_description : There are times when you get suckered in
+ By var_dump and print_f to stdin
+ But its when you do these things too much
+ That you've become slow and must get back in touch
+ You can do it It's all up to you-mmmmmkay
+ With a little plan you can change your life tooo-day
+ You dont have to spend your life var_dumping stuff
+ Being made fun of because of that
+ Follow my plan and very soon you will see-eeyy, its easy mmkay
+
+
+ We'll demystify Xdebug, how does it work, how to set it up for local/remote debugging and how to use handy features like conditional breakpoints (for example, recursion debugging). P.S. Original song from South Park
+---
+takeaways : Deeper Xdebug understanding

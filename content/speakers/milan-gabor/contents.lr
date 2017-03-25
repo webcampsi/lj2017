@@ -1,0 +1,13 @@
+name: Milan Gabor
+---
+tagline : SecuritySan
+---
+image : /images/speakers/milan_gabor.png
+---
+link : https://twitter.com/MilanGabor
+---
+talk_title : Security - forgotten chapter
+---
+talk_description : Web security is often neglected part in development life cycle. This negligence often leads to security breaches and stolen data. What is real reason behind this and how can we make web apps more secure is main topic in this talk
+---
+takeaways :

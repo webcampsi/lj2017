@@ -2,11 +2,6 @@ _model: speakers
 ---
 title: Speakers
 ---
-body:
-
-Body of speakers goes here?
-
----
 _discoverable: yes
 ---
 _hidden: no

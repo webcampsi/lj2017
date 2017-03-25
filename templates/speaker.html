@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% set siblings = this.get_siblings() %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block subpage_gradient %}<div class="background-gradient-subpage clearfix header">{% endblock%}
+
+{% block body %}
+    <div class="row section-speaker">
+        <div class="medium-12 column">
+            <div class="row">
+                <div class="medium-10 column">
+                    <img src="{{ this.image|default("/images/speakers/default.png", true) | asseturl }}" class="modal-img-circle">
+                    <span class="speaker-name">{{ this.name }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-12 column">
+                    <h2>Session: {{ this.talk_title }}</h2>
+                    <h5>Description:</h5>
+                    <p>{{ this.talk_description }}</p>
+                    <br>
+                    <h5>What will the audience get from this talk:</h5>
+                    <p>{{ this.takeaways }}</p>
+                </div>
+            </div>
+            <div class="row subpage-nav">
+                <div class="medium-6 column">
+                {% if siblings.prev_page %}
+                  <a href="{{ siblings.prev_page|url }}">Previous: {{ siblings.prev_page.name }}</a>
+                {% endif %}
+                </div>
+                <div class="medium-6 column next-speaker">
+                {% if siblings.next_page %}
+                  <a href="{{ siblings.next_page|url }}">Next: {{ siblings.next_page.name }}</a>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

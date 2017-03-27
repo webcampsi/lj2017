@@ -665,7 +665,7 @@ h1 {
     color: $body-font-color;
 }
 
-.modal-img-circle {
+.speaker-img-circle {
     width: 50px;
     border-radius: 50%;
     border: 4px $primary-color solid;
@@ -673,12 +673,12 @@ h1 {
 }
 
 
-div[class^="modal-speaker-"] {
+div[class^="speaker-details-"] {
     border: solid rem-calc(15) #F4F4F4;
     background-color: #FCFCFC;
 }
 
-.modal-speaker-representation{
+.speaker-details-representation{
 
     .speaker-name {
         display: inline;

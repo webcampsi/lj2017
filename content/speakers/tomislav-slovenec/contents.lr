@@ -1,0 +1,13 @@
+name: Tomislav Slovenec
+---
+tagline : Javascript engineer
+---
+image : /images/speakers/tomislav_slovenec.png
+---
+link :
+---
+talk_title : CSS features coming to a browser near you
+---
+talk_description : Enjoying work with CSS can be hard, especially considering the slow tempo new features are being shipped by. However, in 2017 we’re expecting some pretty cool features that will make CSS a lot easier to deal with. In this talk we’ll give a quick overview of some of those features, such as CSS grids and CSS variables, that are being included in your favourite browsers at the moment you’re reading this. This talk aims to cover some of their merits and the ways they can be used to improve your workflow and simplify your layout implementation.
+---
+takeaways : An overview of some fresh CSS features.

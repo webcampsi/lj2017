@@ -1,0 +1,13 @@
+name: Philipp Krenn
+---
+tagline : Infrastructure | Developer Advocate at Elastic
+---
+image : /images/speakers/philipp_krenn.png
+---
+link : https://twitter.com/xeraa
+---
+talk_title : Awesome Logging Infrastructure Using The Elastic Stack
+---
+talk_description : One of the hottest and most widely used tools for log monitoring and analytics at the moment is the Elastic Stack: Elasticsearch doing the hard work of analyzing and searching large amounts of data, Logstash for parsing and enrichment. Beats as a lightweight agent or forwarder. Kibana for powerful visualizations.
+---
+takeaways : This talk gives you an overview of the four technologies, how they are working together, and how they can solve your problems.

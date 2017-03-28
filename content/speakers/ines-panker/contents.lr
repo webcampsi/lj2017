@@ -1,0 +1,13 @@
+name: Ines Panker
+---
+tagline : Disasters conciliator
+---
+image : /images/speakers/ines_panker.png
+---
+link : https://twitter.com/InesPanker
+---
+talk_title : Case Study: Use of JSONB in PostgreSQL
+---
+talk_description : Recently PostgreSQL introduced the JSON and JSONB data types. At first, we ignored this news, we could not see how the JSON types could be of use to us. But then we used it once and then twice and then we almost went overboard with JSONs. This prompted us to stop, take a step back and analyze when a JSON type is useful and when it causes unnecessary hassle.
+---
+takeaways : How and when to use the JSON types. What the advantages and disadvantages are. And how to avoid falling into a JSON mania.

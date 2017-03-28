@@ -1,0 +1,13 @@
+name: Gregor Lah
+---
+tagline: CTO @ ICONOMI
+---
+image: /images/speakers/gregor_lah.png
+---
+link: https://twitter.com/iconominet
+---
+talk_title: Adopting event based microservices architecture
+---
+talk_description: Introduction about the benefits and challenges of adopting microservice architecture. What are they? When it should be used and when not.
+---
+takeaways: An insight on the benefits we got by embracing event based microservice architecture.

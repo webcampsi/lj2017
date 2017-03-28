@@ -1,0 +1,13 @@
+name: Jošt Novljan
+---
+tagline : Team Lead at Reciprocity, Inc.
+---
+image : /images/speakers/jost_novljan.png
+---
+link :
+---
+talk_title : The black art of code reviews
+---
+talk_description : The talk will be about the code review process from the ground up. First about why you should do it (less bugs, team growth, more ownership, etc..), then how it's properly done, then the automated tools that you can use that help reviewing. Then we'll get to some more details and examples of what usually happens on teams and how to avoid those things. Like PRs piling up, huge PRs being opened, no one reviewing because everyone is too busy, etc.. Also the details of what makes a good PR review and what makes a bad one.
+---
+takeaways : They will learn the importance of the PR review process and how to avoid some classic pitfalls once they start doing it. Or if they are already doing it, they'll learn how they can improve it. Or they will have a better understanding of why they should be doing it more.

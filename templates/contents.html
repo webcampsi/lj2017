@@ -264,7 +264,7 @@
         </div>
 
         {% for id, item in bag('sponsors').items() %}
-            <div class="medium-6 small-6 column sponsor">
+            <div class="medium-6 small-12 column sponsor">
                 <a href="{{ item.link }}" target="_blank">
                     <img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
                 </a>

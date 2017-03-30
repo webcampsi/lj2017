@@ -615,8 +615,16 @@ h1 {
 
     .speaker-name {
         display: inline;
-        margin-left: rem-calc(5);
         font-size: rem-calc(25);
+    }
+
+    .speaker-info {
+        margin-bottom: rem-calc(30);
+    }
+
+    .speaker-tagline {
+        display: inline;
+        font-size: rem-calc(16);
     }
 
     .subpage-nav {
@@ -635,7 +643,7 @@ h1 {
 .team-name {
     display: block;
     margin-top: rem-calc(17);
-    font-size: rem-calc(25);
+    font-size: rem-calc(20);
 }
 
 .team-description {
@@ -666,12 +674,23 @@ h1 {
 }
 
 .speaker-img-circle {
-    width: 50px;
+    width: 80px;
     border-radius: 50%;
     border: 4px $primary-color solid;
     display: inline;
 }
 
+.speaker-link {
+    background-color: transparent;
+    width: rem-calc(25);
+    height: rem-calc(25);
+}
+
+.speaker-link-other {
+    background-color: transparent;
+    width: rem-calc(15);
+    height: rem-calc(15);
+}
 
 div[class^="speaker-details-"] {
     border: solid rem-calc(15) #F4F4F4;

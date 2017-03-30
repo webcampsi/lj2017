@@ -3,8 +3,8 @@
     <a href="{{ speaker|url }}">
         <img src="{{ speaker.image|default("/images/speakers/default.png", true) | asseturl }}"/><br/>
     </a>
-    <a href="{{ speaker|url }}"><span class="team-name">{{ speaker.name }}</span></a>
-    <span class="team-description">{{ speaker.tagline }}</span>
+    <a href="{{ speaker|url }}" class="team-name">{{ speaker.name }}</a>
+    <span class="team-description">{{ speaker.talk_title }}</span>
 
     <div class="learn-more">
         <a href="{{ speaker|url }}" class="button blue small">Learn more</span></a>

@@ -296,29 +296,4 @@
         </div>
     </div>
 
-
-
-    <div class="row align-spaced section-team" id="team">
-        <div class="small-12 column text-center">
-            <h1>The Team</h1>
-        </div>
-        <div class="medium-8 small-12 column text-center team-description">
-            <p>WebCamp is brought to you by a team of volunteers. <br/>We
-                estimate
-                that about 256 cups of coffee will be emptied in preparation for
-                this event.</p>
-        </div>
-
-        <div class="medium-12 column hide-for-small-only"></div>
-        {% for id, item in bag('team').items() %}
-            <div class="medium-3 small-6 column team-member">
-                <a href="{{ item.link }}" target="_blank">
-                    <img src="{{ item.image|asseturl }}"/><br/>
-                    <span class="team-name">{{ item.name }}</span>
-                </a>
-                <span class="team-description">{{ item.tagline }}</span>
-
-            </div>
-        {% endfor %}
-    </div>
 {% endblock %}

@@ -174,12 +174,33 @@ h1 {
     }
 }
 
+.newsletter-form-small {
+    background-color: $orange;
+    padding: rem-calc(20);
+    border-radius: rem-calc(5);
+}
+
 .newsletter-form input[type="text"], .newsletter-form input[type="email"] {
     padding: rem-calc(0) rem-calc(24);
     margin-right: rem-calc(13);
     border-radius: rem-calc(5);
     line-height: rem-calc(40);
     width: initial;
+    display: inline;
+
+    @include breakpoint(small only) {
+        margin-right: 0;
+        padding-right: 0;
+        width: 240px;
+    }
+}
+
+.newsletter-form-small input[type="text"], .newsletter-form-small input[type="email"] {
+    padding: rem-calc(20);
+    margin-right: rem-calc(10);
+    border-radius: rem-calc(5);
+    line-height: rem-calc(30);
+    width: rem-calc(300);
     display: inline;
 
     @include breakpoint(small only) {
@@ -216,6 +237,13 @@ h1 {
     margin-left: rem-calc(30);
     @include breakpoint(small only) {
         margin-right: rem-calc(30);
+    }
+}
+
+.newsletter-button-small {
+    margin-left: rem-calc(20);
+    @include breakpoint(small only) {
+        margin-right: rem-calc(20);
     }
 }
 

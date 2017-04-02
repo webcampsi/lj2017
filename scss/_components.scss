@@ -178,6 +178,9 @@ h1 {
     background-color: $orange;
     padding: rem-calc(20);
     border-radius: rem-calc(5);
+    @include breakpoint(small only) {
+        text-align: center;
+    }
 }
 
 .newsletter-form input[type="text"], .newsletter-form input[type="email"] {
@@ -195,7 +198,7 @@ h1 {
     }
 }
 
-.newsletter-form-small input[type="text"], .newsletter-form-small input[type="email"] {
+.newsletter-form-small input[type="email"] {
     padding: rem-calc(20);
     margin-right: rem-calc(10);
     border-radius: rem-calc(5);
@@ -204,9 +207,7 @@ h1 {
     display: inline;
 
     @include breakpoint(small only) {
-        margin-right: 0;
-        padding-right: 0;
-        width: 240px;
+        width: 90%;
     }
 }
 
@@ -403,9 +404,9 @@ h1 {
     overflow: visible;
 
     @include breakpoint(small only) {
-        width: 40%;
+        width: 30%;
         right: rem-calc(-10);
-        top: rem-calc(50);
+        top: rem-calc(-30);
     }
 }
 

@@ -404,7 +404,7 @@ h1 {
     overflow: visible;
 
     @include breakpoint(medium down) {
-        width: 30%;
+        width: 35%;
         right: rem-calc(-10);
         top: rem-calc(-30);
     }

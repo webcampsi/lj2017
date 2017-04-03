@@ -180,6 +180,15 @@ h2 {
     }
 }
 
+.newsletter-form-small {
+    background-color: $orange;
+    padding: rem-calc(20);
+    border-radius: rem-calc(5);
+    @include breakpoint(small only) {
+        text-align: center;
+    }
+}
+
 .newsletter-form input[type="text"], .newsletter-form input[type="email"] {
     padding: rem-calc(0) rem-calc(24);
     margin-right: rem-calc(13);
@@ -192,6 +201,19 @@ h2 {
         margin-right: 0;
         padding-right: 0;
         width: 240px;
+    }
+}
+
+.newsletter-form-small input[type="email"] {
+    padding: rem-calc(20);
+    margin-right: rem-calc(10);
+    border-radius: rem-calc(5);
+    line-height: rem-calc(30);
+    width: rem-calc(300);
+    display: inline;
+
+    @include breakpoint(small only) {
+        width: 90%;
     }
 }
 
@@ -222,6 +244,13 @@ h2 {
     margin-left: rem-calc(30);
     @include breakpoint(small only) {
         margin-right: rem-calc(30);
+    }
+}
+
+.newsletter-button-small {
+    margin-left: rem-calc(20);
+    @include breakpoint(small only) {
+        margin-right: rem-calc(20);
     }
 }
 
@@ -380,10 +409,10 @@ h2 {
     top: rem-calc(-80);
     overflow: visible;
 
-    @include breakpoint(small only) {
-        width: 40%;
+    @include breakpoint(medium down) {
+        width: 35%;
         right: rem-calc(-10);
-        top: rem-calc(50);
+        top: rem-calc(-30);
     }
 }
 

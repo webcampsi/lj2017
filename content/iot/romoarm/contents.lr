@@ -1,0 +1,19 @@
+name: RoboArm
+---
+link: http://andrei.disscore.com/roboarm
+---
+image: /images/iot/roboarm.jpg
+---
+thumb: /images/iot/roboarm-thumb.jpg
+---
+presenter: Andei Morozov
+---
+tagline: Small robotic IoT arm.
+---
+project_description: RoboArm is small IoT gadget which you can control via the Internet, using special interface. It can be like a toy or like laboratory assistant. And of course it was an open source project, which you can easily fork on [my GitHub](https://github.com/andagent/RoboArm).
+
+An idea of that project was to show to children that programming is cool, and not so hard. In that project you can see special function to program RoboArm using special functions and plain text file, it was specially made to learn children programming and see the result in real time.
+
+Another plus of RoboArm, that it supports multi users controlling, so, for example if you are playing with RoboArm and somebody will come to the interface, he will be in queue, waiting for your finish. It makes controlling of RoboArm easier and more interesting.
+
+The author of the project student of 8 grade in primary school in Ljubljana.

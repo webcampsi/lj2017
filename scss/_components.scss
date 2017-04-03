@@ -40,6 +40,12 @@ h1 {
     line-height: rem-calc(60);
 }
 
+h2 {
+    font-size: rem-calc(30);
+    font-weight: bolder;
+    line-height: rem-calc(40);
+}
+
 .header {
     @include breakpoint(medium) {
         margin-top: rem-calc(30);
@@ -656,6 +662,34 @@ h1 {
 
 .section-sponsors h1 {
     margin-bottom: rem-calc(45);
+}
+
+.section-supporters {
+    margin-top: rem-calc(40);
+}
+
+.supporters-list {
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(50);
+}
+
+.supporters {
+    font-size: rem-calc(20);
+
+    img {
+        width: 30%;
+        height: auto;
+
+        @include breakpoint(small only) {
+            width: 25%;
+            margin-bottom: rem-calc(15);
+        }
+    }
+
+    .button {
+        margin-top: rem-calc(15);
+        margin-bottom: rem-calc(15);
+    }
 }
 
 .haiku {

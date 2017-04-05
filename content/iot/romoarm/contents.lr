@@ -8,7 +8,7 @@ thumb: /images/iot/roboarm-thumb.jpg
 ---
 presenter: Andei Morozov
 ---
-tagline: Small robotic IoT arm.
+tagline: Small robotic IoT arm
 ---
 project_description: RoboArm is small IoT gadget which you can control via the Internet, using special interface. It can be like a toy or like laboratory assistant. And of course it was an open source project, which you can easily fork on [my GitHub](https://github.com/andagent/RoboArm).
 

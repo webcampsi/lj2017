@@ -117,7 +117,7 @@
             </div>
         </div>
     </div>
-    <div class="row section-important-wrapper">
+    <div class="row section-important-wrapper" id="tickets">
         <div class="section-important">
             <div class="medium-10 medium-offset-1 small-12 column">
                 <h1>tl;dr:</h1>
@@ -130,10 +130,18 @@
                 <p><strong>Tickets:</strong> free, distributed only through
                     mailing
                     list</p>
-                <p>Don’t miss any of the important dates, subscribe to our
-                    mailing
-                    list and you’ll be the first to hear when the ticket
-                    registration opens!</p>
+                    <p>Don’t miss any of the important dates, subscribe to our
+                        mailing list and you’ll be the first to hear when the ticket
+                        registration opens!</p>
+
+                    <h4>Subscribe to get notified about the tickets</h4>
+                    <form class="newsletter-form-small"
+                          action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2"
+                          method="post">
+                        <input type="email" name="MERGE0" placeholder="Your email address...">
+                        <input type="submit" value="Subscribe"
+                               class="button blue newsletter-button">
+                    </form>
             </div>
 
             <img src="{{ 'images/mug-large.svg'|asseturl }}" alt="It's a mug!!"
@@ -272,7 +280,7 @@
                 <br/>
             </div>
         {% endfor %}
-        <div>
+        <div class="medium-10 small-12 column text-center team-description">
             This event would not be possible without the generous help of
             <a href="http://www.fri.uni-lj.si/en/about/" target="_blank">
                 Faculty of Computer and Information Science</a>.
@@ -283,6 +291,41 @@
                 href="http://fri.uni-lj.si/en/study-programmes" target="_blank">different
             post-graduate study programs</a>.
         </div>
+
+        <div class="medium-10 small-12 column text-center section-supporters" id="supporters">
+            <h2>Supporters</h2>
+        </div>
+        <div class="medium-10 small-12 column text-center supporters-list">
+
+            <p>Our gratitude goes to (but is not limited to):</p>
+            <div class="row align-bottom">
+                <div class="medium-expand show-for-small-only column supporters">
+                    <img src="{{ '/images/duck-crown.png'|asseturl }}">
+                </div>
+                <div class="medium-expand small-12 column supporters">
+                    Ivan Habunek <br>
+                    Tom Philip
+                </div>
+                <div class="medium-expand hide-for-small-only column supporters">
+                    <img src="{{ '/images/duck-crown.png'|asseturl }}">
+                </div>
+                <div class="medium-expand small-12 column supporters">
+                Darko Bodnaruk <br>
+                Irena Jaksa Zupancic
+                </div>
+            </div>
+        </div>
+
+        <div class="medium-10 small-12 column text-center">
+        <p>WebCamp supporters are the ones supporting the event we all love by <strong>buying a free ticket</strong> to help keeping the event free for newcomers. </p>
+        <p>
+        <a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button orange supporter">Become a WebCamp supporter</a>
+        </p>
+
+        <p>As a supporter you are guaranteed to get your ticket and you help the community at the same time. Also, there's a special spot on the wall of gratitude above just for you.</p>
+        </div>
+
+
     </div>
 
     <div class="row align-spaced section-team" id="team">

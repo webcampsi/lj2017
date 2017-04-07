@@ -1,3 +1,4 @@
+{% set root = site.get_root(alt='de') %}
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -61,16 +62,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="medium-offset-2 medium-7 small-12 column clearfix">
             <ul class="menu">
-                <li><a href="/#speakers">Speakers</a></li>
+                <li><a href="{{ root|url }}#speakers">Speakers</a></li>
 {#                <li><a href="/#cfp">IoT Corner</a></li>#}
 {#              <li><a href="/#tickets">Tickets</a></li>#}
-                <li><a href="/#info">Venue</a></li>
+                <li><a href="{{ root|url }}#info">Venue</a></li>
                 <li class="hide-for-small-only"><a href="{{ '/coc'|url }}">Code of Conduct</a>
                 </li>
                 <li class="show-for-small-only"><a href="{{ '/coc'|url }}">CoC</a>
                 </li>
-                <li class="hide-for-small-only"><a href="/#partners">Partners</a>
-                <li class="hide-for-small-only"><a href="/team">Team</a></li>
+                <li class="hide-for-small-only"><a href="{{ root|url }}#partners">Partners</a>
+                <li class="hide-for-small-only"><a href="{{ '/team'|url }}">Team</a></li>
 
             </ul>
         </div>
@@ -80,12 +81,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% endblock %}
     <div class="footer">
         <div class="row text-center medium-text-left">
-            <div class="medium-3 small-6 small-offset-3 medium-offset-0 column footer-logo">
+            <div class="medium-4 small-6 small-offset-3 medium-offset-0 column footer-logo">
                 <img src="{{ 'images/logo.svg'|asseturl }}"/> <br>
                 <small> Made with &hearts; by a <a href="/team">team of volunteers</a></small>
             </div>
             <div class="show-for-small-only small-12 column"></div>
-            <div class="medium-3 medium-offset-3 small-12 column">
+            <div class="medium-3 medium-offset-2 small-12 column">
                 <p><a href="/coc" target="_blank">Code of Conduct</a></p>
                 Lost? Get in touch: <br>
 

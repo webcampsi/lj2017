@@ -1,0 +1,25 @@
+name: NoiseCheck
+---
+link: https://noisecheck.io/
+---
+image: /images/iot/noisecheck.png
+---
+thumb: /images/iot/noisecheck-thumb.png
+---
+presenter: Nikola Drobac
+---
+tagline: A quiet smart home assistant
+---
+project_description: *Tired of gabby yada-yada assistants? You want something to help around the house, without always telling them what to do every single time?*
+
+In short, NoiseCheck is not your usual home assistant, it is a platform that helps you have the best working and living environment you possibly can. With multiple sensors and rich integrations with internet enabled devices, you'll be more productive, more relaxed and, of course, making your place smart with powerful workflows.
+
+To get more in depth, platform consists of hardware and software parts. The hardware part is based on Raspberry Pi and various sensors, that help you monitor the environment and trigger events when conditions in a room change in certain criteria. Temperature, Air quality and Humidity sensors are there to make sure you have plenty of fresh air, so your brain can work fast solving those mind-boggling problems at the office. Beside physical sensors, Raspberry Pi has some software goodies that can help you in making your place smarter.
+
+Following the good practice in IoT world, the device is using MQTT as an efficient and low resource consuming protocol to communicate with the web server, where the sensor data is stored and processed. From there, data is displayed in a Human-friendly web interface with realtime info, average values and event visualisations.
+
+The interface for data display and overview of the whole system is web based so it is any-screen friendly, and you can have multiple customized dashboards with various relevant information. We understand that you want different stuff at home from the ones at work, so you can have a separate dashboard for each of those places...
+
+Integrations cover a wide variety of Smart Devices, including Philips Hue Lights, AC control units, DVR systems, Belkin WeMo ecosystem as well as completely custom web hooks. Communication is standardized, so the list of supported devices keeps growing.
+
+You can see our technical stack <a href="https://stackshare.io/noisecheck/noisecheck" target="_blank">here</a>.

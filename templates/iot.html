@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% set siblings = this.get_siblings() %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block subpage_gradient %}<div class="background-gradient-subpage clearfix header">{% endblock%}
+
+{% block body %}
+    <div class="row section-subpage">
+        <div class="medium-12 column">
+            <div class="row speaker-info">
+                <div class="medium-12 column">
+                    <h2>{{ this.name }}
+                    {% if this.link %}
+                        <a href="{{this.link}}" target="_blank">
+                            <img src="{{ 'images/icon-link.svg'|asseturl }}" class="speaker-link-other">
+                        </a>
+                    {% endif %}
+                    </h2>
+                    <p class="iot-tagline">{{ this.tagline }}</p>
+                    {% if this.image %}
+                    <img src="{{ this.image | asseturl }}" />
+                    {% endif %}
+                    <p>{{ this.project_description }}</p>
+                    <p><em>Presented by: {{ this.presenter }}</em></p>
+                </div>
+            </div>
+            <div class="row subpage-nav">
+                <div class="medium-6 column">
+                {% if siblings.prev_page %}
+                  <a href="{{ siblings.prev_page|url }}">Previous: {{ siblings.prev_page.name }}</a>
+                {% endif %}
+                </div>
+                <div class="medium-6 column next-speaker">
+                {% if siblings.next_page %}
+                  <a href="{{ siblings.next_page|url }}">Next: {{ siblings.next_page.name }}</a>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

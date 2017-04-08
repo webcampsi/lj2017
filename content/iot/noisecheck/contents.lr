@@ -22,4 +22,4 @@ The interface for data display and overview of the whole system is web based so 
 
 Integrations cover a wide variety of Smart Devices, including Philips Hue Lights, AC control units, DVR systems, Belkin WeMo ecosystem as well as completely custom web hooks. Communication is standardized, so the list of supported devices keeps growing.
 
-You can see our technical stack [here](https://stackshare.io/noisecheck/noisecheck).
+You can see our technical stack <a href="https://stackshare.io/noisecheck/noisecheck" target="_blank">here</a>.

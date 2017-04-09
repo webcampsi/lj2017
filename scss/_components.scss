@@ -644,7 +644,7 @@ h2 {
 .section-subpage {
     margin-top: rem-calc(80);
     padding-top: rem-calc(20);
-    margin-bottom: rem-calc(120);
+    //margin-bottom: rem-calc(80);
     background-color: rgba(255,255,255,0.8);
     border-radius: 5px;
 
@@ -662,13 +662,18 @@ h2 {
         font-size: rem-calc(16);
     }
 
-    .subpage-nav {
-        margin-top: rem-calc(40);
+    .speaker-bio {
+        margin-top: rem-calc(20);
+        font-size: rem-calc(14);
     }
+}
 
-    .next-speaker {
-        text-align: right;
-    }
+.subpage-nav {
+    margin-top: rem-calc(40);
+}
+
+.next-speaker {
+    text-align: right;
 }
 
 .section-info {
@@ -752,10 +757,16 @@ h2 {
     color: $body-font-color;
 }
 
+.callout {
+    border:none;
+    margin-top: rem-calc(20);
+    color: #777777;
+}
+
 .speaker-img-circle {
-    width: 80px;
+    width: rem-calc(80);
     border-radius: 50%;
-    border: 4px $primary-color solid;
+    border: 2px $primary-color solid;
     display: inline;
 }
 
@@ -794,3 +805,4 @@ div[class^="speaker-details-"] {
     position: absolute;
     bottom: rem-calc(-20);
 }
+

@@ -1,0 +1,13 @@
+{% macro render_workshop(workshop) %}
+<div class="medium-3 small-6 column team-member speaker-container text-center" id="{{workshop._slug}}">
+    <a href="{{ workshop |url }}">
+        <img src="{{ workshop.image|default("/images/workshops/"+ workshop._slug + ".png", true) | asseturl }}"/><br/>
+    </a>
+    <a href="{{ workshop|url }}" class="team-name">{{ workshop.host }}</a>
+    <span class="team-description">{{ workshop.title }}</span>
+
+    <div class="learn-more">
+        <a href="{{ workshop|url }}" class="button blue small">Learn more</span></a>
+    </div>
+</div>
+{% endmacro %}

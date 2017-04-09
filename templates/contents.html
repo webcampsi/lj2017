@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% from "macros/speaker_intro.html" import render_speaker %}
 {% from "macros/iot_intro.html" import render_iot %}
+{% from "macros/workshop_intro.html" import render_workshop %}
 {% block body %}
     <div class="hero row show-for-medium">
         <img src="{{ 'images/animation/monitors.svg'|asseturl }}"
@@ -116,6 +117,17 @@
                 <p><a href="http://artrebel9.com/" target="_blank"><img src="{{ 'images/iot/ar9-logo-inv.png'|asseturl }}" alt="Art Rebel 9 logo"/></a></p>
             </div>
         </div>
+    </div>
+    <div class="row align-spaced section-team" id="workshops">
+        <div class="small-12 column text-center">
+            <h1>Workshops</h1>
+            <p class="section-info">And now something completely different...</p>
+        </div>
+
+        <div class="medium-12 column hide-for-small-only"></div>
+        {% for workshop in site.query('/workshops') %}
+            {{ render_workshop(workshop) }}
+        {% endfor %}
     </div>
     <div class="row section-important-wrapper" id="tickets">
         <div class="section-important">

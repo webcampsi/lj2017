@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% set siblings = this.get_siblings() %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block subpage_gradient %}<div class="background-gradient-subpage clearfix header">{% endblock%}
+
+{% block body %}
+    <div class="row section-subpage">
+        <div class="medium-12 column">
+
+            <div class="row speaker-info">
+                <div class="small-2 column">
+                    <img class="speaker-img-circle" src="{{ this.image|default("/images/workshops/" + this._slug + ".png", true) | asseturl }}" class="img-rounded">
+                </div>
+                <div class="small-10 column">
+                    <span class="speaker-name">{% if this.presenter %}{{ this.presenter }}</span><br><span class="speaker-tagline">{{ this.host }}{% else %}{{ this.host }}</span>{% endif %}
+                </div>
+            </div>
+            <div class="row speaker-info">
+                <div class="medium-12 column">
+                    <h2>{{ this.title }}</h2>
+                    <p>{{ this.description }}</p>
+                </div>
+                <div class="medium-12 column callout clearfix">
+                    <h5>About
+                    {% if this.link %}
+                        {% if 'twitter' in this.link %}
+                            <a href="{{this.link}}" target="_blank">
+                                <img src="{{ 'images/twitter-blue.svg'|asseturl }}" class="speaker-link">
+                            </a>
+                        {% else %}
+                            <a href="{{this.link}}" target="_blank">
+                                <img src="{{ 'images/icon-link.svg'|asseturl }}" class="speaker-link-other">
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                    </h5>
+                    <div class="speaker-bio">
+                    {{ this.host_bio }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="row subpage-nav">
+                <div class="medium-4 column hide-for-small-only">
+                {% if siblings.prev_page %}
+                  <a href="{{ siblings.prev_page|url }}"> &lt; {{ siblings.prev_page.name }}</a>
+                {% endif %}
+                </div>
+                <div class="medium-4 small-12 column text-center">
+                  <a href="{{ '/'|url }}#{{ this._slug}}"> Back to workshops</a>
+                </div>
+                <div class="medium-4 column next-speaker hide-for-small-only">
+                {% if siblings.next_page %}
+                  <a href="{{ siblings.next_page|url }}">{{ siblings.next_page.name }} &gt;</a>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

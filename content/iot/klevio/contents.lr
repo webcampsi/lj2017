@@ -10,4 +10,16 @@ presenter: Marko Mrdjenovič
 ---
 tagline: Open doors with your phone
 ---
-project_description: 
+project_description: Klevio is a combination of hardware and software that enables you to open doors via an app on your mobile phone, meaning you no longer need to carry keys and that you can let people in when you’re not there as well as distribute virtual keys so people can let themselves in via the app on their own phone.
+
+Unlike other key replacement solutions on the market, Klevio doesn’t require you to change your locks and works on multiple doors, so if you live in an apartment building it can work with the communal door as well as your own front door. Additionally, some other systems rely on batteries to power the device, so if they run out of power you are locked out, whereas Klevio is connected to the mains power. The device is not visible from the outside of your home, so no one knows you have the technology, making it more discreet and safer than some other solutions.
+
+The hardware device that works as an intercom is based on Raspberry PI (CM3) with added support for WiFi (ESP), BLE (NRF51) and Zigbee (EM357). It runs python daemons with supervisord, that send signed JSON web tokens over secure websockets to Tornado servers that store data in PostgreSQL and Redis. The frontend application is based on Cordova / Angular4 / Ionic3 and works on Android (5+) and iOS (8+) devices.
+
+We are currently looking to hire for the following roles:
+
+1. Front-end developer (junior/intermediate)
+2. Back-end developer (junior/intermediate)
+3. Hardware/firmware engineer (intermediate/senior)
+
+We’re well funded, our salaries are competitive, we’re based near BTC. For more information, come check our desk at WebCamp.

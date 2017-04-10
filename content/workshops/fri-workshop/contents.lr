@@ -2,10 +2,20 @@ _model: workshop
 ---
 name: FRI workshop
 ---
-description: TBD...
+description: In the short starting presentation we will present the Web programming course at the University of Ljubljana, Faculty of Computer and Information Science. From the teaching assistant’s point of view, we will briefly describe the course curriculum, obligatory projects students need to pass, and the web technologies used. We will also show which frameworks are the most popular among the students and their common issues.
+
+Then we’ll have a discussion on suggestion to changes to our course according to real-world industry needs.
 ---
-image: /images/workshops/fri-workshop.png
+host: FRI Ljubljana
 ---
-title: FRI workshop for all
+presenter: Matevž Jekovec, Gašper Fele-Žorž
 ---
-host: FRI people
+image: /images/workshops/gasper-fele-zorz.jpg
+---
+title: FRI your mind
+---
+link: https://www.fri.uni-lj.si/
+---
+host_bio:
+
+The Faculty of Computer and Information Science (FRI) is the leading teaching and research institution in the field of Computer Science in Slovenia, and in spite of its comparatively short history it has a number of active research groups, as well as a lengthy roster of alumni, some of whom have achieved distinction in various fields of computer science in Slovenia and abroad.

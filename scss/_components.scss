@@ -171,6 +171,10 @@ h2 {
     vertical-align: text-top;
 }
 
+.newsletter-cta .supporter-push {
+    vertical-align: text-top;
+}
+
 .newsletter-form {
     display: inline-block;
 
@@ -178,6 +182,20 @@ h2 {
         text-align: center;
         padding-bottom: rem-calc(20);
     }
+}
+
+.newsletter-form-push {
+    display: inline-block;
+    background-color: $blue;
+
+    @include breakpoint(medium down) {
+        text-align: center;
+        padding-bottom: rem-calc(20);
+    }
+}
+
+.mateja-cta {
+    padding-top: rem-calc(30);
 }
 
 .newsletter-form-small {
@@ -225,6 +243,7 @@ h2 {
     @include breakpoint(medium down) {
         display: block;
         text-align: center;
+        padding: rem-calc(15) 0;
     }
 }
 
@@ -240,8 +259,24 @@ h2 {
     margin-left: rem-calc(5);
 }
 
+.newsletter-arrow-push {
+    // float: left;
+    display: inline-block;
+    margin-top: rem-calc(-3);
+    margin-left: rem-calc(5);
+}
+
 .newsletter-button {
     margin-left: rem-calc(30);
+    @include breakpoint(small only) {
+        margin-right: rem-calc(30);
+    }
+}
+
+.newsletter-button-push {
+    margin-left: rem-calc(30);
+    margin-top: rem-calc(20);
+
     @include breakpoint(small only) {
         margin-right: rem-calc(30);
     }

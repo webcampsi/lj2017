@@ -182,11 +182,13 @@ h2 {
 
 .newsletter-form-push {
     display: inline-block;
-    padding: rem-calc(30) 0;
+    padding-top: rem-calc(20);
+    padding-bottom:rem-calc(-20);
 
     @include breakpoint(medium down) {
         text-align: center;
         padding-bottom: rem-calc(20);
+        padding-top: 0;
     }
 }
 

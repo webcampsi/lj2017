@@ -180,6 +180,16 @@ h2 {
     }
 }
 
+.newsletter-form-push {
+    display: inline-block;
+    padding: rem-calc(30) 0;
+
+    @include breakpoint(medium down) {
+        text-align: center;
+        padding-bottom: rem-calc(20);
+    }
+}
+
 .newsletter-form-small {
     background-color: $orange;
     padding: rem-calc(20);

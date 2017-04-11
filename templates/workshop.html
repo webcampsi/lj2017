@@ -21,7 +21,9 @@
                     <h2>{{ this.title }}</h2>
                     <p>{{ this.description }}</p>
                 </div>
-                <div class="medium-12 column callout clearfix">
+            </div>
+            <div class="row">
+                <div class="small-10 column">
                     <h5>About
                     {% if this.link %}
                         {% if 'twitter' in this.link %}
@@ -40,8 +42,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
             <div class="row subpage-nav">
                 <div class="medium-4 column hide-for-small-only">
                 {% if siblings.prev_page %}

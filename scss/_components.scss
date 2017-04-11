@@ -670,6 +670,9 @@ h2 {
 
 .subpage-nav {
     margin-top: rem-calc(40);
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(40);
+    }
 }
 
 .next-speaker {

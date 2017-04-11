@@ -1,0 +1,142 @@
+{% macro render_room_header(room) %}
+    {{ room.name}}<br>
+    {% if room.sponsored == 'true' %}
+    <span class="talk-room-sponsor">SPONSORED BY</span>
+    {% else %}
+    <span class="talk-room-sponsor">&nbsp;</span>
+    {% endif %}
+    <span class="talk-room">{{ room.label}}</span>
+{% endmacro %}
+
+{% macro render_talk_placeholder() %}
+<td class="empty-slot">&nbsp;</td>
+{% endmacro %}
+
+{% macro render_room_talk(room) %}
+<span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ room.name }} | {{ room.label }}</span>{% if room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
+{% endmacro %}
+
+
+{% macro render_talk(speaker, room) %}
+<td>
+    <div class="talk">
+      <a data-open="modal-speaker-{{ speaker._slug }}" target="_blank"><img class="talk-speaker-image" src="{{ speaker.image|asseturl }}"></a>
+      <a data-open="modal-speaker-{{ speaker._slug }}" target="_blank" class="talk-info">
+        {{ render_room_talk(room) }}
+        <span class="talk-speaker">{{ speaker.name }}</span>
+        <span class="talk-title">{{ speaker.talk_title }}</span>
+      </a>
+    </div>
+    <div class="medium-3 small-6 column">
+        <div class="reveal large modal-speaker-representation" id="modal-speaker-{{ speaker._slug }}" data-reveal data-reset-on-close="true">
+            <div class="medium-12 column">
+            <div class="row">
+
+                <div class="hide-for-small-only column">
+                    <img src="{{ speaker.image|asseturl }}" class="speaker-img-circle"/>
+                </div>
+                <div class="show-for-small-only small-12 text-center">
+                    <img src="{{ speaker.image|asseturl }}" class="speaker-img-circle"/>
+                </div>
+                <div class="medium-10 small-12">
+                    <span class="speaker-name">{{ speaker.name }}</span>
+                    <h2>{{ speaker.talk_title }}</h2>
+                </div>
+            </div>
+                <p>{{ speaker.talk_description }}</p>
+                <br>
+                <h5>What you can get from this talk:</h5>
+                <p>{{ speaker.takeaways }}</p>
+
+            </div>
+            <button class="close-button" data-close
+                    aria-label="Close modal"
+                    type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</td>
+{% endmacro %}
+
+{% macro render_announcement(slot, room) %}
+<td colspan="4">
+<div class="announcement">
+  <a data-open="modal-speaker-{{ slot._slug }}" target="_blank"><img class="talk-speaker-image" src="{{ '/images/mug.svg'|asseturl }}"></a>
+  <a data-open="modal-speaker-{{ slot._slug }}" target="_blank" class="talk-info">
+    {{ render_room_talk(room) }}
+    <span class="talk-speaker">{{ slot.title }}</span>
+    <span class="talk-title">{{ slot.description }}</span>
+    {% if room  %}
+        <span class="talk-title">{{ room.name }} | {{ room.label }}</span>
+    {% endif %}
+  </a>
+</div>
+<div class="medium-3 small-6 column">
+    <div class="reveal large modal-speaker-representation" id="modal-speaker-{{ slot._slug }}" data-reveal data-reset-on-close="true">
+        <div class="medium-12 column">
+            <div class="row">
+                <div class="hide-for-small-only columns">
+                    <img src="{{ '/images/mug.svg'|asseturl }}" class="speaker-img-circle"/>
+                </div>
+                <div class="show-for-small-only small-12 columns text-center">
+                    <img src="{{ '/images/mug.svg'|asseturl }}" class="speaker-img-circle"/>
+                </div>
+
+                <div class="medium-10 small-12 columns">
+                    <h2>{{ slot.title }}</h2>
+                    <p>{{ slot.description }}</p>
+                </div>
+                <p>{{ slot.body }}</p>
+            </div>
+        </div>
+        <button class="close-button" data-close
+                aria-label="Close modal"
+                type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+</td>
+
+{% endmacro %}
+
+{% macro render_workshop(workshop, room) %}
+<td>
+<div class="talk">
+  <a data-open="modal-speaker-{{ workshop._slug }}" target="_blank"><img class="talk-speaker-image" src="{{ workshop.image|default("/images/placeholder-speaker.png", true)|asseturl }}"></a>
+  <a data-open="modal-speaker-{{ workshop._slug }}" target="_blank" class="talk-info">
+    {{ render_room_talk(room) }}
+    <span class="talk-speaker">{{ workshop.host }}</span>
+    <span class="talk-title">{{ workshop.title }}</span>
+  </a>
+</div>
+<div class="medium-3 small-6 column">
+    <div class="reveal large modal-speaker-representation" id="modal-speaker-{{ workshop._slug }}" data-reveal data-reset-on-close="true">
+        <div class="medium-12 column">
+        <div class="row">
+            <div class="hide-for-small-only column">
+                <img src="{{ workshop.image|default("/images/placeholder-speaker.png", true)|asseturl }}" class="speaker-img-circle"/>
+            </div>
+            <div class="show-for-small-only small-12 text-center">
+                <img src="{{ workshop.image|default("/images/placeholder-speaker.png", true)|asseturl }}" class="speaker-img-circle"/>
+            </div>
+
+            <div class="medium-10 small-12">
+                <span class="speaker-name">{{ workshop.host }}</span>
+                <h2>{{ workshop.title}}</h2>
+            </div>
+        </div>
+            <p>{{ workshop.description }}</p>
+            <br>
+        </div>
+        <button class="close-button" data-close
+                aria-label="Close modal"
+                type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+</td>
+{% endmacro %}
+

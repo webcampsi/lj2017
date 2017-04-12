@@ -112,8 +112,11 @@ h2 {
 .menu > li {
     padding: 0.7rem 1rem;
     vertical-align: bottom;
-    margin-bottom: 2px;
-    background-color: #dedede;
+
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(2);
+        background-color: #dedede;
+    }
 }
 
 .menu > li > a {

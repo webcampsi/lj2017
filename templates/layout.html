@@ -61,21 +61,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      alt="WebCamp Logo" class="logo"></a>
         </div>
         <div class="medium-offset-2 medium-7 small-12 column clearfix">
-            <ul class="menu">
-                <li><a href="{{ root|url }}#speakers">Speakers</a></li>
-{#                <li><a href="/#cfp">IoT Corner</a></li>#}
-{#              <li><a href="/#tickets">Tickets</a></li>#}
-                <li><a href="{{ root|url }}#info">Venue</a></li>
-                <li class="hide-for-small-only"><a href="{{ '/coc'|url }}">Code of Conduct</a>
-                </li>
-                <li class="show-for-small-only"><a href="{{ '/coc'|url }}">CoC</a>
-                </li>
-                <li class="hide-for-small-only"><a href="{{ root|url }}#partners">Partners</a>
-                <li class="hide-for-small-only"><a href="{{ '/team'|url }}">Team</a></li>
+            <div class="title-bar" data-responsive-toggle="webcamp-menu" data-hide-for="medium">
+              <button class="menu-icon" type="button" data-toggle="webcamp-menu"></button>
+              <div class="title-bar-title"><a data-toggle="webcamp-menu">Menu</a></div>
+            </div>
 
-            </ul>
+            <div class="top-bar" id="webcamp-menu">
+              <div class="top-bar-left">
+                <ul class="vertical medium-horizontal menu" data-dropdown-menu data-responsive-menu="vertical medium">
+                    <li><a href="{{ root|url }}#schedule">Schedule</a></li>
+                    <li><a href="{{ root|url }}#iot">IoT</a></li>
+                    <li><a href="{{ root|url }}#info">Venue</a></li>
+                    <li><a href="{{ root|url }}#sponsors">Sponsors</a></li>
+                    <li><a href="{{ '/coc'|url }}">Code of Conduct</a></li>
+                </ul>
+                </div>
+            </div>
         </div>
     </div>
+
     {% block body %}
 
     {% endblock %}

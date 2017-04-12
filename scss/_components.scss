@@ -9,6 +9,7 @@ $orangeDark: #D58E1F;
 $buttonBlue: #55C1E8;
 $buttonBlueShadow: #2199C3;
 
+
 /* Backgrounds */
 .background-blue {
     background: $blue;
@@ -111,18 +112,35 @@ h2 {
 .menu > li {
     padding: 0.7rem 1rem;
     vertical-align: bottom;
+    margin-bottom: 2px;
+    background-color: #dedede;
 }
 
 .menu > li > a {
     padding: 0;
     padding-bottom: 1px;
-    border-bottom: 1px solid $primary-color;
     white-space: nowrap;
 }
 
 .menu li:last-child() {
     padding-right: 0;
 }
+
+.top-bar, .top-bar ul {
+    background-color: transparent;
+}
+
+.title-bar {
+    background-color: $blue;
+    color: $white;
+    a, a:visited {
+        color: $white;
+    }
+    a:hover {
+        color: #dedede;
+    }
+}
+
 
 .header {
     position: relative;
@@ -1023,5 +1041,21 @@ div[class^="speaker-details-"] {
 .learn-more {
     position: absolute;
     bottom: rem-calc(-20);
+}
+
+
+/* Fixing quirks */
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
 }
 

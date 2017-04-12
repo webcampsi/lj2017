@@ -31,7 +31,7 @@ gulp.task('compress', function() {
     // 'bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
     'bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
     'bower_components/gsap/src/minified/TweenMax.min.js',
-
+    'js/schedule.js',
     'js/app.js'
   ];
 

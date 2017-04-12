@@ -32,6 +32,11 @@ $buttonBlueShadow: #2199C3;
     width: rem-calc(85);
 }
 
+.reveal {
+    border-radius: rem-calc(5);
+}
+
+
 /* Type */
 
 h1 {
@@ -415,6 +420,7 @@ h2 {
     }
 }
 
+/* Section: Important */
 .section-important {
     position: relative;
     padding-top: rem-calc(61);
@@ -451,6 +457,7 @@ h2 {
     }
 }
 
+/* Section: CfP */
 .section-cfp {
 
 }
@@ -510,14 +517,24 @@ h2 {
     font-weight: 600;
 }
 
-.section-schedule h1 {
-    margin: rem-calc(93) 0 rem-calc(112);
-    color: $white;
-}
+/* Section: Schedule */
 
 .section-schedule {
     display: flex;
     justify-content: center;
+
+    h1 {
+        margin: rem-calc(53) 0 rem-calc(53);
+        color: #fff;
+    }
+
+    table thead, table tbody, table tfoot {
+        background-color: transparent;
+    }
+
+    table tbody tr:nth-child(even) {
+        background-color: transparent;
+    }
 }
 
 .section-schedule-row {
@@ -526,31 +543,68 @@ h2 {
 
 .schedule {
     border-spacing: 0 rem-calc(47px);
-    margin-bottom: rem-calc(180);
+    margin-bottom: rem-calc(75);
+
+    thead,
+    tbody,
+    tr {
+        color: $white;
+        //background-color: transparent !important;
+        vertical-align: top;
+    }
+
+    thead {
+        @include breakpoint(small only) {
+            display: none;
+        }
+    }
+
+    th {
+        color: $white;
+        font-weight: bold;
+        font-size: rem-calc(24);
+        text-align: center;
+    }
 
     @include breakpoint(small only) {
         width: 100%;
+
+        .empty-slot {
+            display: none;
+        }
     }
 }
 
-.schedule thead,
-.schedule tbody,
+
+
 .schedule tr {
-    color: $white;
-    background-color: transparent !important;
-}
+    td {
+        .slot-status {
+            display: none;
+        }
 
-.schedule thead {
-    @include breakpoint(small only) {
-        display: none;
+        .talk, .announcement {
+            padding-right: rem-calc(10);
+            min-height: 100px;
+
+            a {
+                color: $white;
+            }
+
+            a:hover {
+                color: $orange;
+            }
+        }
+
+        .past {
+            a { color: red;}
+            a:hover {color: green;}
+        }
+
+        @include breakpoint(small only) {
+            border: none;
+        }
     }
-}
-
-.schedule th {
-    color: $white;
-    font-weight: bold;
-    font-size: rem-calc(24);
-    text-align: center;
 }
 
 .schedule tr td:first-child() {
@@ -559,9 +613,24 @@ h2 {
     text-align: right;
     padding-left: 0;
     padding-right: rem-calc(20);
+
+}
+
+.schedule tr td:last-child() {
+    @include breakpoint(small only) {
+        .talk {
+            border-bottom: 1px solid #ededed;
+            padding-bottom: rem-calc(15);
+        }
+
+        .announcement {
+            border-bottom: none;
+        }
+    }
 }
 
 .schedule td {
+
     @include breakpoint(small only) {
         display:block;
         // box-sizing: border-box;
@@ -570,54 +639,160 @@ h2 {
     }
 }
 
-.schedule .talk {
+.schedule .talk, .announcement {
     display: flex;
+}
+
+
+.talk-room {
+    display: block;
+    font-size: rem-calc(16);
+
+    @include breakpoint(small only) {
+        display: inline-block;
+    }
+}
+
+.talk-room-sponsor {
+    display: block;
+    font-size: rem-calc(8);
+    text-transform: uppercase;
+    margin-top: rem-calc(5);
+
+    @include breakpoint(small only) {
+        display: inline;
+        background-color: $blue;
+        padding-left: rem-calc(5);
+        padding-right: rem-calc(5);
+    }
 }
 
 .talk-room i {
     margin-right: rem-calc(6);
 }
 
-.schedule .talk-speaker-image {
-    flex-grow: 1;
-    min-width: rem-calc(103);
 
-    @include breakpoint(medium down) {
-        display: none;
+.schedule {
+    .talk-speaker-image {
+        flex-grow: 1;
+        min-width: rem-calc(50);
+        width: rem-calc(50);
+        border-radius: rem-calc(50%);
+    }
+
+    .talk-info {
+        display: block;
+        flex-grow: 2;
+        display: inline-block;
+        text-align: left;
+        color: $white;
+
+        padding-left: rem-calc(25);
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $blue;
+        }
+
+    }
+
+    .talk-speaker {
+        display: block;
+        font-size: rem-calc(16);
+    }
+
+    .talk-jobtitle {
+        display: block;
+        font-size: rem-calc(16);
+        font-style: italic;
+    }
+
+    .talk-title {
+        display: block;
+        font-size: rem-calc(20);
     }
 }
 
-.schedule .talk-info {
-    display: block;
-    flex-grow: 2;
-    display: inline-block;
-    text-align: left;
-    color: $white;
 
-    padding-left: rem-calc(25);
+.reveal {
+    border-radius: rem-calc(5);
+}
 
-    &:active,
-    &:hover,
-    &:focus {
-        color: $primary-color;
+
+.schedule .active-now
+ {
+    color: $orange;
+
+    .slot-status {
+        display: inline-block;
+        padding: rem-calc(2);
+
+        color: $black;
+        font-size: rem-calc(9);
+        background-color: $orange;
+        text-transform: uppercase;
+        visibility: visible;
+    }
+
+    a, a:visited {
+        color: $white;
+    }
+
+    a:hover {
+        color: $white;
     }
 }
 
-.schedule .talk-speaker {
-    display: block;
-    font-size: rem-calc(24);
+.schedule .past {
+    color: rgba(220,220,220,.80);
+
+    td {
+        border: none;
+    }
+
+    .talk a {
+        color: rgba(220,220,220,.70);
+    }
+    .talk a:hover {
+        color: $white;
+    }
 }
 
+.schedule .talk-announcement.future td{
+    background-color: $blue;
 
-.schedule .talk-jobtitle {
-    display: block;
-    font-size: rem-calc(16);
-    font-style: italic;
+    a:hover {
+        color: #dedede;
+    }
 }
 
-.schedule .talk-title {
-    display: block;
-    font-size: rem-calc(16);
+.schedule .talk-announcement.past td{
+    background-color: rgba(77,77,77,0.3) !important;
+    color: rgba(240,240,240,.9);
+
+    a {
+        color:rgba(220,220,220,.70);
+    }
+    a:hover {
+        color: $white;
+    }
+}
+
+.schedule .talk-announcement.active-now {
+
+    a:hover {
+        color: $orange;
+    }
+
+    td {
+    background-color: transparent !important;
+    }
+
+    @include breakpoint(medium up) {
+        border-bottom: 1px solid $orange;
+    }
+
 }
 
 .talk-announcement {
@@ -658,6 +833,10 @@ h2 {
     display: inline-block;
 }
 
+/******************************/
+
+/* Section: team */
+
 .section-team {
     margin-top: rem-calc(120);
     margin-bottom: rem-calc(170);
@@ -675,6 +854,8 @@ h2 {
 .team-member img {
     border-radius: 5%;
 }
+
+/* Section: subpage */
 
 .section-subpage {
     margin-top: rem-calc(80);

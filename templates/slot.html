@@ -1,53 +1,30 @@
 {% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
 {% from "macros/schedule_slot.html" import render_talk_placeholder, render_talk, render_announcement, render_workshop, render_room_header %}
 
+{% block subpage_gradient %}<div class="background-gradient-subpage clearfix header">{% endblock%}
+
 {% block body %}
-<div class="background-black text-white section-schedule" id="section-schedule">
-<table class="schedule hover">
-  <thead>
-    <tr>
-      <th></th>
-      <th>{{ render_room_header(bag('rooms.room1')) }}</th>
-      <th>{{ render_room_header(bag('rooms.room2')) }}</th>
-      <th>{{ render_room_header(bag('rooms.room3')) }}</th>
-      <th>{{ render_room_header(bag('rooms.workshop')) }}</th>
-  </thead>
-  <tbody>
-
-{% set slot = this %}
-{% if slot.type == 'single' %}
-<tr class="slot talk-announcement">
-{% else %}
-<tr class="slot">
-{% endif %}
-    <td class="slot-time" data-start-time="{{ slot.start_time }}" data-end-time="{{ slot.end_time }}">&nbsp;{{ slot.start_time }}<br><span class="slot-status">in progress</span></td>
-    {% if slot.type == 'single' %}
-        {{ render_announcement (slot, slot.room) }}
-    {% else %}
-        {% set speaker1 = site.get('/speakers/' + slot.track1_speaker) %}
-        {{ render_talk (speaker1, bag('rooms.room1')) }}
-
-        {% if slot.speaker2 and slot.speaker2 != None %}
-            {% set speaker2 = site.get('/speakers/' + slot.track2_speaker) %}
-            {{ render_talk (speaker2, bag('rooms.room2')) }}
-        {% else %}
-            {{ render_talk_placeholder() }}
-        {% endif %}
-        {% if slot.speaker3 and slot.speaker3 != None %}
-            {% set speaker3 = site.get('/speakers/' + slot.track3_speaker) %}
-            {{ render_talk (speaker3, bag('rooms.room3')) }}
-        {% else %}
-            {{ render_talk_placeholder() }}
-        {% endif %}
-        {% if slot.workshop and slot.workshop != None %}
-            {% set workshop = site.get('/workshops/' + slot.workshop) %}
-            {{ render_workshop (workshop, bag('rooms.workshop')) }}
-        {% else %}
-            {{ render_talk_placeholder() }}
-        {% endif %}
-    {% endif %}
-</tr>
-</tbody>
-</table>
-</div>
+    <div class="row section-subpage">
+        <div class="medium-12 column">
+            <div class="row speaker-info">
+                <div class="small-2 column">
+                    <img class="speaker-img-circle" src="{{ this.image|default("/images/mug.svg", true) | asseturl }}" class="img-rounded">
+                </div>
+                <div class="small-10 column">
+                    <span class="speaker-name">{{ this.title }}</span><br><span class="speaker-tagline">{{ this.description }}</span>
+                </div>
+            </div>
+            <div class="row speaker-info">
+                <div class="medium-12 column">
+                    <p>{{ this.body }}</p>
+                </div>
+            </div>
+            <div class="row subpage-nav">
+                <div class="medium-4 medium-offset-4 small-12 column text-center">
+                  <a href="{{ '/'|url }}#{{ this._slug}}"> Back to schedule</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

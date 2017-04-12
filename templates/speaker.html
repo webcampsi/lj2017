@@ -36,18 +36,21 @@
                     <p>{{ this.takeaways }}</p>
                 </div>
             </div>
-            <div class="row subpage-nav">
-                <div class="medium-6 column">
-                {% if siblings.prev_page %}
-                  <a href="{{ siblings.prev_page|url }}">Previous: {{ siblings.prev_page.name }}</a>
-                {% endif %}
-                </div>
-                <div class="medium-6 column next-speaker">
-                {% if siblings.next_page %}
-                  <a href="{{ siblings.next_page|url }}">Next: {{ siblings.next_page.name }}</a>
-                {% endif %}
-                </div>
-            </div>
+           <div class="row subpage-nav">
+               <div class="medium-4 column hide-for-small-only">
+               {% if siblings.prev_page %}
+                 <a href="{{ siblings.prev_page|url }}"> &lt; {{ siblings.prev_page.name }}</a>
+               {% endif %}
+               </div>
+               <div class="medium-4 small-12 column text-center">
+                 <a href="{{ '/'|url }}#{{ this._slug}}"> Back to schedule</a>
+               </div>
+               <div class="medium-4 column next-speaker hide-for-small-only">
+               {% if siblings.next_page %}
+                 <a href="{{ siblings.next_page|url }}">{{ siblings.next_page.name }} &gt;</a>
+               {% endif %}
+               </div>
+           </div>
         </div>
     </div>
 {% endblock %}

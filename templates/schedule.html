@@ -1,6 +1,3 @@
-{% extends "layout.html" %}
-{% block title %}{{ this.title }}{% endblock %}
-
 {% from "macros/schedule_slot.html" import render_talk_placeholder, render_talk, render_announcement, render_workshop, render_room_header, render_room_talk %}
 
 {% block body %}
@@ -30,7 +27,11 @@
             {% endif %}
                 <td class="slot-time" data-start-time="{{ slot.start_time }}" data-end-time="{{ slot.end_time }}">&nbsp;{{ slot.start_time }}<br><span class="slot-status">in progress</span></td>
                 {% if slot.type == 'single' %}
-                    {{ render_announcement (slot, bag('rooms', slot.room)) }}
+                    {% if slot and slot.room %}
+                        {{ render_announcement (slot, bag('rooms', slot.room)) }}
+                    {% else %}
+                        {{ render_announcement (slot, None)}}
+                    {% endif %}
                 {% else %}
                     {% set speaker1 = site.get('/speakers/' + slot.track1_speaker) %}
                     {{ render_talk (speaker1, bag('rooms.room1')) }}

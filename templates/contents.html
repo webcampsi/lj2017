@@ -85,7 +85,7 @@
     </div>
     <br>
 
-    <div class="row align-spaced section-team" id="speakers">
+    {# <div class="row align-spaced section-team" id="speakers">
         <div class="small-12 column text-center">
             <h1>Speakers</h1>
         </div>
@@ -94,7 +94,7 @@
         {% for speaker in site.query('/speakers') %}
             {{ render_speaker(speaker) }}
         {% endfor %}
-    </div>
+    </div> #}
 
     <div class="row align-spaced section-team" id="iot">
         <div class="small-12 column text-center">
@@ -131,7 +131,7 @@
             </div>
         </div>
     </div>
-    <div class="row align-spaced section-team" id="workshops">
+    {# <div class="row align-spaced section-team" id="workshops">
         <div class="small-12 column text-center">
             <h1>Workshops</h1>
             <p class="section-info">And now something completely different...</p>
@@ -141,7 +141,7 @@
         {% for workshop in site.query('/workshops') %}
             {{ render_workshop(workshop) }}
         {% endfor %}
-    </div>
+    </div> #}
     <div class="row section-important-wrapper" id="tickets">
         <div class="section-important">
             <div class="medium-10 medium-offset-1 small-12 column">
@@ -180,6 +180,8 @@
                  class="section-important-mug"/>
         </div>
     </div>
+
+    {% include 'schedule.html' %}
 
     {# About, Location, Venue #}
     <div class="row section-about" id="info">
@@ -372,4 +374,11 @@
                  <p>WebCamp Ljubljana is brought to you by a <a href="/team">team of volunteers</a>.</p>
              </div>
          </div>
+{% endblock %}
+
+{% block custom_javascript %}
+<script type="text/javascript">
+    WebCamp.Schedule.setStyles();
+</script>
+
 {% endblock %}

@@ -8,4 +8,6 @@ start_time: 9:00
 ---
 type: single
 ---
-room:
+body:
+
+Hello world type of talk. All the important things you need to know in order not to miss anything.

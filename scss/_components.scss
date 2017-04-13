@@ -87,6 +87,21 @@ h2 {
     }
 }
 
+
+
+.top-bar, .top-bar ul {
+    background-color: transparent;
+
+    @include breakpoint(small) {
+        background-color: #dedede;
+    }
+}
+
+.title-bar {
+    background-color: $blue;
+    color: #fff;
+}
+
 .menu {
     margin-top: rem-calc(25);
     float: right;
@@ -106,17 +121,36 @@ h2 {
 .menu > li {
     padding: 0.7rem 1rem;
     vertical-align: bottom;
+
+    @include breakpoint(small only) {
+        margin-bottom: rem-calc(2);
+        background-color: #dedede;
+    }
 }
 
 .menu > li > a {
     padding: 0;
     padding-bottom: 1px;
-    border-bottom: 1px solid $primary-color;
     white-space: nowrap;
 }
 
 .menu li:last-child() {
     padding-right: 0;
+}
+
+.top-bar, .top-bar ul {
+    background-color: transparent;
+}
+
+.title-bar {
+    background-color: $blue;
+    color: $white;
+    a, a:visited {
+        color: $white;
+    }
+    a:hover {
+        color: #dedede;
+    }
 }
 
 .header {

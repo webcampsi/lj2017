@@ -46,7 +46,7 @@
     <div class="background-black newsletter-cta">
         <div class="newsletter-cta-row">
             <div class="newsletter-text">
-                <span class="hide-for-small-only">
+                {# <span class="hide-for-small-only">
                   Sorry, there are <br class="show-for-large"/>
                   no more free tickets.<br class="show-for-large"/>
                   Still want to attend?
@@ -54,32 +54,30 @@
                 <span class="show-for-small-only">
                   Still want to attend WebCamp?
                 </span>
-            {#
+                #}
               <span class="hide-for-small-only">
-                We'll send free<br class="show-for-large"/>
-                tickets to list<br class="show-for-large"/>
-                subscribers!
+                Missed yout free<br class="show-for-large"/>
+                ticket? Subscribe for <br class="show-for-large"/>
+                not missing it next year!
               </span>
               <span class="show-for-small-only">
-                Free tickets for list subscribers!
+                Get notified about Free tickets for list subscribers!
               </span>
-            #}
                 <img src="{{ 'images/arrow.svg'|asseturl }}" class="newsletter-arrow show-for-large"/>
             </div>
-            {#
             <form class="newsletter-form"
                   action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2"
                   method="post">
                 <input type="text" name="MERGE1" placeholder="Name"
                        class="show-for-large">
                 <input type="email" name="MERGE0" placeholder="Email">
-                <input type="submit" value="Get Notified"
+                <input type="submit" value="Subscribe"
                        class="button orange newsletter-button">
             </form>
-            #}
-            <div class="newsletter-form supporter-push">
+            {# <div class="newsletter-form supporter-push">
                 <a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button orange newsletter-button supporter">Become a supporter</a>
             </div>
+            #}
         </div>
     </div>
     </div>
@@ -153,19 +151,15 @@
                         Information
                         Science, Ljubljana</p>
                     <p><strong>Event date:</strong> Saturday, April 22, 2017</p>
-                    <p><strong>Tickets:</strong> free, distributed only through
-                        mailing
-                        list</p>
-                        <p>Don’t miss any of the important dates, subscribe to our
-                            mailing list and you’ll be the first to hear when the ticket
-                            registration opens!</p>
+                    <p><strong>Tickets:</strong> sorry, all the free tickets are gone, but you might still get one by <a href="#supporters">supporting WebCamp</a>.</p>
+                        <p>Don’t miss your chance to get a free ticket next year, subscribe to our
+                            mailing list and you’ll be the first to hear when we gt the ball rolling!</p>
                 </div>
-                <div class="newsletter-form-small">
+                {# <div class="newsletter-form-small">
                     <h4>Missed your free ticket? We have a few spaces left for our supporters.</h4>
                     <a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button blue newsletter-button supporter">Become a supporter</a>
-                </div>
-                {#
-               <h4>Subscribe to get notified about the tickets</h4>
+                </div>#}
+               <h4>Subscribe not to miss everything next year!</h4>
                 <form class="newsletter-form-small"
                       action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2"
                       method="post">
@@ -173,7 +167,6 @@
                     <input type="submit" value="Subscribe"
                            class="button blue newsletter-button">
                 </form>
-                #}
             </div>
 
             <img src="{{ 'images/mug-large.svg'|asseturl }}" alt="It's a mug!!"
@@ -305,24 +298,14 @@
             <h1>Partners</h1>
         </div>
         {% for id, item in bag('partners').items() %}
-            <div class="medium-6 small-6 column sponsor">
+            <div class="medium-6 small-12 column sponsor">
                 <a href="{{ item.link }}" target="_blank">
                     <img src="{{ item.image|asseturl }}" alt="{{ item.name }}"/>
                 </a>
-                <br/>
+                <p><br/>{{ item.description|safe }}</p>
             </div>
         {% endfor %}
-        <div class="medium-10 small-12 column text-center team-description">
-            This event would not be possible without the generous help of
-            <a href="http://www.fri.uni-lj.si/en/about/" target="_blank">
-                Faculty of Computer and Information Science</a>.
-            They also host a lot of other interesting <a
-                href="http://fri.uni-lj.si/sl/dogodki"
-                target="_blank">events</a>.
-            Check out their event list and <a
-                href="http://fri.uni-lj.si/en/study-programmes" target="_blank">different
-            post-graduate study programs</a>.
-        </div>
+
 
         <div class="medium-10 small-12 column text-center section-supporters" id="supporters">
             <h2>Supporters</h2>

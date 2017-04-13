@@ -61,20 +61,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      alt="WebCamp Logo" class="logo"></a>
         </div>
         <div class="medium-offset-2 medium-7 small-12 column clearfix">
-            <ul class="menu">
-                <li><a href="{{ root|url }}#speakers">Speakers</a></li>
-{#                <li><a href="/#cfp">IoT Corner</a></li>#}
-{#              <li><a href="/#tickets">Tickets</a></li>#}
-                <li><a href="{{ root|url }}#info">Venue</a></li>
-                <li class="hide-for-small-only"><a href="{{ '/coc'|url }}">Code of Conduct</a>
-                </li>
-                <li class="show-for-small-only"><a href="{{ '/coc'|url }}">CoC</a>
-                </li>
-                <li class="hide-for-small-only"><a href="{{ root|url }}#partners">Partners</a>
-                <li class="hide-for-small-only"><a href="{{ '/team'|url }}">Team</a></li>
-
-            </ul>
-        </div>
+            <div class="title-bar" data-responsive-toggle="webcamp-menu" data-hide-for="medium" style="display: none;">
+                <button class="menu-icon" type="button" data-toggle="webcamp-menu"></button>
+                <div class="title-bar-title"><a data-toggle="webcamp-menu">Menu</a></div>
+            </div>
+            <div class="top-bar" id="webcamp-menu">
+                <div class="top-bar-left">
+                <ul class="vertical medium-horizontal menu" data-dropdown-menu="dropdown-menu" data-responsive-menu="vertical medium" role="menubar">
+                    <li><a href="{{ root|url }}#speakers">Speakers</a></li>
+                    <li><a href="{{ root|url }}#workshops">Workshops</a></li>
+                    <li><a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank">Tickets</a></li>
+                    <li><a href="{{ root|url }}#sponsors">Sponsors</a></li>
+                    {# <li><a href="/#cfp">IoT Corner</a></li>#}
+                    {# <li><a href="/#tickets">Tickets</a></li>#}
+                    {# <li><a href="{{ root|url }}#info">Venue</a></li>#}
+                    <li><a href="{{ '/coc'|url }}">Code of Conduct</a></li>
+                    {# <li><a href="{{ '/team'|url }}">Team</a></li> #}
+                </ul>
+                </div> <!-- top-bar-left -->
+            </div> <!-- top-bar -->
+        </div> <!-- column -->
     </div>
     {% block body %}
 

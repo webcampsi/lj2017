@@ -2,6 +2,7 @@
 {% from "macros/speaker_intro.html" import render_speaker %}
 {% from "macros/iot_intro.html" import render_iot %}
 {% from "macros/workshop_intro.html" import render_workshop %}
+{% block custom_meta_tag %}<meta http-equiv="refresh" content="900" >{% endblock %}
 {% block body %}
     <div class="hero row show-for-medium">
         <img src="{{ 'images/animation/monitors.svg'|asseturl }}"

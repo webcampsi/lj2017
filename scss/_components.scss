@@ -755,7 +755,7 @@ h2 {
 
         }
 
-        @include breakpoint(small) {
+        @include breakpoint(small only) {
             padding-top: rem-calc(20);
 
             &:first-child() {
@@ -764,7 +764,6 @@ h2 {
             }
         }
     }
-
 
 
     .slot-status {

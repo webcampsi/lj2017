@@ -233,11 +233,19 @@ h2 {
 }
 
 .newsletter-form-small {
-    background-color: $orange;
-    padding: rem-calc(20);
+    background-color: transparent;
+    padding: rem-calc(10);
     border-radius: rem-calc(5);
     @include breakpoint(small only) {
         text-align: center;
+    }
+
+    &.blue {
+        background-color: $blue;
+    }
+
+    &.orange {
+        background-color: $orange;
     }
 }
 
@@ -762,7 +770,7 @@ h2 {
     .team-description {
         font-size: rem-calc(15);
     }
-    
+
     .iot-thumb {
         width: 170px;
         height: 170px;
@@ -888,3 +896,21 @@ div[class^="speaker-details-"] {
     bottom: rem-calc(-20);
 }
 
+.explanation {
+    color: $white;
+    font-size: rem-calc(16);
+    margin-left: rem-calc(15);
+}
+
+a.explanation {
+    color: $white;
+    display: inline-block;
+    /*font-size: rem-calc(12);*/
+    margin-left: rem-calc(30);
+    text-decoration: underline;
+
+    @include breakpoint(small only) {
+        display: block;
+        margin-left: 0;
+    }
+}

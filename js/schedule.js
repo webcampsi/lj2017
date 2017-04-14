@@ -49,7 +49,6 @@ var WebCamp = window.WebCamp || {};
             var slotEnds = $(this).find(".slot-time").data("end-time");
             var cellStyle = getClassForSectionInProgress(slotStarts, slotEnds);
             $(this).addClass(cellStyle);
-
           });
     }
 
@@ -64,12 +63,9 @@ var WebCamp = window.WebCamp || {};
         tmpCurrentDay.setHours(0, 0, 0, 0);
 
         if(tmpCurrentDay.getTime() == tmpEventDay.getTime()) {
-            setStylesEnabled = true;
-        }
-
-        if (setStylesEnabled) {
             applySlotStyles();
         }
+
     }
 
     WebCamp.Schedule = {};

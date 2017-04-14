@@ -1,0 +1,9 @@
+name: NerdPool
+---
+link: https://github.com/BigWhale/nerdpool
+---
+presenter: David Klasinc
+---
+tagline: NerdPool is a pool for nerds.
+---
+project_description: They said there won't be much work having a swimming pool in your back yard. They lied. So, let's automate as much of it as possible. Connecting together an Arduino, ESP-12E board, a Raspberry Pi and a few sensors. Nerdpool monitors your water temperature in the pool and the air temperature by the pool. It also control the filter pump and pool lights. With a few spare relay switches it can control whatever you want it to control. For a total buzzword compliance there's also mobile support. All this can be done with your phone from your inflatable arm chair while floating around in your pool.

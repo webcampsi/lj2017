@@ -5,6 +5,7 @@ $black: #2D2D2D;
 $white: #FFFFFF;
 $orange: #FFB542;
 $orangeDark: #D58E1F;
+$greyDark: rgba(222,222,222,.90);
 
 $buttonBlue: #55C1E8;
 $buttonBlueShadow: #2199C3;
@@ -618,8 +619,8 @@ h2 {
         }
 
         .past {
-            a { color: red;}
-            a:hover {color: green;}
+            a { color: $greyDark; }
+            a:hover { color: $greyDark;}
         }
 
         @include breakpoint(small only) {
@@ -640,7 +641,7 @@ h2 {
 .schedule tr td:last-child() {
     @include breakpoint(small only) {
         .talk {
-            border-bottom: 1px solid #ededed;
+           //border-bottom: 1px solid #ededed;
             padding-bottom: rem-calc(15);
         }
 
@@ -694,7 +695,7 @@ h2 {
 
 
 .schedule {
-    .talk-speaker-image {
+    .talk-speaker-image, .image {
         flex-grow: 1;
         min-width: rem-calc(50);
         width: rem-calc(50);
@@ -744,6 +745,27 @@ h2 {
 .schedule .active-now
  {
     color: $orange;
+    td {
+
+        @include breakpoint(medium) {
+            padding-top: rem-calc(50);
+            padding-bottom: rem-calc(50);
+            border-top: 1px solid $orange;
+            border-bottom: 1px solid $orange;
+
+        }
+
+        @include breakpoint(small) {
+            padding-top: rem-calc(20);
+
+            &:first-child() {
+                border-top: 1px solid $orange;
+                border-bottom: 0;
+            }
+        }
+    }
+
+
 
     .slot-status {
         display: inline-block;
@@ -766,14 +788,21 @@ h2 {
 }
 
 .schedule .past {
-    color: rgba(220,220,220,.80);
+    color: $greyDark;
+
+    .talk, .announcement {
+            filter: brightness(70%);
+    }
+    .talk:hover, .announcement:hover {
+            filter: brightness(100%);
+    }
 
     td {
         border: none;
     }
 
     .talk a {
-        color: rgba(220,220,220,.70);
+        color: $greyDark;
     }
     .talk a:hover {
         color: $white;
@@ -789,11 +818,10 @@ h2 {
 }
 
 .schedule .talk-announcement.past td{
-    background-color: rgba(77,77,77,0.3) !important;
-    color: rgba(240,240,240,.9);
+    background-color: rgba(33,153,195,.2);//rgba(77,77,77,0.3); //!important;
 
     a {
-        color:rgba(220,220,220,.70);
+        color: $greyDark;
     }
     a:hover {
         color: $white;
@@ -807,7 +835,7 @@ h2 {
     }
 
     td {
-    background-color: transparent !important;
+        background-color: transparent !important;
     }
 
     @include breakpoint(medium up) {

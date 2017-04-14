@@ -734,6 +734,7 @@ h2 {
         display: block;
         font-size: rem-calc(20);
     }
+
 }
 
 
@@ -808,6 +809,10 @@ h2 {
     }
 }
 
+.schedule .talk-announcement td {
+    background-color: $blue;
+}
+
 .schedule .talk-announcement.future td{
     background-color: $blue;
 
@@ -817,7 +822,7 @@ h2 {
 }
 
 .schedule .talk-announcement.past td{
-    background-color: rgba(33,153,195,.2);//rgba(77,77,77,0.3); //!important;
+    background-color: rgba(77,77,77,0.3);
 
     a {
         color: $greyDark;
@@ -880,6 +885,22 @@ h2 {
 .talk-announcement-description {
     display: inline-block;
 }
+
+.special-slot {
+    td {
+        background-color: rgba(77,77,77,0.4);
+    }
+
+    .start-time {
+        display: block;
+        color: $blue;
+    }
+    .end-time {
+        color: $blue;
+        opacity: 0.6;
+    }
+}
+
 
 /******************************/
 

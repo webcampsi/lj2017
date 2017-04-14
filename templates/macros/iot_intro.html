@@ -1,9 +1,9 @@
 {% macro render_iot(iot) %}
-<div class="medium-3 small-6 column team-member speaker-container">
+<div class="medium-3 small-6 column team-member speaker-container iot-corner">
 	<div class="iot-thumb">
 
 	    <a href="{{ iot|url }}">
-	       <img src="{{ iot.thumb|default("/images/speakers/default.png", true) | asseturl }}" class="iot-img" /><br/><br/>
+	       <img src="{{ iot.thumb|default("/images/iot/iot-mug-thumb.png", true) | asseturl }}" class="iot-img" /><br/><br/>
 	    </a>
 	</div>
     <a href="{{ iot|url }}" class="team-name">{{ iot.name }}</a>

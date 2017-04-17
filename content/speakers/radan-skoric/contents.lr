@@ -8,6 +8,12 @@ link :
 ---
 talk_title : Battling complexity
 ---
-talk_description : Life is easy when the app is small. With time, it grows larger and complexity creeps in. In order to keep our sanity, we have to battle it. If you've spent at least a few years working in the software industry you've either worked on or heard of some large long-lived project where features are a pain to add and its developers fantasize about killing it and reimplementing it from scratch. At the center of Toptal's business there is a very large system running it. The set of requirements and their complexity has grown organically over more than 67,000 commits. Toptal's engineering team has worked hard to keep its complexity under control and I'll share practical advice that can be used to improve any size project without overengineering it while preparing it for the future at the same time.
+talk_description : Life is easy when the app is small. With time, it grows larger and complexity creeps in. In order to keep our sanity, we have to battle it. 
+
+If you've spent at least a few years working in the software industry you've either worked on or heard of some large long-lived project where features are a pain to add and its developers fantasize about killing it and reimplementing it from scratch. 
+
+At the center of Toptal's business there is a very large system running it. The set of requirements and their complexity has grown organically over more than 67,000 commits. Toptal's engineering team has worked hard to keep its complexity under control and I'll share practical advice that can be used to improve any size project without overengineering it while preparing it for the future at the same time.
 ---
-takeaways : In the age of buzzwords I want to offer a toolbox that is a bit more level headed. There's no need to start the application by using the latest no-sql database with the latest web framework broken down into 20 microservices that are then all dockerized in order to be able to scale the codebase. In fact it will probably hurt you to start like that. What I want to do is highlight some of the programming best practices that I found in my experience to be either misunderstood or neglected that have a big effect on handling raising complexity of a project.
+takeaways : In the age of buzzwords I want to offer a toolbox that is a bit more level headed. There's no need to start the application by using the latest no-sql database with the latest web framework broken down into 20 microservices that are then all dockerized in order to be able to scale the codebase. In fact it will probably hurt you to start like that. 
+
+What I want to do is highlight some of the programming best practices that I found in my experience to be either misunderstood or neglected that have a big effect on handling raising complexity of a project.

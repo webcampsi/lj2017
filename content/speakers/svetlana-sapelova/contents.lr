@@ -10,4 +10,4 @@ talk_title : ES6-7 generators: for better or for worse
 ---
 talk_description : ES6 generators are one of the most controversial features. People have been arguing about whether it's a win or just a feature nobody will care about in a while. In this talk, we will dive into generators to see what they can be used for, check some interesting patterns, and will talk about what to anticipate from them in ES7
 ---
-takeaways : Everyone familiar with javascript. Knowledge of promises is a plus
+takeaways : Everyone familiar with javascript. Knowledge of promises is a plus.

@@ -94,6 +94,20 @@ h2 {
     }
 }
 
+
+.top-bar, .top-bar ul {
+    background-color: transparent;
+
+    @include breakpoint(small) {
+        background-color: #dedede;
+    }
+}
+
+.title-bar {
+    background-color: $blue;
+    color: #fff;
+}
+
 .menu {
     margin-top: rem-calc(25);
     float: right;
@@ -144,7 +158,6 @@ h2 {
         color: #dedede;
     }
 }
-
 
 .header {
     position: relative;
@@ -226,11 +239,19 @@ h2 {
 }
 
 .newsletter-form-small {
-    background-color: $orange;
-    padding: rem-calc(20);
+    background-color: transparent;
+    padding: rem-calc(10);
     border-radius: rem-calc(5);
     @include breakpoint(small only) {
         text-align: center;
+    }
+
+    &.blue {
+        background-color: $blue;
+    }
+
+    &.orange {
+        background-color: $orange;
     }
 }
 
@@ -888,15 +909,15 @@ h2 {
 
 .special-slot {
     td {
-        background-color: rgba(77,77,77,0.4);
+        background-color: $blue;//rgba(77,77,77,0.1);
     }
 
     .start-time {
         display: block;
-        color: $blue;
+        color: $white;
     }
     .end-time {
-        color: $blue;
+        color: $white;
         opacity: 0.6;
     }
 }
@@ -970,9 +991,19 @@ h2 {
     margin-bottom: rem-calc(40);
 }
 
-.iot-thumb {
-    width: 170px;
-    height: 170px;
+.iot-corner {
+    .team-name {
+        font-size: rem-calc(20);
+    }
+
+    .team-description {
+        font-size: rem-calc(15);
+    }
+
+    .iot-thumb {
+        width: 170px;
+        height: 170px;
+    }
 }
 
 .iot-tagline {
@@ -1110,3 +1141,21 @@ div[class^="speaker-details-"] {
   }
 }
 
+.explanation {
+    color: $white;
+    font-size: rem-calc(16);
+    margin-left: rem-calc(15);
+}
+
+a.explanation {
+    color: $white;
+    display: inline-block;
+    /*font-size: rem-calc(12);*/
+    margin-left: rem-calc(30);
+    text-decoration: underline;
+
+    @include breakpoint(small only) {
+        display: block;
+        margin-left: 0;
+    }
+}

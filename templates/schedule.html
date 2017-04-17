@@ -60,29 +60,29 @@
             </tr>
             {% endfor %}
             <tr class="special-slot">
-            <td><span class="start-time">10:00</span><span class="end-time">15:30</span></td>
+            <td><span class="start-time">08:00</span><span class="end-time">15:30</span></td>
             <td colspan="4">
                 <div class="talk">
-                  <a href="#"><img class="talk-speaker-image" src="{{ '/images/iot/vr-duck.png'|asseturl }}"></a>
-                  <a href="#" target="_blank" class="talk-info">
-                  {% set vr_room = bag('rooms.vr')%}
-                  <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ vr_room.name }} | {{ vr_room.label }}</span>{% if vr_room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
-                    <span class="talk-speaker">VR/AR showcase</span>
-                    <span class="talk-title">The latest and greatest of virtual and augmented reality platforms</span>
+                  <a href="#iot"><img class="talk-speaker-image" src="{{ '/images/iot/mug-iot.png'|asseturl }}"></a>
+                  <a href="#iot" class="talk-info">
+                  {% set iot_room = bag('rooms.iot')%}
+                  <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ iot_room.name }} | {{ iot_room.label }}</span>{% if iot_room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
+                  <span class="talk-speaker">IoT Corner @ &nbsp;<span class="hide-for-small-only">{{ iot_room.name }}</span></span>
+                  <span class="talk-title">A showcase of internet-connected projects from startups and makers</span>
                   </a>
                 </div>
             </td>
             </tr>
             <tr class="special-slot">
-            <td><span class="start-time">08:00</span><span class="end-time">15:30</span></td>
+            <td><span class="start-time">10:00</span><span class="end-time">15:30</span></td>
             <td colspan="4">
                 <div class="talk">
-                  <a href="#"><img class="talk-speaker-image" src="{{ '/images/iot/iot.png'|asseturl }}"></a>
-                  <a href="#" target="_blank" class="talk-info">
-                  {% set iot_room = bag('rooms.iot')%}
-                  <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ iot_room.name }} | {{ iot_room.label }}</span>{% if iot_room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
-                  <span class="talk-speaker">IoT Corner</span>
-                  <span class="talk-title">A showcase of internet-connected projects from startups and makers</span>
+                  <a href="#vr"><img class="talk-speaker-image" src="{{ '/images/iot/mug-vr.png'|asseturl }}"></a>
+                  <a href="#vr" class="talk-info">
+                  {% set vr_room = bag('rooms.vr')%}
+                  <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ vr_room.name }} | {{ vr_room.label }}</span>{% if vr_room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
+                    <span class="talk-speaker">VR/AR showcase @ &nbsp;<span class="hide-for-small-only">{{ vr_room.name }}</span></span>
+                    <span class="talk-title">The latest and greatest of virtual and augmented reality platforms</span>
                   </a>
                 </div>
             </td>

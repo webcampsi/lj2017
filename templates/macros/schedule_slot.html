@@ -35,7 +35,7 @@
 {% macro render_announcement(slot, room) %}
 <td colspan="4">
 <div class="announcement" id="{{ slot._slug }}">
-  <a href="{{ slot|url }}"><img class="talk-speaker-image" src="{{ '/images/mug.svg'|asseturl }}"></a>
+  <a href="{{ slot|url }}"><img class="talk-speaker-image" src="{{ slot.image|default('/images/mug.png')|asseturl }}"></a>
   <a href="{{ slot|url }}" class="talk-info">
     {{ render_room_talk(room) }}
     <span class="talk-speaker">{{ slot.title }}</span>

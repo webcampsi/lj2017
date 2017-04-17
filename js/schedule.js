@@ -26,7 +26,7 @@ var WebCamp = window.WebCamp || {};
         var currentTime = hours * SECONDS_IN_HOUR + minutes * SECONDS_IN_MINUTE;
 
         if (slotStartTimeParts.lenght < 2 || slotEndTimeParts.lenght < 2) {
-            return;
+            return '';
         }
 
         slotStart = slotStartTimeParts[0] * SECONDS_IN_HOUR + slotStartTimeParts[1] * SECONDS_IN_MINUTE;
@@ -53,6 +53,7 @@ var WebCamp = window.WebCamp || {};
     }
 
     var init = function init(eventDate) {
+
         mainEventDate = new Date(eventDate);
         currentDate = new Date();
 
@@ -65,7 +66,6 @@ var WebCamp = window.WebCamp || {};
         if(tmpCurrentDay.getTime() == tmpEventDay.getTime()) {
             applySlotStyles();
         }
-
     }
 
     WebCamp.Schedule = {};

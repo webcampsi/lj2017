@@ -85,7 +85,8 @@
         </div>
     </div>
     </div>
-    <br>
+
+    {% include 'schedule.html' %}
 
     {# <div class="row align-spaced section-team" id="speakers">
         <div class="small-12 column text-center">
@@ -109,6 +110,8 @@
             {{ render_workshop(workshop) }}
         {% endfor %}
     </div> #}
+
+    <br><br>
     <div class="row section-important-wrapper" id="tickets">
         <div class="section-important">
             <div class="medium-10 medium-offset-1 small-12 column">
@@ -146,8 +149,6 @@
                  class="section-important-mug"/>
         </div>
     </div>
-
-    {% include 'schedule.html' %}
 
     {# About, Location, Venue #}
     <div class="row section-about" id="info">

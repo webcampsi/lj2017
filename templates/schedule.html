@@ -1,0 +1,98 @@
+{% from "macros/schedule_slot.html" import render_talk_placeholder, render_talk, render_announcement, render_workshop, render_room_header, render_room_talk %}
+
+{% block body %}
+
+<div class="background-black text-white section-schedule" id="schedule">
+      <div class="section-schedule-row">
+        <div class="medium-12 column text-center">
+          <h1>Schedule</h1>
+        </div>
+
+        <div class="medium-12 column text-center">
+          <table class="schedule">
+            <thead>
+              <tr>
+                <th>Room</th>
+                <th>{{ render_room_header(bag('rooms.room1')) }}</th>
+                <th>{{ render_room_header(bag('rooms.room2')) }}</th>
+                <th>{{ render_room_header(bag('rooms.room3')) }}</th>
+                <th>{{ render_room_header(bag('rooms.workshop')) }}</th>
+            </thead>
+            <tbody>
+            {% for slot in site.query('/schedule').order_by('id') %}
+            {% if slot.type == 'single' %}
+            <tr class="slot talk-announcement">
+            {% else %}
+            <tr class="slot">
+            {% endif %}
+                <td class="slot-time" data-start-time="{{ slot.start_time }}" data-end-time="{{ slot.end_time }}">&nbsp;{{ slot.start_time }}<br><span class="slot-status">in progress</span></td>
+                {% if slot.type == 'single' %}
+                    {% if slot and slot.room %}
+                        {{ render_announcement (slot, bag('rooms', slot.room)) }}
+                    {% else %}
+                        {{ render_announcement (slot, None)}}
+                    {% endif %}
+                {% else %}
+                    {% set speaker1 = site.get('/speakers/' + slot.track1_speaker) %}
+                    {{ render_talk (speaker1, bag('rooms.room1')) }}
+
+                    {% if slot.track2_speaker is defined %}
+                        {% set speaker2 = site.get('/speakers/' + slot.track2_speaker) %}
+                        {{ render_talk (speaker2, bag('rooms.room2')) }}
+                    {% else %}
+                        {{ render_talk_placeholder() }}
+                    {% endif %}
+
+                    {% if slot.track3_speaker is defined %}
+                        {% set speaker3 = site.get('/speakers/' + slot.track3_speaker) %}
+                        {{ render_talk (speaker3, bag('rooms.room3')) }}
+                    {% else %}
+                        {{ render_talk_placeholder() }}
+                    {% endif %}
+
+                    {% if slot.workshop is defined %}
+                        {% set workshop = site.get('/workshops/' + slot.workshop) %}
+                        {{ render_workshop (workshop, bag('rooms.workshop')) }}
+                    {% else %}
+                        {{ render_talk_placeholder() }}
+                    {% endif %}
+                {% endif %}
+            </tr>
+            {% endfor %}
+            <tr class="special-slot">
+            <td><span class="start-time">08:00</span><span class="end-time">15:30</span></td>
+            <td colspan="4">
+                <div class="talk">
+                  <a href="#iot"><img class="talk-speaker-image" src="{{ '/images/iot/mug-iot.png'|asseturl }}"></a>
+                  <a href="#iot" class="talk-info">
+                  {% set iot_room = bag('rooms.iot')%}
+                  <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ iot_room.name }} | {{ iot_room.label }}</span>{% if iot_room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
+                  <span class="talk-speaker">IoT Corner @ &nbsp;<span class="hide-for-small-only">{{ iot_room.name }}</span></span>
+                  <span class="talk-title">A showcase of internet-connected projects from startups and makers</span>
+                  </a>
+                </div>
+            </td>
+            </tr>
+            <tr class="special-slot">
+            <td><span class="start-time">10:00</span><span class="end-time">15:30</span></td>
+            <td colspan="4">
+                <div class="talk">
+                  <a href="#vr"><img class="talk-speaker-image" src="{{ '/images/iot/mug-vr.png'|asseturl }}"></a>
+                  <a href="#vr" class="talk-info">
+                  {% set vr_room = bag('rooms.vr')%}
+                  <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ vr_room.name }} | {{ vr_room.label }}</span>{% if vr_room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
+                    <span class="talk-speaker">VR/AR showcase @ &nbsp;<span class="hide-for-small-only">{{ vr_room.name }}</span></span>
+                    <span class="talk-title">The latest and greatest of virtual and augmented reality platforms</span>
+                  </a>
+                </div>
+            </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
+

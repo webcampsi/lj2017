@@ -5,9 +5,11 @@ $black: #2D2D2D;
 $white: #FFFFFF;
 $orange: #FFB542;
 $orangeDark: #D58E1F;
+$greyDark: rgba(222,222,222,.90);
 
 $buttonBlue: #55C1E8;
 $buttonBlueShadow: #2199C3;
+
 
 /* Backgrounds */
 .background-blue {
@@ -31,6 +33,11 @@ $buttonBlueShadow: #2199C3;
 .mug-small {
     width: rem-calc(85);
 }
+
+.reveal {
+    border-radius: rem-calc(5);
+}
+
 
 /* Type */
 
@@ -86,7 +93,6 @@ h2 {
         padding-top: rem-calc(67);
     }
 }
-
 
 
 .top-bar, .top-bar ul {
@@ -228,9 +234,6 @@ h2 {
     }
 }
 
-.mateja-cta {
-    padding-top: rem-calc(30);
-}
 
 .newsletter-form-small {
     background-color: transparent;
@@ -394,6 +397,9 @@ h2 {
 }
 
 /* Section: VR */
+
+
+
 .section-vr {
     padding-top: rem-calc(70);
     padding-bottom: rem-calc(70);
@@ -452,11 +458,14 @@ h2 {
 }
 
 .section-important-wrapper {
+    margin-top: rem-calc(90);
+
     @include breakpoint(small only) {
         overflow: hidden;
     }
 }
 
+/* Section: Important */
 .section-important {
     position: relative;
     padding-top: rem-calc(61);
@@ -493,6 +502,7 @@ h2 {
     }
 }
 
+/* Section: CfP */
 .section-cfp {
 
 }
@@ -552,14 +562,24 @@ h2 {
     font-weight: 600;
 }
 
-.section-schedule h1 {
-    margin: rem-calc(93) 0 rem-calc(112);
-    color: $white;
-}
+/* Section: Schedule */
 
 .section-schedule {
     display: flex;
     justify-content: center;
+
+    h1 {
+        margin: rem-calc(53) 0 rem-calc(53);
+        color: #fff;
+    }
+
+    table thead, table tbody, table tfoot {
+        background-color: transparent;
+    }
+
+    table tbody tr:nth-child(even) {
+        background-color: transparent;
+    }
 }
 
 .section-schedule-row {
@@ -568,31 +588,68 @@ h2 {
 
 .schedule {
     border-spacing: 0 rem-calc(47px);
-    margin-bottom: rem-calc(180);
+    margin-bottom: rem-calc(75);
+
+    thead,
+    tbody,
+    tr {
+        color: $white;
+        //background-color: transparent !important;
+        vertical-align: top;
+    }
+
+    thead {
+        @include breakpoint(small only) {
+            display: none;
+        }
+    }
+
+    th {
+        color: $white;
+        font-weight: bold;
+        font-size: rem-calc(24);
+        text-align: center;
+    }
 
     @include breakpoint(small only) {
         width: 100%;
+
+        .empty-slot {
+            display: none;
+        }
     }
 }
 
-.schedule thead,
-.schedule tbody,
+
+
 .schedule tr {
-    color: $white;
-    background-color: transparent !important;
-}
+    td {
+        .slot-status {
+            display: none;
+        }
 
-.schedule thead {
-    @include breakpoint(small only) {
-        display: none;
+        .talk, .announcement {
+            padding-right: rem-calc(10);
+            min-height: 100px;
+
+            a {
+                color: $white;
+            }
+
+            a:hover {
+                color: $orange;
+            }
+        }
+
+        .past {
+            a { color: $greyDark; }
+            a:hover { color: $greyDark;}
+        }
+
+        @include breakpoint(small only) {
+            border: none;
+        }
     }
-}
-
-.schedule th {
-    color: $white;
-    font-weight: bold;
-    font-size: rem-calc(24);
-    text-align: center;
 }
 
 .schedule tr td:first-child() {
@@ -601,9 +658,24 @@ h2 {
     text-align: right;
     padding-left: 0;
     padding-right: rem-calc(20);
+
+}
+
+.schedule tr td:last-child() {
+    @include breakpoint(small only) {
+        .talk {
+           //border-bottom: 1px solid #ededed;
+            padding-bottom: rem-calc(15);
+        }
+
+        .announcement {
+            border-bottom: none;
+        }
+    }
 }
 
 .schedule td {
+
     @include breakpoint(small only) {
         display:block;
         // box-sizing: border-box;
@@ -612,54 +684,191 @@ h2 {
     }
 }
 
-.schedule .talk {
+.schedule .talk, .announcement {
     display: flex;
+}
+
+
+.talk-room {
+    display: block;
+    font-size: rem-calc(16);
+
+    @include breakpoint(small only) {
+        display: inline-block;
+    }
+}
+
+.talk-room-sponsor {
+    display: block;
+    font-size: rem-calc(8);
+    text-transform: uppercase;
+    margin-top: rem-calc(5);
+
+    @include breakpoint(small only) {
+        display: inline;
+        background-color: $blue;
+        padding-left: rem-calc(5);
+        padding-right: rem-calc(5);
+    }
 }
 
 .talk-room i {
     margin-right: rem-calc(6);
 }
 
-.schedule .talk-speaker-image {
-    flex-grow: 1;
-    min-width: rem-calc(103);
 
-    @include breakpoint(medium down) {
-        display: none;
+.schedule {
+    .talk-speaker-image, .image {
+        flex-grow: 1;
+        min-width: rem-calc(50);
+        width: rem-calc(50);
+        border-radius: rem-calc(50%);
+    }
+
+    .talk-info {
+        display: block;
+        flex-grow: 2;
+        display: inline-block;
+        text-align: left;
+        color: $white;
+
+        padding-left: rem-calc(25);
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $blue;
+        }
+
+    }
+
+    .talk-speaker {
+        display: block;
+        font-size: rem-calc(16);
+    }
+
+    .talk-jobtitle {
+        display: block;
+        font-size: rem-calc(16);
+        font-style: italic;
+    }
+
+    .talk-title {
+        display: block;
+        font-size: rem-calc(20);
+    }
+
+}
+
+
+.reveal {
+    border-radius: rem-calc(5);
+}
+
+
+.schedule .active-now
+ {
+    color: $orange;
+    td {
+
+        @include breakpoint(medium) {
+            padding-top: rem-calc(50);
+            padding-bottom: rem-calc(50);
+            border-top: 1px solid $orange;
+            border-bottom: 1px solid $orange;
+
+        }
+
+        @include breakpoint(small only) {
+            padding-top: rem-calc(20);
+
+            &:first-child() {
+                border-top: 1px solid $orange;
+                border-bottom: 0;
+            }
+        }
+    }
+
+
+    .slot-status {
+        display: inline-block;
+        padding: rem-calc(2);
+
+        color: $black;
+        font-size: rem-calc(9);
+        background-color: $orange;
+        text-transform: uppercase;
+        visibility: visible;
+    }
+
+    a, a:visited {
+        color: $white;
+    }
+
+    a:hover {
+        color: $white;
     }
 }
 
-.schedule .talk-info {
-    display: block;
-    flex-grow: 2;
-    display: inline-block;
-    text-align: left;
-    color: $white;
+.schedule .past {
+    color: $greyDark;
 
-    padding-left: rem-calc(25);
+    .talk, .announcement {
+            filter: brightness(70%);
+    }
+    .talk:hover, .announcement:hover {
+            filter: brightness(100%);
+    }
 
-    &:active,
-    &:hover,
-    &:focus {
-        color: $primary-color;
+    td {
+        border: none;
+    }
+
+    .talk a {
+        color: $greyDark;
+    }
+    .talk a:hover {
+        color: $white;
     }
 }
 
-.schedule .talk-speaker {
-    display: block;
-    font-size: rem-calc(24);
+.schedule .talk-announcement td {
+    background-color: $blue;
 }
 
+.schedule .talk-announcement.future td{
+    background-color: $blue;
 
-.schedule .talk-jobtitle {
-    display: block;
-    font-size: rem-calc(16);
-    font-style: italic;
+    a:hover {
+        color: #dedede;
+    }
 }
 
-.schedule .talk-title {
-    display: block;
-    font-size: rem-calc(16);
+.schedule .talk-announcement.past td{
+    background-color: rgba(77,77,77,0.3);
+
+    a {
+        color: $greyDark;
+    }
+    a:hover {
+        color: $white;
+    }
+}
+
+.schedule .talk-announcement.active-now {
+
+    a:hover {
+        color: $orange;
+    }
+
+    td {
+        background-color: transparent !important;
+    }
+
+    @include breakpoint(medium up) {
+        border-bottom: 1px solid $orange;
+    }
+
 }
 
 .talk-announcement {
@@ -700,6 +909,26 @@ h2 {
     display: inline-block;
 }
 
+.special-slot {
+    td {
+        background-color: $blue;//rgba(77,77,77,0.1);
+    }
+
+    .start-time {
+        display: block;
+        color: $white;
+    }
+    .end-time {
+        color: $white;
+        opacity: 0.6;
+    }
+}
+
+
+/******************************/
+
+/* Section: team */
+
 .section-team {
     margin-top: rem-calc(120);
     margin-bottom: rem-calc(170);
@@ -717,6 +946,8 @@ h2 {
 .team-member img {
     border-radius: 5%;
 }
+
+/* Section: subpage */
 
 .section-subpage {
     margin-top: rem-calc(80);
@@ -894,6 +1125,22 @@ div[class^="speaker-details-"] {
 .learn-more {
     position: absolute;
     bottom: rem-calc(-20);
+}
+
+
+/* Fixing quirks */
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
 }
 
 .explanation {

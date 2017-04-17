@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% from "macros/schedule_slot.html" import render_talk_placeholder, render_talk, render_announcement, render_workshop, render_room_header %}
+
+{% block subpage_gradient %}<div class="background-gradient-subpage clearfix header">{% endblock%}
+
+{% block body %}
+    <div class="row section-subpage">
+        <div class="medium-12 column">
+            <div class="row speaker-info">
+                <div class="small-2 column">
+                    <img class="speaker-img-circle" src="{{ this.image|default("/images/mug.svg", true) | asseturl }}" class="img-rounded">
+                </div>
+                <div class="small-10 column">
+                    <span class="speaker-name">{{ this.title }}</span><br><span class="speaker-tagline">{{ this.description }}</span>
+                </div>
+            </div>
+            <div class="row speaker-info">
+                <div class="medium-12 column">
+                    <p>{{ this.body }}</p>
+                </div>
+            </div>
+            <div class="row subpage-nav">
+                <div class="medium-4 medium-offset-4 small-12 column text-center">
+                  <a href="{{ '/'|url }}#{{ this._slug}}"> Back to schedule</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

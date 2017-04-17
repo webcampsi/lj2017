@@ -1,0 +1,64 @@
+{% macro render_room_header(room) %}
+    {{ room.name}}<br>
+    {% if room.sponsored == 'true' %}
+    <span class="talk-room-sponsor">SPONSORED BY</span>
+    {% else %}
+    <span class="talk-room-sponsor">&nbsp;</span>
+    {% endif %}
+    <span class="talk-room">{{ room.label}}</span>
+{% endmacro %}
+
+{% macro render_talk_placeholder() %}
+    <td class="empty-slot">&nbsp;</td>
+{% endmacro %}
+
+{% macro render_room_talk(room) %}
+    {% if room and room is defined  %}
+    <span class="show-for-small-only talk-room"><i class="icon-map-signs"></i> {{ room.name }} | {{ room.label }}</span>{% if room.sponsored == 'true' %} <span class="show-for-small-only talk-room-sponsor">sponsor</span>{% endif %}
+    {% endif %}
+{% endmacro %}
+
+
+{% macro render_talk(speaker, room) %}
+<td>
+    <div class="talk" id="{{ speaker._slug }}">
+      <a href="{{ speaker|url }}"><img class="talk-speaker-image" src="{{ speaker.image|asseturl }}"></a>
+      <a href="{{ speaker|url }}" class="talk-info">
+        {{ render_room_talk(room) }}
+        <span class="talk-speaker">{{ speaker.name }}</span>
+        <span class="talk-title">{{ speaker.talk_title }}</span>
+      </a>
+    </div>
+</td>
+{% endmacro %}
+
+{% macro render_announcement(slot, room) %}
+<td colspan="4">
+<div class="announcement" id="{{ slot._slug }}">
+  <a href="{{ slot|url }}"><img class="talk-speaker-image" src="{{ slot.image|default('/images/mug.png')|asseturl }}"></a>
+  <a href="{{ slot|url }}" class="talk-info">
+    {{ render_room_talk(room) }}
+    <span class="talk-speaker">{{ slot.title }}</span>
+    <span class="talk-title">{{ slot.description }}</span>
+    {% if room and room is defined %}
+        <span class="talk-title">{{ room.name }} | {{ room.label }}</span>
+    {% endif %}
+  </a>
+</div>
+</td>
+
+{% endmacro %}
+
+{% macro render_workshop(workshop, room) %}
+<td>
+<div class="talk" id="{{ workshop._slug }}">
+  <a href="{{ workshop|url }}"><img class="talk-speaker-image" src="{{ workshop.image|default("/images/placeholder-speaker.png", true)|asseturl }}"></a>
+  <a href="{{ workshop|url }}" class="talk-info">
+    {{ render_room_talk(room) }}
+    <span class="talk-speaker">{{ workshop.host }}</span>
+    <span class="talk-title">{{ workshop.title }}</span>
+  </a>
+</div>
+</td>
+{% endmacro %}
+

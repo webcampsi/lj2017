@@ -1,0 +1,15 @@
+title: Welcome talk
+---
+description: Let's all meet and greet.
+---
+end_time: 9:30
+---
+start_time: 9:00
+---
+type: single
+---
+body:
+
+Hello world type of talk. All the important things you need to know in order not to miss anything.
+---
+image: images/mug.png

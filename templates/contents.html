@@ -2,6 +2,7 @@
 {% from "macros/speaker_intro.html" import render_speaker %}
 {% from "macros/iot_intro.html" import render_iot %}
 {% from "macros/workshop_intro.html" import render_workshop %}
+{% block custom_meta_tag %}<meta http-equiv="refresh" content="900" >{% endblock %}
 {% block body %}
     <div class="hero row show-for-medium">
         <img src="{{ 'images/animation/monitors.svg'|asseturl }}"
@@ -84,9 +85,10 @@
         </div>
     </div>
     </div>
-    <br>
 
-    <div class="row align-spaced section-team" id="speakers">
+    {% include 'schedule.html' %}
+
+    {# <div class="row align-spaced section-team" id="speakers">
         <div class="small-12 column text-center">
             <h1>Speakers</h1>
         </div>
@@ -95,44 +97,9 @@
         {% for speaker in site.query('/speakers') %}
             {{ render_speaker(speaker) }}
         {% endfor %}
-    </div>
+    </div> #}
 
-    <div class="row align-spaced section-team" id="iot">
-        <div class="small-12 column text-center">
-            <h1>IoT Corner</h1>
-            <p class="section-info">The IoT Corner is a showcase of internet-connected projects from startups and makers.</p>
-        </div>
-
-        <div class="medium-12 column hide-for-small-only"></div>
-        {% for iot in site.query('/iot') %}
-            {{ render_iot(iot) }}
-        {% endfor %}
-    </div>
-
-    <div class="background-black">
-        <div class="row section-vr" id="vr">
-            <div class="small-12 column text-center">
-                <h1>VR/AR showcase</h1>
-                <img src="{{ 'images/iot/vr-duck.png'|asseturl }}" alt="Virtual reality duck" class="vr-duck"/>
-            </div>
-            <div class="medium-6 small-12 column text-vr">
-                <p>Our friends at <a href="http://artrebel9.com/" target="_blank"><strong>Art Rebel 9</strong></a> will be showcasing the latest and greatest virtual and augmented reality platforms as part of their <a href="http://www.probi.me/" target="_blank"><strong>Probi.me</strong></a> pop up events.
-                </p>
-                <p>You'll be able to play with:</p>
-                <ul>
-                    <li>HTC Vive (VR)</li>
-                    <li>Oculus Rift CV2 (VR)</li>
-                    <li>Microsoft HoloLens (MR)</li>
-                    <li>Mirage app (AR)</li>
-                </ul>
-            </div>
-            <div class="medium-6 small-12 column text-center text-vr">
-                <p><a href="http://www.probi.me/" target="_blank"><img src="{{ 'images/iot/probime.png'|asseturl }}" alt="Probi.me VR and AR showcase events"/></a></p>
-                <p><a href="http://artrebel9.com/" target="_blank"><img src="{{ 'images/iot/ar9-logo-inv.png'|asseturl }}" alt="Art Rebel 9 logo"/></a></p>
-            </div>
-        </div>
-    </div>
-    <div class="row align-spaced section-team" id="workshops">
+    {# <div class="row align-spaced section-team" id="workshops">
         <div class="small-12 column text-center">
             <h1>Workshops</h1>
             <p class="section-info">And now something completely different...</p>
@@ -142,7 +109,9 @@
         {% for workshop in site.query('/workshops') %}
             {{ render_workshop(workshop) }}
         {% endfor %}
-    </div>
+    </div> #}
+
+    <br>
     <div class="row section-important-wrapper" id="tickets">
         <div class="section-important">
             <div class="medium-10 medium-offset-1 small-12 column">
@@ -230,9 +199,7 @@
 
         <div class="medium-6 small-12 column text-paragraph">
             <p>Check out some highlights from the previous year below — but keep
-                in
-                mind that this year’s WebCamp is going to be even more
-                special!
+                in mind that this year’s WebCamp is going to be even more special!
             </p>
             <p>Also see how much fun we had in
                 <a href="http://2015.webcamp.si">2015</a>&nbsp;&amp;
@@ -276,6 +243,42 @@
         </div>
     </div>
     {# End About, Location, Venue #}
+
+    <div class="row align-spaced section-team" id="iot">
+        <div class="small-12 column text-center">
+            <h1>IoT Corner</h1>
+            <p class="section-info">The IoT Corner is a showcase of internet-connected projects from startups and makers.</p>
+        </div>
+
+        <div class="medium-12 column hide-for-small-only"></div>
+        {% for iot in site.query('/iot') %}
+            {{ render_iot(iot) }}
+        {% endfor %}
+    </div>
+
+    <div class="background-black">
+        <div class="row section-vr" id="vr">
+            <div class="small-12 column text-center">
+                <h1>VR/AR showcase</h1>
+                <img src="{{ 'images/iot/vr-duck.png'|asseturl }}" alt="Virtual reality duck" class="vr-duck"/>
+            </div>
+            <div class="medium-6 small-12 column text-vr">
+                <p>Our friends at <a href="http://artrebel9.com/" target="_blank"><strong>Art Rebel 9</strong></a> will be showcasing the latest and greatest virtual and augmented reality platforms as part of their <a href="http://www.probi.me/" target="_blank"><strong>Probi.me</strong></a> pop up events.
+                </p>
+                <p>You'll be able to play with:</p>
+                <ul>
+                    <li>HTC Vive (VR)</li>
+                    <li>Oculus Rift CV2 (VR)</li>
+                    <li>Microsoft HoloLens (MR)</li>
+                    <li>Mirage app (AR)</li>
+                </ul>
+            </div>
+            <div class="medium-6 small-12 column text-center text-vr">
+                <p><a href="http://www.probi.me/" target="_blank"><img src="{{ 'images/iot/probime.png'|asseturl }}" alt="Probi.me VR and AR showcase events"/></a></p>
+                <p><a href="http://artrebel9.com/" target="_blank"><img src="{{ 'images/iot/ar9-logo-inv.png'|asseturl }}" alt="Art Rebel 9 logo"/></a></p>
+            </div>
+        </div>
+    </div>
 
     <div class="row align-spaced section-team" id="sponsors">
         <div class="small-12 column text-center">
@@ -362,4 +365,12 @@
                  <p>WebCamp Ljubljana is brought to you by a <a href="/team">team of volunteers</a>.</p>
              </div>
          </div>
+{% endblock %}
+
+{% block custom_javascript %}
+<script type="text/javascript">
+    //2011-04-11T10:20:30Z - UTC time
+    WebCamp.Schedule.init("2017-04-22T06:00:00Z");
+</script>
+
 {% endblock %}

@@ -234,9 +234,6 @@ h2 {
     }
 }
 
-.mateja-cta {
-    padding-top: rem-calc(30);
-}
 
 .newsletter-form-small {
     background-color: transparent;
@@ -400,6 +397,9 @@ h2 {
 }
 
 /* Section: VR */
+
+
+
 .section-vr {
     padding-top: rem-calc(70);
     padding-bottom: rem-calc(70);
@@ -458,6 +458,8 @@ h2 {
 }
 
 .section-important-wrapper {
+    margin-top: rem-calc(90);
+
     @include breakpoint(small only) {
         overflow: hidden;
     }

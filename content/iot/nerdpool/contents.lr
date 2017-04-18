@@ -2,6 +2,10 @@ name: NerdPool
 ---
 link: https://github.com/BigWhale/nerdpool
 ---
+image: /images/iot/nerdpool.jpg
+---
+thumb: /images/iot/nerdpool-thumb.jpeg
+---
 presenter: David Klasinc
 ---
 tagline: NerdPool is a pool for nerds.

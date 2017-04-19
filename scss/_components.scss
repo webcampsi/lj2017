@@ -7,6 +7,9 @@ $orange: #FFB542;
 $orangeDark: #D58E1F;
 $greyDark: rgba(222,222,222,.90);
 
+$grey: #999999;
+$greyShadow: #444444;
+
 $buttonBlue: #55C1E8;
 $buttonBlueShadow: #2199C3;
 
@@ -250,6 +253,10 @@ h2 {
     &.orange {
         background-color: $orange;
     }
+
+    &.grey {
+        background-color: $greyDark;
+    }
 }
 
 .newsletter-form input[type="text"], .newsletter-form input[type="email"] {
@@ -394,6 +401,37 @@ h2 {
         top: 4px;
         box-shadow: 0px 0px 0px 0px $orangeDark;
     }
+}
+
+.button.grey {
+    @include button-style($grey, $grey, $white);
+    margin-top: rem-calc(10);
+    padding: rem-calc(12) rem-calc(40);
+
+    box-shadow: 0px 4px 0px 0px $greyShadow;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: rem-calc(22);
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        position: relative;
+        top: 1px;
+        box-shadow: 0px 3px 0px 0px $greyShadow;
+    }
+
+    &:active {
+        position: relative;
+        top: 4px;
+        box-shadow: 0px 0px 0px 0px $greyShadow;
+    }
+}
+
+.button.disabled, .button[disabled] {
+    opacity: .50;
 }
 
 /* Section: VR */
@@ -1048,7 +1086,7 @@ h2 {
     font-size: rem-calc(20);
 
     img {
-        width: 30%;
+        width: 50%;
         height: auto;
 
         @include breakpoint(small only) {

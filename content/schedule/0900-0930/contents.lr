@@ -13,3 +13,5 @@ body:
 Hello world type of talk. All the important things you need to know in order not to miss anything.
 ---
 image: images/mug.png
+---
+room: welcome

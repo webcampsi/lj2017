@@ -47,7 +47,7 @@
     <div class="background-black newsletter-cta">
         <div class="newsletter-cta-row">
             <div class="newsletter-text">
-                <span class="hide-for-small-only">
+                {#<span class="hide-for-small-only">
                   Sorry, all the free<br class="show-for-large"/>
                   tickets are gone!<br class="show-for-large"/>
                   Still want to attend?
@@ -55,6 +55,7 @@
                 <span class="show-for-small-only">
                   Still want to attend WebCamp?
                 </span>
+                #}
 
               {# <span class="hide-for-small-only">
                 Missed your free<br class="show-for-large"/>
@@ -65,9 +66,17 @@
                 Get notified about Free tickets for list subscribers!
               </span>
               #}
+              <span class="hide-for-small-only">
+                All the tickets are gone! <br class="show-for-large"/>
+                Didn't get one? Subscribe and <br class="show-for-large"/>
+                don't miss your next WebCamp.
+              </span>
+              <span class="show-for-small-only">
+                We're sold out. Subscribe and don't miss the next WebCamp!
+              </span>
                 <img src="{{ 'images/arrow.svg'|asseturl }}" class="newsletter-arrow show-for-large"/>
             </div>
-            {# <form class="newsletter-form"
+            <form class="newsletter-form"
                   action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2"
                   method="post">
                 <input type="text" name="MERGE1" placeholder="Name"
@@ -76,12 +85,11 @@
                 <input type="submit" value="Subscribe"
                        class="button orange newsletter-button">
             </form>
-            #}
-            <div class="newsletter-form supporter-push">
+
+            {#<div class="newsletter-form supporter-push">
                 <a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button orange newsletter-button supporter">Become a supporter</a>
                 <span style="explanation"><a class="explanation" href="#supporters"> What's a supporter?</a></span>
-            </div>
-
+            </div> #}
         </div>
     </div>
     </div>
@@ -127,15 +135,10 @@
                         <p>Don’t miss your chance to get a free ticket next year, subscribe to our
                             mailing list and you’ll be the first to hear when we get the ball rolling!</p>
                     #}
-                    <p><strong>Tickets:</strong> sorry, all the free tickets are gone, but you might still get one by <a href="#supporters">supporting WebCamp</a>. </p>
+                    <p><strong>Tickets:</strong> All the free and supporter tickets are gone thanks to our <a href="#supporters">amazing WebCamp supporters</a>. </p>
                 </div>
                 <br/>
-                <h4>We have a few spaces left for our supporters.</h4>
-                <div class="newsletter-form-small">
-                    <a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button blue newsletter-button supporter">Become a supporter</a>
-                </div>
-                <p><br/>OR...<br/></p>
-               <h4>Subscribe and don't miss it next year!</h4>
+               <h4>Subscribe and don't miss the next WebCamp!</h4>
                 <form class="newsletter-form-small orange"
                       action="//webcamp.us9.list-manage.com/subscribe/post?u=fe215c156a9c379ef50c7c68c&amp;id=18c5122cf2"
                       method="post">
@@ -167,8 +170,8 @@
                 for the community</strong>. All talks are in English and we expect 500+
                 attendees from all over the region. <strong>It’s free to attend, but
                 you need a ticket</strong>. This year's tickets are all sold out.
-            </p>           
-            
+            </p>
+
         </div>
 
         <div class="medium-6 small-12 column text-paragraph">
@@ -353,7 +356,8 @@
         <div class="medium-10 small-12 column text-center">
         <p>WebCamp supporters generously decided to support the event by paying for their ticket. This helps us keep the conference free for everyone. </p>
         <p>
-            <a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button orange supporter">Become a supporter</a>
+            {#<a href="https://www.eventbrite.com/e/webcamp-ljubljana-2017-tickets-33039592310?discount=SUPPORTER" target="_blank" class="button orange supporter">Become a supporter</a>#}
+            <div class="button grey disabled supporter">SOLD OUT</div>
         </p>
 
         <p>As a supporter you are guaranteed to get your ticket and you help the community at the same time.

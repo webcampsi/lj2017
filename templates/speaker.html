@@ -34,6 +34,9 @@
                     <br>
                     <h5>What will the audience get from this talk:</h5>
                     <p>{{ this.takeaways }}</p>
+                    {% if this.slides_link %}
+                    <p><a href="{{this.slides_link}}" target="_blank"><img src="{{ 'images/slides.svg'|asseturl }}" class="speaker-link"> Slides</a></p>
+                    {% endif %}
                 </div>
             </div>
            <div class="row subpage-nav">

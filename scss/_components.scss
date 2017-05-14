@@ -970,6 +970,10 @@ h2 {
 .section-team {
     margin-top: rem-calc(120);
     margin-bottom: rem-calc(170);
+
+    .team-description {
+        margin-bottom: rem-calc(20);
+    }
 }
 
 .section-team h1 {
@@ -1075,6 +1079,10 @@ h2 {
 
 .section-supporters {
     margin-top: rem-calc(40);
+}
+
+.section-volunteers {
+    margin-top: rem-calc(10);
 }
 
 .supporters-list {

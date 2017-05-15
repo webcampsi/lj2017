@@ -1,0 +1,6 @@
+{% set root = site.get_root() %}
+{% if F.target.startswith('/') %}
+<meta http-equiv="refresh" content="0;url={{ this.target|url }}">
+{% else %}
+<meta http-equiv="refresh" content="0;url={{ root|url }}{{ this.target }}">
+{% endif %}

@@ -75,7 +75,7 @@
                 Missed WebCamp? <br class="show-for-large"/>
                 Subscribe to be the first <br class="show-for-large"/>
                 to hear about the next one!
-              </span>                
+              </span>
               <span class="show-for-small-only">
                 Missed WebCamp? Subscribe to be the first to hear about the next one!
               </span>
@@ -108,9 +108,9 @@
     </div>
 
 
-    {% include 'schedule.html' %}
+    {# {% include 'schedule.html' %} #}
 
-    {# <div class="row align-spaced section-team" id="speakers">
+    <div class="row align-spaced section-team" id="speakers">
         <div class="small-12 column text-center">
             <h1>Speakers</h1>
         </div>
@@ -121,7 +121,7 @@
         {% endfor %}
     </div> #}
 
-    {# <div class="row align-spaced section-team" id="workshops">
+    <div class="row align-spaced section-team" id="workshops">
         <div class="small-12 column text-center">
             <h1>Workshops</h1>
             <p class="section-info">And now something completely different...</p>
@@ -131,7 +131,7 @@
         {% for workshop in site.query('/workshops') %}
             {{ render_workshop(workshop) }}
         {% endfor %}
-    </div> #}
+    </div>
 
     <br>
     <div class="row section-important-wrapper" id="tickets">

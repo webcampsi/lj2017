@@ -39,6 +39,13 @@
                     {% endif %}
                 </div>
             </div>
+            {% if this.lecture_video %}
+            <div class="row lecture-video">
+                <div class="medium-12 column text-center">
+                    <iframe width="560" height="315" src="{{ this.lecture_video }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            {% endif %}
            <div class="row subpage-nav">
                <div class="medium-4 column hide-for-small-only">
                {% if siblings.prev_page %}

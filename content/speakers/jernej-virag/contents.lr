@@ -11,3 +11,5 @@ talk_title : Building my own IoT sensors with web interface
 talk_description : IoT is all the rage these days, so of course I had to have a few devices of my own. Since all the pre-built devices are bad, insecure and expensive, I've built my own temperature sensor hub based on a Raspberry Pi, Python, Flask and cheap chinese sensors. This talk is all about how that was easily made.
 ---
 takeaways : A nice crash course on how to jump-start IoT development with web-based user interfaces.
+---
+lecture_video: ejRbjI1eV-E

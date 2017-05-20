@@ -13,3 +13,5 @@ talk_description : Recently PostgreSQL introduced the JSON and JSONB data types.
 takeaways : How and when to use the JSON types. What the advantages and disadvantages are. And how to avoid falling into a JSON mania.
 ---
 slides_link: https://speakerdeck.com/inesp/conquering-jsonb-in-postgresql
+---
+lecture_video: Agi7WWEZBNM

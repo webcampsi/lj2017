@@ -42,7 +42,7 @@
             {% if this.lecture_video %}
             <div class="row lecture-video">
                 <div class="medium-12 column text-center">
-                    <iframe width="560" height="315" src="{{ this.lecture_video }}" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{this.lecture_video}}?list=PLIZtfj-D-vQyHICP4U2rave3u8Tmzc7pZ" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
             {% endif %}
@@ -53,7 +53,8 @@
                {% endif %}
                </div>
                <div class="medium-4 small-12 column text-center">
-                 <a href="{{ '/'|url }}#{{ this._slug}}"> Back to schedule</a>
+                 {# <a href="{{ '/'|url }}#{{ this._slug}}"> Back to schedule</a> #}
+                 <a href="{{ '/'|url }}#speakers"> Back to speakers</a>
                </div>
                <div class="medium-4 column next-speaker hide-for-small-only">
                {% if siblings.next_page %}

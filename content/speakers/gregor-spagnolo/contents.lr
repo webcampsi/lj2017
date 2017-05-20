@@ -11,3 +11,5 @@ talk_title : .NET core & microservices the good, the bad, the ugly
 talk_description : Nowadays many software companies are moving from monolithic systems to micro-services. In this talk we will take an inside look into transformation of a company from monolithic to micro-service oriented. Furthermore, we will rise questions what do we really benefit from micro-services and .net on them.
 ---
 takeaways : Inside look into micro-services oriented infrastructure and .NET running on Linux machines.
+---
+lecture_video: LDLo0Wp0S5Y

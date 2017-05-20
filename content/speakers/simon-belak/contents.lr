@@ -11,3 +11,5 @@ talk_title : Escape from JS
 talk_description : Javascript is a bad language to program in and a great language to compile into. In this talk you will learn about some of the exciting languages and paradigms cropping up on the outskirts of the Javascript ecosystem.
 ---
 takeaways : You will learn things like how does transpiling to Javascript work, you'll get a quick look at ClojureScript, Elm, and PureScript, find out about new tools and paradigms that these language bring to the development experience, and a word on interoperability.
+---
+lecture_video: y5q118OX6WE

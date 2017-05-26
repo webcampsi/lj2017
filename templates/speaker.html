@@ -39,13 +39,15 @@
                     {% endif %}
                 </div>
             </div>
-            {% if this.lecture_video %}
             <div class="row lecture-video">
                 <div class="medium-12 column text-center">
+                    {% if this.lecture_video %}
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{this.lecture_video}}?list=PLIZtfj-D-vQyHICP4U2rave3u8Tmzc7pZ" frameborder="0" allowfullscreen></iframe>
+                    {% else %}
+                    <p><em>We're sorry, there's no video available for this talk. Technology failed us this time.</em></p>
+                    {% endif %}
                 </div>
             </div>
-            {% endif %}
            <div class="row subpage-nav">
                <div class="medium-4 column hide-for-small-only">
                {% if siblings.prev_page %}
